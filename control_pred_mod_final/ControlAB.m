@@ -91,7 +91,7 @@ if tact-tant >= Tm
     end
     
     tact_pi = tact;
-    referencia = Vdc;
+    referencia = Vdc*3;
     salida_med = vcca;
 
     if (tact_pi - tantpi) >= Tmpi

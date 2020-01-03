@@ -49,7 +49,7 @@ CL = 2200e-6; % capacitancia en [mF]
     global Vdc Cdc Vodc Ideal vcrls
     Vdc = 62; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
-    Vodc = 0; %Tension inicial en el capacitor [V]
+    Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
     
     %% parámetros de los semiconductores SiC-Mosfet
