@@ -16,15 +16,16 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 
 %% parámetros de simulación %%
 global Tm fm Ts Tsim APFon
-fm = 15000; %Frecuencia de muestreo [Hz]
+fm = 20000; %Frecuencia de muestreo [Hz]
 Tm = 1/fm; %Periodo de muestreo [s]
-Tsim= 0.1; %Tiempo total de simulacion [s]
-Ts= 1e-6; %Tiempo de integracion para la simulacion [s]
-APFon = 0.02;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+Tsim= 0.5; %Tiempo total de simulacion [s]
+Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
+APFon = 0.025;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
 
 %% parámetros de la red eléctrica %%
+
 global Vs fe we teta_a teta_b teta_c 
-Vs= 310.2;%Tension de la red [V]
+Vs= 120*sqrt(2);%Tension de la red [V]
 fe = 50; %Frecuencia de la red [Hz]
 we= 2*pi*fe; %Frecuencia de la red [rad/s]
 teta_a= 0; %Angulo de fase a [deg]
@@ -45,7 +46,7 @@ CL = 2200; % capacitancia en [mF]
 %% parámetros del convertidor multinivel %%
     %%parametros DC-LINK%%
     global Vdc Cdc Vodc Ideal 
-    Vdc = 114; %Tension ideal del DC-Link [V]
+    Vdc = 65; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
@@ -127,7 +128,29 @@ CL = 2200; % capacitancia en [mF]
     
     
 %% PARAMETROS DE CONTROL %% 
-global  tant ioa iob ioc vca_ref vcb_ref vcc_ref
+global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
+global Tmpi kp ki tantpi  err_antpi resp_ant
+ki = 0.0009;
+kp = 0.0055;
+Tmpi = 1/5000;
+tantpi = 0;
+resp_ant = 0;
+err_antpi = 0;
+
+global  Tm_fd fm_fd tant_fd xkm1 xkm2 ykm1 ykm2... %Parametros de filtro digital
+        num den %numerador y denominador del filtro digital 
+    
+    fm_fd = 1000;
+    fn = fm_fd/2;
+    Tm_fd = 1/fm_fd;
+    [N Wc] = buttord(25/fn, 125/fn, 1, 20); % fc = 25Hz, fs = 125Hz, Gc = -1dB, Gp = -20dB
+    [num den] = butter(N,Wc);
+    %fvtool(num,den)
+    tant_fd = 0; %Instante de la muestra anterior filtro digital
+    xkm1 = 0;
+    xkm2 = 0;
+    ykm1 = 0;
+    ykm2 = 0;
 
 tant = 0; %Instante de la muestra anterior MBPC clasico
 
@@ -139,5 +162,9 @@ ioc = 1;
 vca_ref = 0;
 vcb_ref = 0;
 vcc_ref = 0;
+
+ica_ref = 0;
+icb_ref = 0;
+icc_ref = 0;
 
 

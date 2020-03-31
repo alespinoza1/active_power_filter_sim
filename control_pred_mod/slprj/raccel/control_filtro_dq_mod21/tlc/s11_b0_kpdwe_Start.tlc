@@ -1,0 +1,110 @@
+%implements s11_b0_kpdwe_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcSetupRuntimeResourcesFcnOfS5B0 = OpaqueTLCBlockFcn("SetupRuntimeResources", 5, 0, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS3B0 = OpaqueTLCBlockFcn("SetupRuntimeResources", 3, 0, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS3B3 = OpaqueTLCBlockFcn("SetupRuntimeResources", 3, 3, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS11B353 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 353, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS10B0 = OpaqueTLCBlockFcn("SetupRuntimeResources", 10, 0, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS8B0 = OpaqueTLCBlockFcn("SetupRuntimeResources", 8, 0, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS8B3 = OpaqueTLCBlockFcn("SetupRuntimeResources", 8, 3, 0, 0)
+%assign tlcStartFcnOfS11B10 = OpaqueTLCBlockFcn("Start", 11, 10, 0, 0)
+%assign tlcStartFcnOfS11B58 = OpaqueTLCBlockFcn("Start", 11, 58, 0, 0)
+%assign tlcStartFcnOfS11B75 = OpaqueTLCBlockFcn("Start", 11, 75, 0, 0)
+%assign tlcStartFcnOfS11B160 = OpaqueTLCBlockFcn("Start", 11, 160, 0, 0)
+%assign tlcStartFcnOfS11B177 = OpaqueTLCBlockFcn("Start", 11, 177, 0, 0)
+%assign tlcStartFcnOfS11B262 = OpaqueTLCBlockFcn("Start", 11, 262, 0, 0)
+%assign tlcStartFcnOfS11B279 = OpaqueTLCBlockFcn("Start", 11, 279, 0, 0)
+%assign tlcStartFcnOfS11B348 = OpaqueTLCBlockFcn("Start", 11, 348, 0, 0)
+%assign tlcStartFcnOfS11B349 = OpaqueTLCBlockFcn("Start", 11, 349, 0, 0)
+%assign tlcStartFcnOfS5B0 = OpaqueTLCBlockFcn("Start", 5, 0, 0, 0)
+%assign tlcStartFcnOfS3B0 = OpaqueTLCBlockFcn("Start", 3, 0, 0, 0)
+%assign tlcStartFcnOfS3B3 = OpaqueTLCBlockFcn("Start", 3, 3, 0, 0)
+%assign tlcStartFcnOfS11B353 = OpaqueTLCBlockFcn("Start", 11, 353, 0, 0)
+%assign tlcStartFcnOfS10B0 = OpaqueTLCBlockFcn("Start", 10, 0, 0, 0)
+%assign tlcStartFcnOfS8B0 = OpaqueTLCBlockFcn("Start", 8, 0, 0, 0)
+%assign tlcStartFcnOfS8B3 = OpaqueTLCBlockFcn("Start", 8, 3, 0, 0)
+%assign tlcStartFcnOfS11B359 = OpaqueTLCBlockFcn("Start", 11, 359, 0, 0)
+%assign tlcStartFcnOfS11B360 = OpaqueTLCBlockFcn("Start", 11, 360, 0, 0)
+%assign tlcStartFcnOfS11B361 = OpaqueTLCBlockFcn("Start", 11, 361, 0, 0)
+%assign tlcStartFcnOfS11B433 = OpaqueTLCBlockFcn("Start", 11, 433, 0, 0)
+%assign tlcStartFcnOfS11B434 = OpaqueTLCBlockFcn("Start", 11, 434, 0, 0)
+%assign tlcStartFcnOfS11B435 = OpaqueTLCBlockFcn("Start", 11, 435, 0, 0)
+%assign tlcStartFcnOfS11B497 = OpaqueTLCBlockFcn("Start", 11, 497, 0, 0)
+%assign tlcStartFcnOfS11B507 = OpaqueTLCBlockFcn("Start", 11, 507, 0, 0)
+%assign tlcStartFcnOfS11B508 = OpaqueTLCBlockFcn("Start", 11, 508, 0, 0)
+%assign tlcStartFcnOfS11B509 = OpaqueTLCBlockFcn("Start", 11, 509, 0, 0)
+%assign tlcStartFcnOfS11B510 = OpaqueTLCBlockFcn("Start", 11, 510, 0, 0)
+%assign tlcStartFcnOfS11B511 = OpaqueTLCBlockFcn("Start", 11, 511, 0, 0)
+%assign tlcStartFcnOfS11B512 = OpaqueTLCBlockFcn("Start", 11, 512, 0, 0)
+%assign tlcStartFcnOfS11B513 = OpaqueTLCBlockFcn("Start", 11, 513, 0, 0)
+%assign tlcStartFcnOfS11B514 = OpaqueTLCBlockFcn("Start", 11, 514, 0, 0)
+%<tlcSetupRuntimeResourcesFcnOfS5B0>\
+%<tlcSetupRuntimeResourcesFcnOfS3B0>\
+%<tlcSetupRuntimeResourcesFcnOfS3B3>\
+%<tlcSetupRuntimeResourcesFcnOfS11B353>\
+%<tlcSetupRuntimeResourcesFcnOfS10B0>\
+%<tlcSetupRuntimeResourcesFcnOfS8B0>\
+%<tlcSetupRuntimeResourcesFcnOfS8B3>\
+%<tlcStartFcnOfS11B10>\
+rtB.iswwcs5qog = rtP.Initial_Value;
+rtDW.khil425x31 = true;
+%<tlcStartFcnOfS11B58>\
+%<tlcStartFcnOfS11B75>\
+%<tlcStartFcnOfS11B160>\
+%<tlcStartFcnOfS11B177>\
+%<tlcStartFcnOfS11B262>\
+%<tlcStartFcnOfS11B279>\
+%<tlcStartFcnOfS11B348>\
+%<tlcStartFcnOfS11B349>\
+rtDW.k3eon5h1qb = false;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+rtB.amnmntafgo = rtP.K1_Value_d551ij3o4j;
+%<tlcStartFcnOfS5B0>\
+rtDW.f0nzjjist2 = false;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+rtB.o4t1yy4lrq = rtP.K1_Value;
+%<tlcStartFcnOfS3B0>\
+rtB.ccwjzypgkc = rtP.K1_Value_bcdfz5rssl;
+%<tlcStartFcnOfS3B3>\
+rtB.gemtqspt04 = rtP.K1_Value_k3boncxixa;
+%<tlcStartFcnOfS11B353>\
+rtDW.ilv3wasjlr = false;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+rtB.btmlskkpjd = rtP.K1_Value_low3mjrnio;
+%<tlcStartFcnOfS10B0>\
+rtDW.lhfr0mtsqf = false;
+%<(RTMSetBlockStateForSolverChangedAtMajorStep())>;
+rtB.mqplhodrlo = rtP.K1_Value_cwedtrmtav;
+%<tlcStartFcnOfS8B0>\
+rtB.iqgz00g5sp = rtP.K1_Value_dy5m30wkc3;
+%<tlcStartFcnOfS8B3>\
+%<tlcStartFcnOfS11B359>\
+%<tlcStartFcnOfS11B360>\
+%<tlcStartFcnOfS11B361>\
+%<tlcStartFcnOfS11B433>\
+%<tlcStartFcnOfS11B434>\
+%<tlcStartFcnOfS11B435>\
+%<tlcStartFcnOfS11B497>\
+%<tlcStartFcnOfS11B507>\
+%<tlcStartFcnOfS11B508>\
+%<tlcStartFcnOfS11B509>\
+%<tlcStartFcnOfS11B510>\
+%<tlcStartFcnOfS11B511>\
+%<tlcStartFcnOfS11B512>\
+%<tlcStartFcnOfS11B513>\
+%<tlcStartFcnOfS11B514>\
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction

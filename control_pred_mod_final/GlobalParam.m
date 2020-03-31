@@ -54,7 +54,6 @@ CL = 2200e-6; % capacitancia en [mF]
     
     %% parámetros de los semiconductores SiC-Mosfet
     global Ron Rs Cs XI c Vc nc
-    nc = 3; %Nº de celdas por fase
     Ron= 1e-3; %Internal resistance [Ohms]
     Rs= 1e5; %Snubber resistance [Ohms]
     Cs= 0.5; %Snubber capacitance [F]
@@ -94,6 +93,7 @@ global  Tm_fd fm_fd tant_fd xkm1 xkm2 ykm1 ykm2... %Parametros de filtro digital
     Tm_fd = 1/fm_fd;
     [N Wc] = buttord(25/fn, 125/fn, 1, 20); % fc = 25Hz, fs = 125Hz, Gc = -1dB, Gp = -20dB
     [num den] = butter(N,Wc);
+    %fvtool(num,den)
     tant_fd = 0; %Instante de la muestra anterior filtro digital
     xkm1 = 0;
     xkm2 = 0;

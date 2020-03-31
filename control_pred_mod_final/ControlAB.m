@@ -56,7 +56,7 @@ icc_med = x(10);
 vcca = x(11)
 
 
-%% %%%%%%% RUTINA DE CONTROL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% RUTINA DE CONTROL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Se espera el tiempo de muestreo
 if tact-tant >= Tm
     %% %%%%%%% GENERADOR DE REFERENCIA/S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,6 +135,7 @@ if tact-tant >= Tm
         icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(vc_ref-vbs_med);
         icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(vc_ref-vcs_med);
         
+        %Se calcula el error de seguimiento de corriente
         dif_a = (ica_ref - ica_km1);
 		dif_b = (icb_ref - icb_km1);
         dif_c = (icc_ref - icc_km1);

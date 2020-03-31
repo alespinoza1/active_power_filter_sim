@@ -16,8 +16,8 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 
 %% parámetros de simulación %%
 global Tm fm Ts Tsim APFon fc 
-fm = 19250; %Frecuencia de muestreo [Hz]
-fc = 19250; % frecuencia de la portadora
+fm = 20000; %Frecuencia de muestreo [Hz]
+fc = 15000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 0.15; %Tiempo total de simulacion [s]
 Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
@@ -30,8 +30,8 @@ Vs= 120*sqrt(2);%Tension de la red [V]
 fe = 50; %Frecuencia de la red [Hz]
 we= 2*pi*fe; %Frecuencia de la red [rad/s]
 teta_a= 0; %Angulo de fase a [deg]
-teta_b= -120; %Angulo de fase b [deg]
-teta_c= 120; %Angulo de fase c [deg]
+teta_b= 120; %Angulo de fase b [deg]
+teta_c= -120; %Angulo de fase c [deg]
 
 %% parámetros del filtro de salida %%
 global Rf Lf
@@ -49,7 +49,7 @@ CL = 2200e-6; % capacitancia en [mF]
     global Vdc Cdc Vodc Ideal vcrls
     Vdc = 62; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
-    Vodc = 0; %Tension inicial en el capacitor [V]
+    Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
     
     %% parámetros de los semiconductores SiC-Mosfet
