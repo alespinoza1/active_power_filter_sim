@@ -17,10 +17,10 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 %% parámetros de simulación %%
 global Tm fm Ts Tsim APFon fc 
 fm = 20000; %Frecuencia de muestreo [Hz]
-fc = 18000; % frecuencia de la portadora
+fc = 20000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 1; %Tiempo total de simulacion [s]
-Ts= 1e-6; %Tiempo de integracion para la simulacion [s]
+Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
 APFon = 0.025;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
 
 
@@ -93,10 +93,11 @@ B1 = -(2*kppll-kipll*Tm)/2
 
     
 %% PARAMETROS DE CONTROL %% 
-global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
+global  tant tantg ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
 global Tmpi kp ki tantpi  err_antpi resp_ant
-ki = 0.0009;
-kp = 0.0055;
+
+ki = 0.065;
+kp = 0.07;
 Tmpi = 1/5000;
 tantpi = 0;
 resp_ant = 0;
@@ -104,6 +105,7 @@ err_antpi = 0;
 
 global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro digital
         num den xkm1q xkm2q ykm1q ykm2q... %numerador y denominador del filtro digital
+        xkm10 xkm20 ykm10 ykm20
     
     
     fm_fd = 1000;
@@ -121,8 +123,18 @@ global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro dig
     xkm2q = 0;
     ykm1q = 0;
     ykm2q = 0;
+    xkm10 = 0;
+    xkm20 = 0;
+    ykm10 = 0;
+    ykm20 = 0;
+    ica_ref = 0;
+    icb_ref = 0;
+    icc_ref = 0;
+
+
 
 tant = 0; %Instante de la muestra anterior MBPC clasico
+tantg = 0;
 
 %Valores iniciales optimos
 ioa = 1;

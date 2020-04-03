@@ -22,7 +22,7 @@ global RL LL CL
 global Vdc Cdc Vodc Ideal 
 
 %% parámetros de los semiconductores SiC-Mosfet
-global Ron Rs Cs XI c Vc
+global Ron Rs Cs XI c nc Vc
 
 %% PARAMETROS DE CONTROL %% 
 global  tant ...
@@ -65,13 +65,12 @@ if tact-tant >= Tm
         icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(vc_ref-vbs_med);
         icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(vc_ref-vcs_med);
         
-        %Se calcula el error de seguimiento de corriente
         dif_a = (ica_ref - ica_km1);
 		dif_b = (icb_ref - icb_km1);
         dif_c = (icc_ref - icc_km1);
 		
         fc_Ja = dif_a*dif_a;
-        fc_Jb = dif_b*dif_b;
+        fc_Jb = dif_b*dif_b; 
         fc_Jc = dif_c*dif_c;
         
         if fc_Ja < fc_Joa
@@ -98,12 +97,12 @@ if tact-tant >= Tm
 
     %actualizacion de estados anteriores
     tant = tact;
-    res=[XI(ioa,:), XI(iob,:), XI(ioc,:), vca_ref, vcb_ref, vcc_ref];
+    res=[vca_ref, vcb_ref, vcc_ref];
 
    
 else
 
-    res=[XI(ioa,:), XI(iob,:), XI(ioc,:), vca_ref, vcb_ref, vcc_ref];
+    res=[vca_ref, vcb_ref, vcc_ref];
 
 end
 
