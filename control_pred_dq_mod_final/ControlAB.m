@@ -84,17 +84,14 @@ if tact-tant >= Tm
    
     %%%%%%%%% GENERADOR DE REFERENCIA/S %%%%%%%%%
     %SE CONVIERTEN AL PLANO DQ
-    Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),- sin(Theta-2*pi/3),- sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med]
-    Id = Idq0(1);
-    Iq = Idq0(2);
-    I0 = Idq0(3);
-
+    Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),-sin(Theta-2*pi/3),-sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med]
+    
     %SE FILTRA LA POTENCIA ACTVIA Y COMPENSA LA CARGA DEL CAPACITOR:
     %Instante actual
     tact_fd = tact;
     %señal a filtrar
-    xkd =  Id;
-    xkq =  Iq;
+    xkd =  Idq0(1);
+    xkq =  Idq0(2);
     if (tact_fd-tant_fd) >= Tm_fd
         ykd = ( num(1)*xkd + num(2)*xkm1d + num(3)*xkm2d - den(2)*ykm1d - den(3)*ykm2d )/den(1);
         tant_fd = tact_fd;
@@ -128,12 +125,12 @@ if tact-tant >= Tm
     end
     
     %SE ESTABLECEN LAS POTENCIAS QUE DEBE INYECTAR EL APF
-    Idc = Id - ykd - pid;
-    Iqc = Iq-ykq;
-    I0c = I0;
+    Idc = Idq0(1) -ykd -pid;
+    Iqc = Idq0(2)-ykq;
+    I0c = Idq0(3);
   
     %SE CONVIERTEN LAS CORRIENTES DE REFERENCIA DEL APF DQ A SU EQUI EN ABC
-    Ic_ref = sqrt(2/3)*inv([cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),- sin(Theta-2*pi/3),- sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)])*[Idc;Iqc;I0c];
+    Ic_ref = sqrt(2/3)*[cos(Theta),-sin(Theta),sqrt(1/2);cos(Theta-2*pi/3),-sin(Theta-2*pi/3),sqrt(1/2);cos(Theta+2*pi/3),-sin(Theta+2*pi/3),sqrt(1/2)]*[Idc;Iqc;I0c];
     ica_ref= Ic_ref(1); 
     icb_ref= Ic_ref(2); 
     icc_ref= Ic_ref(3); 

@@ -20,7 +20,7 @@ fm = 20000; %Frecuencia de muestreo [Hz]
 fc = 18000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 1; %Tiempo total de simulacion [s]
-Ts= 1e-6; %Tiempo de integracion para la simulacion [s]
+Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
 APFon = 0.025;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
 
 
@@ -47,7 +47,7 @@ CL = 2200e-6; % capacitancia en [mF]
 %% parámetros del convertidor multinivel %%
     %%parametros DC-LINK%%
     global Vdc Cdc Vodc Ideal vcrls
-    Vdc = 62; %Tension ideal del DC-Link [V]
+    Vdc = 60; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
@@ -93,7 +93,7 @@ B1 = -(2*kppll-kipll*Tm)/2
 
     
 %% PARAMETROS DE CONTROL %% 
-global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
+global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref 
 global Tmpi kp ki tantpi  err_antpi resp_ant
 ki = 0.0009;
 kp = 0.0055;
