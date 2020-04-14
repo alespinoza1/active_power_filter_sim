@@ -16,12 +16,12 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 
 %% parámetros de simulación %%
 global Tm fm Ts Tsim APFon fc 
-fm = 20000; %Frecuencia de muestreo [Hz]
+fm = 15000; %Frecuencia de muestreo [Hz]
 fc = 15000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
-Tsim= 0.15; %Tiempo total de simulacion [s]
-Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
-APFon = 0.025;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+Tsim= 0.25; %Tiempo total de simulacion [s]
+Ts= 10e-6; %Tiempo de integracion para la simulacion [s]
+APFon = 0.015;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
 
 
 %% parámetros de la red eléctrica %%
@@ -50,7 +50,7 @@ CL = 2200e-6; % capacitancia en [mF]
     Vdc = 62; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
-    Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
+    Ideal = 1; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
     
     %% parámetros de los semiconductores SiC-Mosfet
     global Ron Rs Cs XI c Vc nc
@@ -70,7 +70,7 @@ CL = 2200e-6; % capacitancia en [mF]
         0 0 0 0 0 0;
         0 0 0 0 1 0;
         0 0 1 0 1 0;
-        1 0 1 0 1 0; ];
+        1 0 1 0 1 0];
     [c,n] = size(XI); %Cantidad de filas y columnas de la matriz de estados de conmutacion
     %funciones de conmutacion correspondientes a los estados de conmutacion respectivamente
     Vc = [-3,-2,-1,0,1,2,3];% vector de niveles activos del CHB
@@ -78,10 +78,10 @@ CL = 2200e-6; % capacitancia en [mF]
     
 %% PARAMETROS DE CONTROL %% 
 global  tant ioa iob ioc vca_ref vcb_ref vcc_ref
-global Tmpi kp ki tantpi  err_antpi resp_ant
+global Tmpi Kp Ki tantpi  err_antpi resp_ant
 
-kp = 0.06;
-ki = 0.07;
+Kp = 0.006;
+Ki = 0.007;
 Tmpi = 1/5000;
 tantpi = 0;
 resp_ant = 0;

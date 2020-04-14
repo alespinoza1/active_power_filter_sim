@@ -1,8 +1,7 @@
 % /************************************************************************
 %  File name   :	MBPC.m
-%  Originator  : 	L. Comparatore
-%  Modified by :    A. Espinoza
-%  Description : 	Implementa el MBPC clasico
+%  Originator  : 	 A. Espinoza
+%  Description : 	Implementa el MBPC en DQ
 % -------------------------------------------------------------------------
 % =======================================================================*/
 function [res] = MBPC( x )
@@ -35,7 +34,6 @@ global fo fn Theta v_q_km1 ylfkm1 B0 B1
 
 global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro digital
         num den xkm1q xkm2q ykm1q ykm2q... %numerador y denominador del filtro digital 
-        xkm10 xkm20 ykm10 ykm20
 %% PARAMETROS DEL PID CONTROL %%    
 global Tmpi kp ki tantpi  err_antpi resp_ant    
         
@@ -65,8 +63,10 @@ if tact-tant >= Tm
     
     %%%%%%%%% PLL %%%%%%%%%%%
     %SE CONVIERTEN AL PLANO DQ
-    Vd = sqrt(2/3)*(cos(Theta)*vas_med + cos(Theta-2*pi/3)*vbs_med + cos(Theta+2*pi/3)*vcs_med);
-    Vq = sqrt(2/3)*(-sin(Theta)*vas_med - sin(Theta-2*pi/3)*vbs_med - sin(Theta+2*pi/3)*vcs_med);
+    [Vdq] = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),- sin(Theta-2*pi/3),- sin(Theta+2*pi/3)]*[vas_med;vbs_med;vcs_med];
+    
+    Vd = Vdq(1);
+    Vq = Vdq(2);
     v_q_k = Vq;
     
     %PID del PLL
@@ -84,17 +84,14 @@ if tact-tant >= Tm
    
     %%%%%%%%% GENERADOR DE REFERENCIA/S %%%%%%%%%
     %SE CONVIERTEN AL PLANO DQ
-    Id = sqrt(2/3)*(cos(Theta)*ial_med + cos(Theta-2*pi/3)*ibl_med + cos(Theta+2*pi/3)*icl_med);
-    Iq = sqrt(2/3)*(-sin(Theta)*ial_med - sin(Theta-2*pi/3)*ibl_med - sin(Theta+2*pi/3)*icl_med);
-    I0 = sqrt(1/3)*(ial_med + ibl_med + icl_med);
-
+    Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),-sin(Theta-2*pi/3),-sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med]
+    
     %SE FILTRA LA POTENCIA ACTVIA Y COMPENSA LA CARGA DEL CAPACITOR:
     %Instante actual
     tact_fd = tact;
     %señal a filtrar
-    xkd =  Id;
-    xkq =  Iq;
-    xk0 = I0;
+    xkd =  Idq0(1);
+    xkq =  Idq0(2);
     if (tact_fd-tant_fd) >= Tm_fd
         ykd = ( num(1)*xkd + num(2)*xkm1d + num(3)*xkm2d - den(2)*ykm1d - den(3)*ykm2d )/den(1);
         tant_fd = tact_fd;
@@ -108,17 +105,9 @@ if tact-tant >= Tm
         xkm1q = xkq;
         ykm2q = ykm1q;
         ykm1q = ykq;
-        
-        yk0 = ( num(1)*xk0 + num(2)*xkm10 + num(3)*xkm20 - den(2)*ykm10 - den(3)*ykm20 )/den(1);
-        xkm2q = xkm10;
-        xkm1q = xk0;
-        ykm2q = ykm10;
-        ykm1q = yk0;
-        
     else
         ykd = ykm1d;
         ykq = ykm1q;
-        yk0 = ykm10;
     end
     
     tact_pi = tact;
@@ -136,14 +125,16 @@ if tact-tant >= Tm
     end
     
     %SE ESTABLECEN LAS POTENCIAS QUE DEBE INYECTAR EL APF
-    Idc = Id - ykd - pid;
-    Iqc = Iq-ykq;
-    I0c = I0-yk0;
+    Idc = Idq0(1)-ykd-pid;
+    Iqc = Idq0(2)-ykq;
+    I0c = Idq0(3);
   
     %SE CONVIERTEN LAS CORRIENTES DE REFERENCIA DEL APF DQ A SU EQUI EN ABC
-    ica_ref=  sqrt(2/3)*(sin(Theta)*Idc + cos(Theta)*Iqc + 1*I0c );
-    icb_ref=  sqrt(2/3)*(sin(Theta-2*pi/3)*Idc + cos(Theta-2*pi/3)*Iqc +1*I0c);
-    icc_ref=  sqrt(2/3)*(sin(Theta+2*pi/3)*Idc + cos(Theta+2*pi/3)*Iqc +1*I0c);
+    Ic_ref = sqrt(2/3)*[cos(Theta),-sin(Theta),sqrt(1/2);cos(Theta-2*pi/3),-sin(Theta-2*pi/3),sqrt(1/2);cos(Theta+2*pi/3),-sin(Theta+2*pi/3),sqrt(1/2)]*[Idc;Iqc;I0c];
+    ica_ref= Ic_ref(1); 
+    icb_ref= Ic_ref(2); 
+    icc_ref= Ic_ref(3); 
+    
     %% %%%%%%% FIN GENERADOR DE REFERENCIA/S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     %% valores iniciales óptimos
@@ -201,6 +192,3 @@ else
     res=[vca_ref, vcb_ref, vcc_ref,ica_ref,icb_ref,icc_ref];
 
 end
-
-
-

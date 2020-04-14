@@ -16,8 +16,8 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 
 %% parámetros de simulación %%
 global Tm fm Ts Tsim APFon fc 
-fm = 20000; %Frecuencia de muestreo [Hz]
-fc = 20000; % frecuencia de la portadora
+fm = 19250; %Frecuencia de muestreo [Hz]
+fc = 19250; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 1; %Tiempo total de simulacion [s]
 Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
@@ -30,8 +30,8 @@ Vs= 120*sqrt(2);%Tension de la red [V]
 fe = 50; %Frecuencia de la red [Hz]
 we= 2*pi*fe; %Frecuencia de la red [rad/s]
 teta_a= 0; %Angulo de fase a [deg]
-teta_b= 120; %Angulo de fase b [deg]
-teta_c= -120; %Angulo de fase c [deg]
+teta_b= -120; %Angulo de fase b [deg]
+teta_c= 120; %Angulo de fase c [deg]
 
 %% parámetros del filtro de salida %%
 global Rf Lf
@@ -47,13 +47,14 @@ CL = 2200e-6; % capacitancia en [mF]
 %% parámetros del convertidor multinivel %%
     %%parametros DC-LINK%%
     global Vdc Cdc Vodc Ideal vcrls
-    Vdc = 62; %Tension ideal del DC-Link [V]
+    Vdc = 58; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
     
     %% parámetros de los semiconductores SiC-Mosfet
     global Ron Rs Cs XI c Vc nc
+    nc = 3; %Nº de celdas por fase
     Ron= 1e-3; %Internal resistance [Ohms]
     Rs= 1e5; %Snubber resistance [Ohms]
     Cs= 0.5; %Snubber capacitance [F]
@@ -69,44 +70,24 @@ CL = 2200e-6; % capacitancia en [mF]
         0 0 0 0 0 0;
         0 0 0 0 1 0;
         0 0 1 0 1 0;
-        1 0 1 0 1 0; ];
+        1 0 1 0 1 0];
     [c,n] = size(XI); %Cantidad de filas y columnas de la matriz de estados de conmutacion
     %funciones de conmutacion correspondientes a los estados de conmutacion respectivamente
     Vc = [-3,-2,-1,0,1,2,3];% vector de niveles activos del CHB
     
-%% PARAMETROS DEL PLL DIGITAL %%
-global fo Theta v_q_km1 ylfkm1 fn B0 B1
-fo = 0;
-fn = fe;
-Theta = 0;
-v_q_km1 = 0;
-ylfkm1 = 0;
-tset = 30e-3; %30ms tiempo de establecimiento
-zeta = 0.7; %factor de amortiguamiento
-delta = 0.05;% banda error 5%
-wn = -(1/(tset*zeta))*log(delta/(1/sqrt(1-zeta^2)));
-kipll = wn^2/Vs;
-kppll = 2*zeta*wn/Vs;
-B0 = (2*kppll+kipll*Tm)/2
-B1 = -(2*kppll-kipll*Tm)/2
-
-
     
 %% PARAMETROS DE CONTROL %% 
-global  tant tantg ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
+global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
 global Tmpi kp ki tantpi  err_antpi resp_ant
-
-ki = 0.065;
-kp = 0.07;
-Tmpi = 1/5000;
+ki = 0.0009;
+kp = 0.0055;
+Tmpi = 1/1000;
 tantpi = 0;
 resp_ant = 0;
 err_antpi = 0;
 
-global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro digital
-        num den xkm1q xkm2q ykm1q ykm2q... %numerador y denominador del filtro digital
-        xkm10 xkm20 ykm10 ykm20
-    
+global  Tm_fd fm_fd tant_fd xkm1 xkm2 ykm1 ykm2... %Parametros de filtro digital
+        num den %numerador y denominador del filtro digital 
     
     fm_fd = 1000;
     fn = fm_fd/2;
@@ -115,26 +96,14 @@ global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro dig
     [num den] = butter(N,Wc);
     %fvtool(num,den)
     tant_fd = 0; %Instante de la muestra anterior filtro digital
-    xkm1d = 0;
-    xkm2d = 0;
-    ykm1d = 0;
-    ykm2d = 0;
-    xkm1q = 0;
-    xkm2q = 0;
-    ykm1q = 0;
-    ykm2q = 0;
-    xkm10 = 0;
-    xkm20 = 0;
-    ykm10 = 0;
-    ykm20 = 0;
-    ica_ref = 0;
-    icb_ref = 0;
-    icc_ref = 0;
+    xkm1 = 0;
+    xkm2 = 0;
+    ykm1 = 0;
+    ykm2 = 0;
 
 
 
 tant = 0; %Instante de la muestra anterior MBPC clasico
-tantg = 0;
 
 %Valores iniciales optimos
 ioa = 1;

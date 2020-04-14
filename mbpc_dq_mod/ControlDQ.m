@@ -111,7 +111,7 @@ if tact-tant >= Tm
     end
     
     tact_pi = tact;
-    referencia = Vdc*3;
+    referencia = Vdc;
     salida_med = vcca;
 
     if (tact_pi - tantpi) >= Tmpi
@@ -125,7 +125,7 @@ if tact-tant >= Tm
     end
     
     %SE ESTABLECEN LAS POTENCIAS QUE DEBE INYECTAR EL APF
-    Idc = Idq0(1) -ykd -pid;
+    Idc = Idq0(1)-ykd-pid;
     Iqc = Idq0(2)-ykq;
     I0c = Idq0(3);
   

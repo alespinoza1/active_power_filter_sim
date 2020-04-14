@@ -54,6 +54,7 @@ CL = 2200e-6; % capacitancia en [mF]
     
     %% parámetros de los semiconductores SiC-Mosfet
     global Ron Rs Cs XI c Vc nc
+    nc = 3; %Nº de celdas por fase
     Ron= 1e-3; %Internal resistance [Ohms]
     Rs= 1e5; %Snubber resistance [Ohms]
     Cs= 0.5; %Snubber capacitance [F]
@@ -78,8 +79,8 @@ CL = 2200e-6; % capacitancia en [mF]
 %% PARAMETROS DE CONTROL %% 
 global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref
 global Tmpi kp ki tantpi  err_antpi resp_ant
-ki = 0.065;
-kp = 0.07;
+ki = 0.0009;
+kp = 0.0055;
 Tmpi = 1/5000;
 tantpi = 0;
 resp_ant = 0;

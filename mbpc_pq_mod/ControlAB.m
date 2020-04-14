@@ -28,7 +28,7 @@ global Ron Rs Cs XI c nc Vc
 global  tant ...
         ioa iob ioc ... 
         vca_ref vcb_ref vcc_ref ...
-        ica_ref icb_ref icc_ref
+        ica_ref icb_ref icc_ref ...
     
 %% PARAMETROS DEL FILTRO DIGITAL %%
 global  Tm_fd fm_fd tant_fd xkm1 xkm2 ykm1 ykm2... %Parametros de simulacion
@@ -53,7 +53,7 @@ iac_med = x(8);
 ibc_med = x(9);
 icc_med = x(10);
 % tension medida en el capacitor de la celda puente H
-vcca = x(11)
+vccaps = x(11:19);
 
 
 %% %%%%%%% RUTINA DE CONTROL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +92,7 @@ if tact-tant >= Tm
     
     tact_pi = tact;
     referencia = Vdc*3;
-    salida_med = vcca;
+    salida_med = vccaps(1);
 
     if (tact_pi - tantpi) >= Tmpi
         err_act = referencia - salida_med;
@@ -130,18 +130,31 @@ if tact-tant >= Tm
         %tension de salida del CHB para el estado "ind"
         vc_ref =Vc(1,ind)*Vdc;
         
+        Vf_a = [XI(ind,1)-XI(ind,2)]*vccaps(1) + [XI(ind,3)-XI(ind,4)]*vccaps(2) + [XI(ind,5)-XI(ind,6)]*vccaps(3);
+        Vf_b = [XI(ind,1)-XI(ind,2)]*vccaps(4) + [XI(ind,3)-XI(ind,4)]*vccaps(5) + [XI(ind,5)-XI(ind,6)]*vccaps(6);
+        Vf_c = [XI(ind,1)-XI(ind,2)]*vccaps(7) + [XI(ind,3)-XI(ind,4)]*vccaps(8) + [XI(ind,5)-XI(ind,6)]*vccaps(9);
+       
+        %tensiones predichas en los caps
+        vcaps_a_km1 = [vccaps(1)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(2)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(3)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
+        vcaps_b_km1 = [vccaps(4)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(5)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(6)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
+        vcaps_c_km1 = [vccaps(7)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(8)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(9)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
+        
         %corrientes predichas a la salida de cada  fase del apf 
-        ica_km1=(1-Tm*Rf/Lf)*iac_med + Tm/Lf*(vc_ref-vas_med);
-        icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(vc_ref-vbs_med);
-        icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(vc_ref-vcs_med);
+        ica_km1=(1-Tm*Rf/Lf)*iac_med + Tm/Lf*(Vf_a-vas_med);
+        icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(Vf_b-vbs_med);
+        icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(Vf_c-vcs_med);
         
         dif_a = (ica_ref - ica_km1);
 		dif_b = (icb_ref - icb_km1);
         dif_c = (icc_ref - icc_km1);
-		
-        fc_Ja = dif_a*dif_a;
-        fc_Jb = dif_b*dif_b; 
-        fc_Jc = dif_c*dif_c;
+        
+        dif_vcap_a = (Vdc-vcaps_a_km1(1))*(Vdc-vcaps_a_km1(1)) + (Vdc-vcaps_a_km1(2)*(Vdc-vcaps_a_km1(2))) + (Vdc-vcaps_a_km1(3))*(Vdc-vcaps_a_km1(3));
+        dif_vcap_b = (Vdc-vcaps_b_km1(1))*(Vdc-vcaps_b_km1(1)) + (Vdc-vcaps_b_km1(2)*(Vdc-vcaps_b_km1(2))) + (Vdc-vcaps_b_km1(3))*(Vdc-vcaps_b_km1(3));
+		dif_vcap_c = (Vdc-vcaps_c_km1(1))*(Vdc-vcaps_c_km1(1)) + (Vdc-vcaps_c_km1(2)*(Vdc-vcaps_c_km1(2))) + (Vdc-vcaps_c_km1(3))*(Vdc-vcaps_c_km1(3));
+        
+        fc_Ja = dif_a*dif_a + 0.1*dif_vcap_a;
+        fc_Jb = dif_b*dif_b + 0.1*dif_vcap_b; 
+        fc_Jc = dif_c*dif_c + 0.1*dif_vcap_c;
         
         if fc_Ja < fc_Joa
             fc_Joa = fc_Ja;
@@ -159,17 +172,15 @@ if tact-tant >= Tm
         end
         
         %referencias de tension
-        vca_ref =Vc(1,ioa)*Vdc;
-        vcb_ref =Vc(1,iob)*Vdc;
-        vcc_ref =Vc(1,ioc)*Vdc;
+        vca_ref = [XI(ioa,1)-XI(ioa,2)]*vccaps(1) + [XI(ioa,3)-XI(ioa,4)]*vccaps(2) + [XI(ioa,5)-XI(ioa,6)]*vccaps(3);
+        vcb_ref = [XI(iob,1)-XI(iob,2)]*vccaps(4) + [XI(iob,3)-XI(iob,4)]*vccaps(5) + [XI(iob,5)-XI(iob,6)]*vccaps(6);
+        vcc_ref = [XI(ioc,1)-XI(ioc,2)]*vccaps(7) + [XI(ioc,3)-XI(ioc,4)]*vccaps(8) + [XI(ioc,5)-XI(ioc,6)]*vccaps(9);
   
     end
-
-    %actualizacion de estados anteriores
+    
     tant = tact;
     res=[vca_ref, vcb_ref, vcc_ref,ica_ref,icb_ref,icc_ref];
-
-   
+    
 else
 
     res=[vca_ref, vcb_ref, vcc_ref,ica_ref,icb_ref,icc_ref];
