@@ -15,13 +15,15 @@ set(0,'DefaultTextInterpreter', 'none')% para borrar el interprete LATEX en caso
 %%%%%%%%%% DEFINICION DE VARIABLES GLOBALES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% parámetros de simulación %%
-global Tm fm Ts Tsim APFon fc 
-fm = 20000; %Frecuencia de muestreo [Hz]
-fc = 15000; % frecuencia de la portadora
+global Tm fm Ts Tsim APFon fc RLon NLLon
+fm = 18000; %Frecuencia de muestreo [Hz]
+fc = 18000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 1; %Tiempo total de simulacion [s]
-Ts= 10e-6; %Tiempo de integracion para la simulacion [s]
-APFon = 0.010;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
+APFon = 0.040;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+RLon = 0.00;%Tiempo de interconexion de la carga RL con el sistema Carga-Red electrica [s]
+NLLon = 0.2
 
 
 %% parámetros de la red eléctrica %%
@@ -47,7 +49,7 @@ CL = 2200e-6; % capacitancia en [mF]
 %% parámetros del convertidor multinivel %%
     %%parametros DC-LINK%%
     global Vdc Cdc Vodc Ideal vcrls
-    Vdc = 65; %Tension ideal del DC-Link [V]
+    Vdc = 62; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
@@ -95,8 +97,8 @@ B1 = -(2*kppll-kipll*Tm)/2
 %% PARAMETROS DE CONTROL %% 
 global  tant ioa iob ioc vca_ref vcb_ref vcc_ref  ica_ref icb_ref icc_ref 
 global Tmpi kp ki tantpi  err_antpi resp_ant
-ki = 0.0009;%0.0009;
-kp = 0.0055;%0.0055;
+ki = 0.006;%0.0009;
+kp = 0.007;%0.0055;
 Tmpi = 1/1000;
 tantpi = 0;
 resp_ant = 0;

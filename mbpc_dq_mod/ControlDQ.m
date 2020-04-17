@@ -32,8 +32,8 @@ global  tant ...
 %% PARAMETROS DEL PLL DIGITAL %%
 global fo fn Theta v_q_km1 ylfkm1 B0 B1
 
-global  Tm_fd fm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro digital
-        num den xkm1q xkm2q ykm1q ykm2q... %numerador y denominador del filtro digital 
+global  Tm_fd tant_fd xkm1d xkm2d ykm1d ykm2d... %Parametros de filtro digital
+        num den ... %numerador y denominador del filtro digital 
 %% PARAMETROS DEL PID CONTROL %%    
 global Tmpi kp ki tantpi  err_antpi resp_ant    
         
@@ -41,26 +41,26 @@ global Tmpi kp ki tantpi  err_antpi resp_ant
 
 %Instante actual
 tact = x(1);
-%Tensiones medidas en la red electrica
-vas_med = x(2);
-vbs_med = x(3);
-vcs_med = x(4);
-%Corrientes medidas en la carga
-ial_med = x(5);
-ibl_med = x(6);
-icl_med = x(7);
-%Corrientes medidas a la salida del APF
-iac_med = x(8);
-ibc_med = x(9);
-icc_med = x(10);
-% tension medida en el capacitor de la celda puente H
-vcca = x(11)
-
 
 %%%%%%%%% RUTINA DE CONTROL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Se espera el tiempo de muestreo
 if tact-tant >= Tm
-    
+
+    %Tensiones medidas en la red electrica
+    vas_med = x(2);
+    vbs_med = x(3);
+    vcs_med = x(4);
+    %Corrientes medidas en la carga
+    ial_med = x(5);
+    ibl_med = x(6);
+    icl_med = x(7);
+    %Corrientes medidas a la salida del APF
+    iac_med = x(8);
+    ibc_med = x(9);
+    icc_med = x(10);
+    %Voltaje medidos en los capacitores de la celdas puente H
+    vccaps = x(11:19);
+ 
     %%%%%%%%% PLL %%%%%%%%%%%
     %SE CONVIERTEN AL PLANO DQ
     [Vdq] = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),- sin(Theta-2*pi/3),- sin(Theta+2*pi/3)]*[vas_med;vbs_med;vcs_med];
@@ -71,10 +71,9 @@ if tact-tant >= Tm
     
     %PID del PLL
     ylf_k = ylfkm1+ B0*v_q_k + B1*v_q_km1;
-    
-    %update output frequency
-    fo=fn+ylf_k;
-    Theta = Theta + 2*pi*(fo*Tm);
+   
+    fo=fn+ylf_k; %actualización de la frecuencia
+    Theta = Theta + 2*pi*(fo*Tm); %actualización de la fase de la red eléctrica.
     if( Theta >= (2*pi - 2*pi*(fo*Tm)) )
         Theta=0;
     end
@@ -86,12 +85,11 @@ if tact-tant >= Tm
     %SE CONVIERTEN AL PLANO DQ
     Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),-sin(Theta-2*pi/3),-sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med]
     
-    %SE FILTRA LA POTENCIA ACTVIA Y COMPENSA LA CARGA DEL CAPACITOR:
+    %SE FILTRA LA POTENCIA ACTVIA, REACTIVA Y COMPENSA LA CARGA DEL CAPACITOR:
     %Instante actual
     tact_fd = tact;
     %señal a filtrar
     xkd =  Idq0(1);
-    xkq =  Idq0(2);
     if (tact_fd-tant_fd) >= Tm_fd
         ykd = ( num(1)*xkd + num(2)*xkm1d + num(3)*xkm2d - den(2)*ykm1d - den(3)*ykm2d )/den(1);
         tant_fd = tact_fd;
@@ -99,20 +97,14 @@ if tact-tant >= Tm
         xkm1d = xkd;
         ykm2d = ykm1d;
         ykm1d = ykd;
-        
-        ykq = ( num(1)*xkq + num(2)*xkm1q + num(3)*xkm2q - den(2)*ykm1q - den(3)*ykm2q )/den(1);
-        xkm2q = xkm1q;
-        xkm1q = xkq;
-        ykm2q = ykm1q;
-        ykm1q = ykq;
+       
     else
         ykd = ykm1d;
-        ykq = ykm1q;
     end
     
     tact_pi = tact;
     referencia = Vdc;
-    salida_med = vcca;
+    salida_med = (vccaps(1)+vccaps(2)+vccaps(3)+vccaps(4)+vccaps(5)+vccaps(6)+vccaps(7)+vccaps(8)+vccaps(9))/9;
 
     if (tact_pi - tantpi) >= Tmpi
         err_act = referencia - salida_med;
@@ -126,7 +118,7 @@ if tact-tant >= Tm
     
     %SE ESTABLECEN LAS POTENCIAS QUE DEBE INYECTAR EL APF
     Idc = Idq0(1)-ykd-pid;
-    Iqc = Idq0(2)-ykq;
+    Iqc = Idq0(2);
     I0c = Idq0(3);
   
     %SE CONVIERTEN LAS CORRIENTES DE REFERENCIA DEL APF DQ A SU EQUI EN ABC
@@ -144,21 +136,33 @@ if tact-tant >= Tm
     for ind=1:c
         
         %tension de salida del CHB para el estado "ind"
-        vc_ref =Vc(1,ind)*Vdc;
+        Vf_a = [XI(ind,1)-XI(ind,2)]*vccaps(1) + [XI(ind,3)-XI(ind,4)]*vccaps(2) + [XI(ind,5)-XI(ind,6)]*vccaps(3);
+        Vf_b = [XI(ind,1)-XI(ind,2)]*vccaps(4) + [XI(ind,3)-XI(ind,4)]*vccaps(5) + [XI(ind,5)-XI(ind,6)]*vccaps(6);
+        Vf_c = [XI(ind,1)-XI(ind,2)]*vccaps(7) + [XI(ind,3)-XI(ind,4)]*vccaps(8) + [XI(ind,5)-XI(ind,6)]*vccaps(9);
+        
+        %tensiones predichas en los caps
+        vcaps_a_km1 = [vccaps(1)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(2)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(3)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
+        vcaps_b_km1 = [vccaps(4)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(5)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(6)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
+        vcaps_c_km1 = [vccaps(7)+(Ts/Cdc)*iac_med*[XI(ind,1)-XI(ind,2)],vccaps(8)+(Ts/Cdc)*iac_med*[XI(ind,3)-XI(ind,4)],vccaps(9)+(Ts/Cdc)*iac_med*[XI(ind,5)-XI(ind,6)]];
         
         %corrientes predichas a la salida de cada  fase del apf 
-        ica_km1=(1-Tm*Rf/Lf)*iac_med + Tm/Lf*(vc_ref-vas_med);
-        icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(vc_ref-vbs_med);
-        icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(vc_ref-vcs_med);
+        ica_km1=(1-Tm*Rf/Lf)*iac_med + Tm/Lf*(Vf_a-vas_med);
+        icb_km1=(1-Tm*Rf/Lf)*ibc_med + Tm/Lf*(Vf_b-vbs_med);
+        icc_km1=(1-Tm*Rf/Lf)*icc_med + Tm/Lf*(Vf_c-vcs_med);
         
         %Se calcula el error de seguimiento de corriente
         dif_a = (ica_ref - ica_km1);
 		dif_b = (icb_ref - icb_km1);
         dif_c = (icc_ref - icc_km1);
+        
+        %se calcula el error de seguimiento de tensión en los caps
+        dif_vcap_a = (Vdc-vcaps_a_km1(1))*(Vdc-vcaps_a_km1(1)) + (Vdc-vcaps_a_km1(2)*(Vdc-vcaps_a_km1(2))) + (Vdc-vcaps_a_km1(3))*(Vdc-vcaps_a_km1(3));
+        dif_vcap_b = (Vdc-vcaps_b_km1(1))*(Vdc-vcaps_b_km1(1)) + (Vdc-vcaps_b_km1(2)*(Vdc-vcaps_b_km1(2))) + (Vdc-vcaps_b_km1(3))*(Vdc-vcaps_b_km1(3));
+		dif_vcap_c = (Vdc-vcaps_c_km1(1))*(Vdc-vcaps_c_km1(1)) + (Vdc-vcaps_c_km1(2)*(Vdc-vcaps_c_km1(2))) + (Vdc-vcaps_c_km1(3))*(Vdc-vcaps_c_km1(3));
 		
-        fc_Ja = dif_a*dif_a;
-        fc_Jb = dif_b*dif_b; 
-        fc_Jc = dif_c*dif_c;
+        fc_Ja = dif_a*dif_a + 0.02*dif_vcap_a;
+        fc_Jb = dif_b*dif_b + 0.02*dif_vcap_b; 
+        fc_Jc = dif_c*dif_c + 0.02*dif_vcap_c;
         
         if fc_Ja < fc_Joa
             fc_Joa = fc_Ja;
@@ -174,13 +178,14 @@ if tact-tant >= Tm
             fc_Joc = fc_Jc;
             ioc = ind;                    
         end
-        
-        %referencias de tension
-        vca_ref =Vc(1,ioa)*Vdc;
-        vcb_ref =Vc(1,iob)*Vdc;
-        vcc_ref =Vc(1,ioc)*Vdc;
   
     end
+    
+    %referencias de tension
+    
+    vca_ref = [XI(ioa,1)-XI(ioa,2)]*vccaps(1) + [XI(ioa,3)-XI(ioa,4)]*vccaps(2) + [XI(ioa,5)-XI(ioa,6)]*vccaps(3);
+    vcb_ref = [XI(iob,1)-XI(iob,2)]*vccaps(4) + [XI(iob,3)-XI(iob,4)]*vccaps(5) + [XI(iob,5)-XI(iob,6)]*vccaps(6);
+    vcc_ref = [XI(ioc,1)-XI(ioc,2)]*vccaps(7) + [XI(ioc,3)-XI(ioc,4)]*vccaps(8) + [XI(ioc,5)-XI(ioc,6)]*vccaps(9);
 
     %actualizacion de estados anteriores
     tant = tact;

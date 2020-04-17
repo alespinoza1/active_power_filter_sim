@@ -91,8 +91,8 @@ if tact-tant >= Tm
     end
     
     tact_pi = tact;
-    referencia = Vdc*3;
-    salida_med = vccaps(1);
+    referencia = Vdc;
+    salida_med = (vccaps(1)+vccaps(2)+vccaps(3)+vccaps(4)+vccaps(5)+vccaps(6)+vccaps(7)+vccaps(8)+vccaps(9))/9;
 
     if (tact_pi - tantpi) >= Tmpi
         err_act = referencia - salida_med;
@@ -152,9 +152,9 @@ if tact-tant >= Tm
         dif_vcap_b = (Vdc-vcaps_b_km1(1))*(Vdc-vcaps_b_km1(1)) + (Vdc-vcaps_b_km1(2)*(Vdc-vcaps_b_km1(2))) + (Vdc-vcaps_b_km1(3))*(Vdc-vcaps_b_km1(3));
 		dif_vcap_c = (Vdc-vcaps_c_km1(1))*(Vdc-vcaps_c_km1(1)) + (Vdc-vcaps_c_km1(2)*(Vdc-vcaps_c_km1(2))) + (Vdc-vcaps_c_km1(3))*(Vdc-vcaps_c_km1(3));
         
-        fc_Ja = dif_a*dif_a + 0.1*dif_vcap_a;
-        fc_Jb = dif_b*dif_b + 0.1*dif_vcap_b; 
-        fc_Jc = dif_c*dif_c + 0.1*dif_vcap_c;
+        fc_Ja = dif_a*dif_a + 0.02*dif_vcap_a;
+        fc_Jb = dif_b*dif_b + 0.02*dif_vcap_b; 
+        fc_Jc = dif_c*dif_c + 0.02*dif_vcap_c;
         
         if fc_Ja < fc_Joa
             fc_Joa = fc_Ja;

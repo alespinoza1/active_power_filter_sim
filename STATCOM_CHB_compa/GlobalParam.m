@@ -72,12 +72,12 @@ global  tona0 tonb0 tonc0 tona1 tonb1 tonc1 tona2 tonb2 tonc2...
 
 
 %% %%%%%%% PARAMETROS DE SIMULACION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-fm = 10000; %Frecuencia de muestreo [Hz]
+fm = 18000; %Frecuencia de muestreo [Hz]
 %fm = fm/2; %Frecuencia de muestreo [Hz] %para el M2PC
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 0.1; %Tiempo total de simulacion [s]
 %Ts= Tm/10; %Tiempo de integracion para la simulacion [s]
-Ts= 1e-6;
+Ts= 5e-6;
 APFon = 0.02;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
 
 %% %%%%%%% PARAMETROS DE LA RED ELECTRICA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
