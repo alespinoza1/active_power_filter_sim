@@ -1,0 +1,410 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Integrator 1" -- block-group
+	{
+	 block: "Integrator"
+	}
+		p_0_smd_1202_sl_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_smd_1202_sl_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "InitialCondition"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Integrator 1"
+
+	group "Integrator 2" -- block-group
+	{
+	 block: "Integrator"
+	}
+		p_0_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_smd_1202_sl_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "InitialCondition"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Integrator 2"
+
+	group "x disp" -- block-group
+	{
+	 block: "SignalGenerator"
+	}
+		p_0_smd_1202_sl_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+		p_1_smd_1202_sl_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Amplitude"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Frequency"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "x disp"
+
+	group "Sum" -- block-group
+	{
+	 block: "Sum"
+	}
+		p_0_smd_1202_sl_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum"
+
+	group "x" -- block-group
+	{
+	 block: "Scope"
+	}
+		p_0_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "x"
+
+  
+  
+	group "Equation Block" -- subsystem-group
+
+		p_0_smd_1202_sl_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "a"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "v" -- block-group
+		{
+		 block: "Inport"
+		}
+			p_0_smd_1202_sl_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "v"
+
+		group "x - x disp" -- block-group
+		{
+		 block: "Inport"
+		}
+			p_0_smd_1202_sl_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "x - x disp"
+
+		group "DampCoeff d" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "DampCoeff d"
+
+		group "Mass m" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Mass m"
+
+		group "SpringConst C" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "SpringConst C"
+
+		group "Product" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product"
+
+		group "Product1" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product1"
+
+		group "Product2" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product2"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			p_0_smd_1202_sl_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum"
+
+
+
+	endgroup -- subsystem-group "Equation Block"
+  
+  
+	group "Logo" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "Logo"
+  
+  
+	group "Model Parameters" -- subsystem-group
+
+
+		p_1_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "C"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "d"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "m"
+		 flags:   PARAM
+		}
+
+		group "C" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_C
+			{
+			 refgroup: ".."
+			 refvar:   "C"
+			 alias:    "C"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "C"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "C"
+
+		group "d" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_d
+			{
+			 refgroup: ".."
+			 refvar:   "d"
+			 alias:    "d"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "d"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "d"
+
+		group "m" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_m
+			{
+			 refgroup: ".."
+			 refvar:   "m"
+			 alias:    "m"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "m"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "m"
+
+		group "DampCoeff d" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "DampCoeff d"
+
+		group "Mass m" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "Mass m"
+
+		group "SpringConst C" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "SpringConst C"
+
+
+
+	endgroup -- subsystem-group "Model Parameters"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "info" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "info"
+
+	p_0_smd_1202_sl_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "a"
+	 origin:  "smd_1202_sl/Equation Block/a"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "v"
+	 origin:  "smd_1202_sl/Integrator 1/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 origin:  "smd_1202_sl/Integrator 2/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x disp"
+	 origin:  "smd_1202_sl/x disp/Out1"
+	 flags:   READONLY
+	}
+
+
+endgroup -- "Model Root"

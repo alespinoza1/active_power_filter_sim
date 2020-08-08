@@ -1,0 +1,32 @@
+%implements s0_b0_z3hpf_TLCInterface "C"
+
+%function getInputAddr_0_1_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_0_1_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_0_1_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&prueba01_P.Constant_Value"
+%endfunction
+
+%function getInput_0_1_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "prueba01_P.Constant_Value"
+%endfunction
+
+%function getInputAddr_0_1_0_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_0_1_0_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+

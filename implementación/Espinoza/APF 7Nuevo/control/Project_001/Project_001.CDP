@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+	<creator type="key">ControlDesk 6.3</creator>
+	<project>
+		<Creator type="key">ControlDesk</Creator>
+		<Name type="key">Project_001.CDP</Name>
+		<DisplayName type="key">Project_001</DisplayName>
+		<Flags type="key">4096</Flags>
+		<Type type="key">1</Type>
+		<UniqueID type="key">728279607</UniqueID>
+		<EntityID type="key">{5F2B9A67-ADCD-4F8E-BBFA-3195EC94A7CC}</EntityID>
+		<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+		<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+		<ItemInfoDescr type="key"/>
+		<ItemInfoAddInfoDb type="key"/>
+		<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		<item>
+			<Targets type="key">project</Targets>
+			<Name type="key">Project_001</Name>
+			<DisplayName type="key">Project_001</DisplayName>
+			<Path type="key">..</Path>
+			<Flags type="key">4100</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">543654569</UniqueID>
+			<EntityID type="key">{73B9A2AD-80AA-4A41-B597-27C494FDC2B7}</EntityID>
+			<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Docs type="key">.doc,.docx,.pdf</Docs>
+				<Name type="key">Specifications</Name>
+				<DisplayName type="key">Specifications</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">722464475</UniqueID>
+				<EntityID type="key">{0CE882FA-0681-47B5-9533-5999C876EC96}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.doc,.docx,.pdf</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Docs type="key">.mpp</Docs>
+				<Name type="key">Project Plans</Name>
+				<DisplayName type="key">Project Plans</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">735794373</UniqueID>
+				<EntityID type="key">{2B9260A6-AB80-4256-BD49-9540C21D0CCE}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.mpp</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager_global</Targets>
+				<Name type="key">Global Data Sets</Name>
+				<DisplayName type="key">Global Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">713928239</UniqueID>
+				<EntityID type="key">{EE8E4F01-F1CD-4224-9149-BBF142F1DC7A}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">variablesmanagement</Targets>
+				<Name type="key">Variable Descriptions</Name>
+				<DisplayName type="key">Variable Descriptions</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">195912170</UniqueID>
+				<EntityID type="key">{89A023EC-648D-4A16-BFC3-E209EAED0D2F}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">Project_001.vdb</Name>
+					<DisplayName type="key">C:\Users\DELL\Documents\Julio Pacher\APF Mono\control\Project_001\Variable Descriptions\Project_001.vdb</DisplayName>
+					<Path type="key">.\Variable Descriptions</Path>
+					<Flags type="key">276</Flags>
+					<Type type="key">18</Type>
+					<UniqueID type="key">336421186</UniqueID>
+					<EntityID type="key">{AADE5647-34D0-4C49-BDFB-29B115C300EB}</EntityID>
+					<ItemInfoDate type="key">23/5/2019 08:50:10</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">control_dmc_microlabbox.sdf</Name>
+					<DisplayName type="key">control_dmc_microlabbox.sdf</DisplayName>
+					<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+					<Flags type="key">18704</Flags>
+					<Type type="key">7</Type>
+					<UniqueID type="key">401996417</UniqueID>
+					<EntityID type="key">{8737EE3E-0545-4703-8D05-26058F932D88}</EntityID>
+					<ItemInfoDate type="key">23/5/2019 08:50:09</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoLog type="key">
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 12:44:58 (UTC)]
+
+Variable description reloaded on 23.05.2019 09:03:50 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 13:02:34 (UTC)]
+
+Variable description reloaded on 23.05.2019 09:06:51 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 13:06:42 (UTC)]
+
+Variable description reloaded on 23.05.2019 09:23:12 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 13:22:53 (UTC)]
+
+Variable description reloaded on 23.05.2019 09:29:42 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 13:29:27 (UTC)]
+
+Variable description reloaded on 23.05.2019 09:38:34 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 13:38:03 (UTC)]
+
+Variable description reloaded on 23.05.2019 10:03:45 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 14:03:30 (UTC)]
+
+Variable description reloaded on 23.05.2019 10:23:01 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 14:22:48 (UTC)]
+
+Variable description reloaded on 23.05.2019 10:46:51 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 14:45:42 (UTC)]
+
+Variable description reloaded on 23.05.2019 10:57:04 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 14:56:55 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:02:34 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:01:58 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:07:23 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:06:43 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:15:45 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:15:37 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:20:29 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:20:18 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:24:08 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:23:59 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:28:43 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:28:34 (UTC)]
+
+Variable description reloaded on 23.05.2019 11:53:27 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-23 15:53:16 (UTC)]
+
+Variable description reloaded on 24.05.2019 15:12:56 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-24 19:12:46 (UTC)]
+
+Variable description reloaded on 24.05.2019 15:32:28 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-24 19:32:15 (UTC)]
+
+Variable description reloaded on 28.05.2019 09:51:15 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 13:51:03 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:03:54 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:03:43 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:09:09 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:08:59 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:18:58 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:18:49 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:27:06 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:25:58 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:29:06 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:28:49 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:32:18 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:32:02 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:34:43 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:34:33 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:37:10 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:36:56 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:41:49 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:40:35 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:43:15 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:43:07 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:45:33 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:44:47 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:48:47 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:48:36 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:57:11 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:56:34 (UTC)]
+
+Variable description reloaded on 28.05.2019 10:59:36 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 14:59:18 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:06:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:06:10 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:09:31 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:08:49 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:11:58 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:11:47 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:13:12 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:13:04 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:16:20 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:16:06 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:19:21 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:19:14 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:20:25 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:20:12 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:21:23 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:21:12 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:22:25 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:22:13 (UTC)]
+
+Variable description reloaded on 28.05.2019 11:28:29 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-28 15:28:18 (UTC)]
+
+Variable description reloaded on 29.05.2019 14:45:55 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 18:43:25 (UTC)]
+
+Variable description reloaded on 29.05.2019 14:47:44 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 18:47:24 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:09:38 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:09:29 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:12:33 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:12:23 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:21:49 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:21:29 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:22:54 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:22:28 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:25:26 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:25:06 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:30:07 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:29:55 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:34:53 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:34:45 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:36:19 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:36:08 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:53:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:52:36 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:55:29 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:55:19 (UTC)]
+
+Variable description reloaded on 29.05.2019 15:58:35 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 19:58:24 (UTC)]
+
+Variable description reloaded on 29.05.2019 16:03:28 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 20:03:20 (UTC)]
+
+Variable description reloaded on 29.05.2019 16:07:36 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 20:07:15 (UTC)]
+
+Variable description reloaded on 29.05.2019 16:09:42 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 20:09:31 (UTC)]
+
+Variable description reloaded on 29.05.2019 16:50:11 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 20:50:02 (UTC)]
+
+Variable description reloaded on 29.05.2019 16:56:20 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-29 20:56:10 (UTC)]
+
+Variable description reloaded on 30.05.2019 12:11:17 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-30 16:10:00 (UTC)]
+
+Variable description reloaded on 30.05.2019 12:11:58 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-30 16:11:44 (UTC)]
+
+Variable description reloaded on 30.05.2019 12:16:02 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-30 16:15:55 (UTC)]
+
+Variable description reloaded on 31.05.2019 12:03:44 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-31 16:03:35 (UTC)]
+
+Variable description reloaded on 31.05.2019 13:30:02 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-31 17:29:54 (UTC)]
+
+Variable description reloaded on 31.05.2019 13:37:07 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-31 17:36:59 (UTC)]
+
+Variable description reloaded on 31.05.2019 13:52:38 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-31 17:52:32 (UTC)]
+
+Variable description reloaded on 31.05.2019 13:54:49 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-05-31 17:53:50 (UTC)]
+
+Variable description reloaded on 03.06.2019 08:24:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-03 12:23:46 (UTC)]
+
+Variable description reloaded on 03.06.2019 08:28:39 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-03 12:27:38 (UTC)]
+
+Variable description reloaded on 03.06.2019 08:29:56 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-03 12:29:46 (UTC)]
+
+Variable description reloaded on 03.06.2019 08:38:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-03 12:38:20 (UTC)]
+
+Variable description reloaded on 03.06.2019 08:50:47 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-03 12:50:31 (UTC)]
+
+Variable description reloaded on 04.06.2019 08:21:36 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-04 12:20:10 (UTC)]
+
+Variable description reloaded on 04.06.2019 10:03:38 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-04 14:03:29 (UTC)]
+
+Variable description reloaded on 05.06.2019 14:09:59 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-05 18:09:36 (UTC)]
+
+Variable description reloaded on 05.06.2019 15:28:27 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-05 19:28:12 (UTC)]
+
+Variable description reloaded on 05.06.2019 15:50:08 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-05 19:49:31 (UTC)]
+
+Variable description reloaded on 05.06.2019 16:44:38 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-05 20:44:24 (UTC)]
+
+Variable description reloaded on 06.06.2019 10:37:23 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 14:37:09 (UTC)]
+
+Variable description reloaded on 06.06.2019 10:47:23 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 14:47:15 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:00:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:00:18 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:03:56 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:03:46 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:06:44 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:06:26 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:09:23 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:09:14 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:13:59 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:13:45 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:16:15 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:16:04 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:23:33 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:22:58 (UTC)]
+
+Variable description reloaded on 06.06.2019 11:25:13 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 15:25:00 (UTC)]
+
+Variable description reloaded on 06.06.2019 12:08:01 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 16:07:45 (UTC)]
+
+Variable description reloaded on 06.06.2019 12:16:30 (C:\Users\DELL\Documents\Julio Pacher\APF Mono\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf [2019-06-06 16:16:22 (UTC)]
+</ItemInfoLog>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.trc</Name>
+						<DisplayName type="key">control_dmc_microlabbox.trc</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">328665573</UniqueID>
+						<EntityID type="key">{FA51C0B8-1097-4B75-A3B4-0FCB55074D12}</EntityID>
+						<ItemInfoDate type="key">6/6/2019 12:16:30</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.map</Name>
+						<DisplayName type="key">control_dmc_microlabbox.map</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">891443772</UniqueID>
+						<EntityID type="key">{8FD0F304-C38F-4A32-81F6-BC8E18FD3F5B}</EntityID>
+						<ItemInfoDate type="key">6/6/2019 12:16:30</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.rta</Name>
+						<DisplayName type="key">control_dmc_microlabbox.rta</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">30</Type>
+						<UniqueID type="key">938623817</UniqueID>
+						<EntityID type="key">{D8632197-6EFD-47ED-9DC2-B3265715B108}</EntityID>
+						<ItemInfoDate type="key">6/6/2019 12:16:30</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager</Targets>
+				<Name type="key">Data Sets</Name>
+				<DisplayName type="key">Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">216272640</UniqueID>
+				<EntityID type="key">{9F7C42CB-2D72-4F78-8A0C-9C58561B4961}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.vfe</Targets>
+				<Name type="key">Variable Filters</Name>
+				<DisplayName type="key">Variable Filters</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">2304</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">8258029</UniqueID>
+				<EntityID type="key">{1EF2B647-C8DC-4A5E-9C65-A22232F60503}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.lab</Targets>
+				<Docs type="key">.lab,.txt</Docs>
+				<Name type="key">Label Lists</Name>
+				<DisplayName type="key">Label Lists</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">120648721</UniqueID>
+				<EntityID type="key">{14901202-EBA0-4D5C-ACEB-5F39CAA0525C}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.lab,.txt</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">interpreter,.py</Targets>
+				<Docs type="key">.py</Docs>
+				<Name type="key">Python Scripts</Name>
+				<DisplayName type="key">Python Scripts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">407144388</UniqueID>
+				<EntityID type="key">{F05C5F75-6DF5-4267-8027-E31CAE96E374}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.py</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">busnavigator,.xml</Targets>
+				<Name type="key">BusNavigator</Name>
+				<DisplayName type="key">BusNavigator</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<ExtendedFlags type="key">256</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">439368220</UniqueID>
+				<EntityID type="key">{6CAC1627-8983-4F5D-BA6C-C2E75F0FE1E4}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">signaleditor</Targets>
+				<Name type="key">Signal Description Sets</Name>
+				<DisplayName type="key">Signal Description Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">702697058</UniqueID>
+				<EntityID type="key">{2103DB97-990C-4C8E-8DC6-94E1823A1A36}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+		<item>
+			<Name type="key">Events</Name>
+			<DisplayName type="key">Events</DisplayName>
+			<Path type="key">.</Path>
+			<Flags type="key">4</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">136557906</UniqueID>
+			<EntityID type="key">{A0727A76-1746-4BC0-8EDA-024EAC3BBB9B}</EntityID>
+			<ItemInfoDate type="key">23/5/2019 08:50:11</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Name type="key">Project.events</Name>
+				<DisplayName type="key">Project.events</DisplayName>
+				<Path type="key">.\Events</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">52</Type>
+				<UniqueID type="key">232192841</UniqueID>
+				<EntityID type="key">{2E077B8E-17CB-4900-8BCF-2BF71D1FB84A}</EntityID>
+				<ItemInfoDate type="key">23/5/2019 08:50:11</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+	</project>
+	<experiments>
+		<experiment>
+			<Creator type="key">ControlDesk</Creator>
+			<Name type="key">Experiment_001_apf.CDE</Name>
+			<DisplayName type="key">Experiment_001_apf</DisplayName>
+			<Path type="key">.\Experiment_001_apf</Path>
+			<Flags type="key">4096</Flags>
+			<Type type="key">2</Type>
+			<UniqueID type="key">170155979</UniqueID>
+			<EntityID type="key">{C27BA996-CB5C-423E-AF7D-84F15FD5D7E6}</EntityID>
+			<ItemInfoDate type="key">23/5/2019 08:50:08</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		</experiment>
+	</experiments>
+	<UserManager/>
+	<XILAPIEESPort Version="1"/>
+	<SignalEditor/>
+	<Interpreter/>
+	<VariablesManagement Version="100">
+		<CreatorVersion type="key">603000375</CreatorVersion>
+	</VariablesManagement>
+	<ProjectExperiment>
+		<LastActiveExperiment type="key">Experiment_001_apf</LastActiveExperiment>
+	</ProjectExperiment>
+	<MeasureDataManagement Version="4"/>
+	<Instrumentation Version="1">
+		<UniqueIds Version="3">
+			<Count type="key">2</Count>
+			<File1 type="key">Experiment_001_apf/Layout1</File1>
+			<Id1 type="key">0</Id1>
+			<File2 type="key">Experiment_001_apf/Layout2</File2>
+			<Id2 type="key">1</Id2>
+		</UniqueIds>
+	</Instrumentation>
+	<DiagnosticsManagement/>
+	<PlatformManagement Version="10"/>
+	<DataSetManager>
+		<Version>
+			<Version type="key">2</Version>
+		</Version>
+		<Work/>
+		<ActiveWork/>
+		<Reference/>
+		<ActiveReference/>
+		<Master/>
+		<ActiveMaster/>
+		<InitialMaster/>
+		<Incomplete/>
+		<IncompleteReadonly/>
+		<DataSet/>
+		<Readonly/>
+		<LabelListFilter>
+			<LabelListFilterFile type="key"/>
+			<LabelListFilterActive type="key">0</LabelListFilterActive>
+		</LabelListFilter>
+		<AutomaticDownload/>
+	</DataSetManager>
+</Root>

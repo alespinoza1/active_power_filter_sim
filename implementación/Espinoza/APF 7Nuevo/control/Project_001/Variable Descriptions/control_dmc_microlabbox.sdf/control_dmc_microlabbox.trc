@@ -1,0 +1,2325 @@
+-- ****************************************************************************
+--
+--  Trace file: Control_DMC_MicroLabBox.trc
+--
+--  RTI1202 7.10 (02-May-2018)
+--  Thu Jun  6 12:16:14 2019
+--
+--  Copyright 2019, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 0
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "Control_DMC_MicroLabBox.map"
+
+_genname     "RTI"
+_genversion  "7.10"
+_gendate     "06/06/2019 12:16:17"
+_description ""
+_author      "RTI1202 7.10 (02-May-2018)"
+_model       "Control_DMC_MicroLabBox"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       1.0E-6
+  alias:       "HostService"
+  increment:   1.0E-6
+  unit:        "s"
+}
+
+
+
+-- Type definitions for structures
+
+typedef Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0 int(32)[2]
+
+struct Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE
+{
+  array-incr: 8         
+}
+    structField0 
+    {
+      alias:   "InputPortsWidth"
+      type:    Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0
+      offs:    0
+    }
+endstruct
+
+
+-- Type definitions for arrays
+typedef Control_DMC_MicroLabBox_ArrayDT0_14 flt(64,IEEE)[14]
+typedef Control_DMC_MicroLabBox_ArrayDT0_6 flt(64,IEEE)[6]
+typedef Control_DMC_MicroLabBox_ArrayDT0_3 flt(64,IEEE)[3]
+typedef Control_DMC_MicroLabBox_ArrayDT0_2 flt(64,IEEE)[2]
+typedef Control_DMC_MicroLabBox_ArrayDT10_12 int(32)[12]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  READONLY
+ unit:  "s"
+ addr:    0x48054ea4
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+ addr:    0x48054ea0
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+ addr:    0x48054ea8
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 RUN=2"
+ unit:  "-"
+ addr:    0x480482f0
+}
+
+p_msg_last_error_no
+{
+ type:  uint(32)*
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: READONLY
+ addr:    0x480466dc
+}
+
+p_dsts_sum_of_reset_time
+{
+ type:  flt(64,IEEE)*
+ alias: "sumOfResetTime"
+ desc:  "Internal variable for summing up reset time."
+ unit:  "s"
+ flags: READONLY|HIDDEN
+ addr:    0x480466d8
+}
+
+
+-- ******** Task Information variables ****************************************
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: READONLY
+ addr:    0x48054ef8
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: READONLY
+ addr:    0x48054efc
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: READONLY
+ addr:    0x48054f00
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: READONLY
+ addr:    0x48054f04
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: READONLY
+ addr:    0x48054f08
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: READONLY
+ addr:    0x48054f0c
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: READONLY
+ addr:    0x48054f10
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: READONLY
+ addr:    0x48054f14
+}
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: READONLY
+ addr:    0x48054f18
+}
+  endgroup
+
+
+endgroup
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Constant" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_Control_DMC_MicroLabBox_real_T_0[28]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+	endgroup -- block-group "Constant"
+
+	group "Duty Cycle" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_Control_DMC_MicroLabBox_real_T_0[32]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+	endgroup -- block-group "Duty Cycle"
+
+	group "Period" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		trcref0_Ts
+		{
+		 refgroup: "/Tunable Parameters"
+		 refvar:   "Ts"
+		 alias:    "Ts"
+}
+		trcref0_Value
+		{
+		 refgroup: "/Tunable Parameters"
+		 refvar:   "Ts"
+		 alias:    "Value"
+		 flags:    DEPRECATED|HIDDEN
+}
+
+
+	endgroup -- block-group "Period"
+
+	group "Scope1" -- block-group
+	{
+	 block: "Scope"
+	}
+		p_0_Control_DMC_MicroLabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+
+
+	endgroup -- block-group "Scope1"
+
+  
+  
+	group "Controlador" -- subsystem-group
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[25]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+		 alias:   "Sw"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[31]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "io"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[34]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "fc"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[37]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "Vs_alfabeta"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[39]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "IL_alfabeta"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[41]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "PLQL"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[62]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "Icref"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[46]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "ickm1"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[49]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "banderaT\n"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ts
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Ts"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Rc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Rc"
+			 alias:    "Rc"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Rc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Constant2" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Lc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Lc"
+			 alias:    "Lc"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Lc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant2"
+
+		group "Constant3" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vdc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vdc"
+			 alias:    "Vdc"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vdc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant3"
+
+		group "Constant4" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_vect
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "vect"
+			 alias:    "vect"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "vect"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant4"
+
+		group "Controlador" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[25]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[31]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out2"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[34]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out3"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[37]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out4"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[39]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out5"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[41]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out6"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[43]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out7"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[46]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out8"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_0_Control_DMC_MicroLabBox_real_T_0[49]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out9"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "Controlador"
+
+		group "Transport\nDelay" -- block-group
+		{
+		 block: "TransportDelay"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[62]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_1_Control_DMC_MicroLabBox_real_T_0[31]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialOutput"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+			trcref0_Tm
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Tm"
+			 alias:    "Tm"
+}
+			trcref0_DelayTime
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Tm"
+			 alias:    "DelayTime"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Transport\nDelay"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[25]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+		 alias:   "contador"
+		 origin:  "Control_DMC_MicroLabBox/Controlador/Controlador/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Controlador"
+  
+  
+	group "DIO_CLASS1_HWINT_BL2" -- subsystem-group
+
+		-- Skipping output Interrupt
+
+
+  
+  
+		group "Common Hardware\nInterrupt Interface" -- subsystem-group
+
+			-- Skipping output  
+
+		endgroup -- subsystem-group "Common Hardware\nInterrupt Interface"
+
+
+	endgroup -- subsystem-group "DIO_CLASS1_HWINT_BL2"
+  
+  
+	group "DIO_CLASS1_PWM_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DIO_CLASS1_PWM_BL1"
+  
+  
+	group "Inversion \nde \nsignificancia1" -- subsystem-group
+
+		-- Skipping output
+
+
+		group "NOT" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT"
+
+		group "NOT1" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT1"
+
+		group "NOT2" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT2"
+
+		group "NOT3" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT3"
+
+		group "NOT4" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[4]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT4"
+
+		group "NOT5" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[5]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT5"
+
+
+
+	endgroup -- subsystem-group "Inversion \nde \nsignificancia1"
+  
+  
+	group "Inversion \nde \nsignificancia2" -- subsystem-group
+
+		p_0_Control_DMC_MicroLabBox_boolean_T_1[6]
+		{
+		 type:    uint(8)*
+		 alias:   "Out1"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		group "NOT" -- block-group
+		{
+		 block: "Logic"
+		}
+			p_0_Control_DMC_MicroLabBox_boolean_T_1[6]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e90
+}
+
+
+		endgroup -- block-group "NOT"
+
+
+
+	endgroup -- subsystem-group "Inversion \nde \nsignificancia2"
+  
+  
+	group "Mediciones1" -- subsystem-group
+
+		-- Skipping output
+		-- Skipping output
+		-- Skipping output
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsa_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsa_offset"
+			 alias:    "Vsa_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsa_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsb_offset"
+			 alias:    "Vsb_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Constant2" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsc_offset"
+			 alias:    "Vsc_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant2"
+
+		group "Constant3" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ila_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ila_offset"
+			 alias:    "Ila_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ila_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant3"
+
+		group "Constant4" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ilb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilb_offset"
+			 alias:    "Ilb_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant4"
+
+		group "Constant5" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ilc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilc_offset"
+			 alias:    "Ilc_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant5"
+
+		group "Constant6" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ica_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ica_offset"
+			 alias:    "Ica_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ica_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant6"
+
+		group "Constant7" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Icb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icb_offset"
+			 alias:    "Icb_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant7"
+
+		group "Constant8" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Icc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icc_offset"
+			 alias:    "Icc_offset"
+}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Constant8"
+
+		group "Gain" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsa
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsa"
+			 alias:    "Ganancia_Vsa"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsa"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain"
+
+		group "Gain1" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsb"
+			 alias:    "Ganancia_Vsb"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsb"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain1"
+
+		group "Gain2" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsc"
+			 alias:    "Ganancia_Vsc"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsc"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain2"
+
+		group "Gain3" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ila
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ila"
+			 alias:    "Ganancia_Ila"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ila"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain3"
+
+		group "Gain4" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ilb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilb"
+			 alias:    "Ganancia_Ilb"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilb"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain4"
+
+		group "Gain5" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ilc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilc"
+			 alias:    "Ganancia_Ilc"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilc"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain5"
+
+		group "Gain6" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ica
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ica"
+			 alias:    "Ganancia_Ica"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ica"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain6"
+
+		group "Gain7" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Icb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icb"
+			 alias:    "Ganancia_Icb"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icb"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain7"
+
+		group "Gain8" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Icc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icc"
+			 alias:    "Ganancia_Icc"
+}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icc"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+}
+
+
+		endgroup -- block-group "Gain8"
+
+		group "S-Function Builder" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[87]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder"
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[81]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+		group "S-Function Builder2" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[93]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder2"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum"
+
+		group "Sum1" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum1"
+
+		group "Sum2" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum2"
+
+		group "Sum3" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum3"
+
+		group "Sum4" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum4"
+
+		group "Sum5" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum5"
+
+		group "Sum6" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum6"
+
+		group "Sum7" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum7"
+
+		group "Sum8" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum8"
+
+  
+  
+		group "ILa" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "ILa"
+  
+  
+		group "ILb\n" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "ILb\n"
+  
+  
+		group "ILc" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "ILc"
+  
+  
+		group "Ica" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Ica"
+  
+  
+		group "Icb" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Icb"
+  
+  
+		group "Icc" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Icc"
+  
+  
+		group "Vsa" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Vsa"
+  
+  
+		group "Vsb" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Vsb"
+  
+  
+		group "Vsc" -- subsystem-group
+
+			p_0_Control_DMC_MicroLabBox_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+		endgroup -- subsystem-group "Vsc"
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[87]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "IL_med"
+		 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[93]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "Ic_med"
+		 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder2/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+		p_0_Control_DMC_MicroLabBox_real_T_0[81]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "Vs_med"
+		 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Mediciones1"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "Salidas digitales" -- subsystem-group
+
+
+
+  
+  
+		group "Señales de Conmutación \nAPF" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF"
+  
+  
+		group "Señales de Conmutación \nAPF1" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF1"
+  
+  
+		group "Señales de Conmutación \nAPF2" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF2"
+  
+  
+		group "Señales de Conmutación \nAPF3" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF3"
+  
+  
+		group "Señales de Conmutación \nAPF4" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF4"
+  
+  
+		group "Señales de Conmutación \nAPF5" -- subsystem-group
+
+
+		endgroup -- subsystem-group "Señales de Conmutación \nAPF5"
+
+
+	endgroup -- subsystem-group "Salidas digitales"
+  
+  
+	group "Señales de Conmutación \nAPF5" -- subsystem-group
+
+
+	endgroup -- subsystem-group "Señales de Conmutación \nAPF5"
+  
+  
+	group "Subsystem" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[50]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[50]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+		 alias:   "Vec_SW"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem"
+  
+  
+	group "Subsystem1" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[56]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[56]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "io"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem1/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem1"
+  
+  
+	group "Subsystem2" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[59]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[59]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "fc"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem2/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem2"
+  
+  
+	group "Subsystem3" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[65]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[65]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "icref"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem3/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem3"
+  
+  
+	group "Subsystem4" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[68]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[68]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "PLQL"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem4/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem4"
+  
+  
+	group "Subsystem5" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[70]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[70]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "ilalfabeta"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem5/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem5"
+  
+  
+	group "Subsystem6" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[72]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[72]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+		 alias:   "vsalfabeta"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem6/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem6"
+  
+  
+	group "Subsystem7" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[74]
+			{
+			 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[74]
+		{
+		 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+		 alias:   "ickm1"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem7/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem7"
+  
+  
+	group "Subsystem8" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[77]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[77]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "bandera"
+		 origin:  "Control_DMC_MicroLabBox/Subsystem8/S-Function Builder1/Out1"
+		 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+	endgroup -- subsystem-group "Subsystem8"
+  
+  
+	group "TicTac" -- subsystem-group
+
+		p_0_Control_DMC_MicroLabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Toggle"
+		 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+		-- Skipping output Counter
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_Control_DMC_MicroLabBox_real_T_0[29]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_Control_DMC_MicroLabBox_real_T_0[24]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Gain" -- block-group
+		{
+		 block: "Gain"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+			p_1_Control_DMC_MicroLabBox_real_T_0[27]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Gain"
+
+		group "Gain1" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_DMC_MicroLabBox_real_T_0[25]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Gain1"
+
+		group "Memory" -- block-group
+		{
+		 block: "Memory"
+		}
+			-- Skipping output Out1
+			p_1_Control_DMC_MicroLabBox_real_T_0[26]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Memory"
+
+		group "Memory1" -- block-group
+		{
+		 block: "Memory"
+		}
+			-- Skipping output Out1
+			p_1_Control_DMC_MicroLabBox_real_T_0[30]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+ addr:    0x48054e94
+}
+
+
+		endgroup -- block-group "Memory1"
+
+		group "Relational\nOperator" -- block-group
+		{
+		 block: "RelationalOperator"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Relational\nOperator"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			p_0_Control_DMC_MicroLabBox_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+ addr:    0x48054e8c
+}
+
+
+		endgroup -- block-group "Sum"
+
+		group "Switch" -- block-group
+		{
+		 block: "Switch"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Switch"
+
+
+
+	endgroup -- subsystem-group "TicTac"
+  
+  
+	group "Timer Task Assignment1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "Timer Task Assignment1"
+  
+  
+	group "TimerTask \nAssignment \nBlock8" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "TimerTask \nAssignment \nBlock8"
+  
+  
+	group "TimerTask \nAssignment \nBlock9" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "TimerTask \nAssignment \nBlock9"
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+	p_1_Control_DMC_MicroLabBox_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ica"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icb"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ila"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilb"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[5]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsa"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsb"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[8]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[9]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ica_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[10]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icb_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[11]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icc_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[12]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ila_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[13]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilb_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[14]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilc_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[15]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Lc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[16]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Rc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[17]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Tm"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[18]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ts"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[19]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vdc"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[20]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsa_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[21]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsb_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[22]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsc_offset"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+	p_1_Control_DMC_MicroLabBox_real_T_0[23]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "vect"
+	 flags:   PARAM
+ addr:    0x48054e94
+}
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	p_0_Control_DMC_MicroLabBox_real_T_0[87]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "IL_med"
+	 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[93]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "Ic_med"
+	 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder2/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[68]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+	 alias:   "PLQL"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem4/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[50]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SW"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[81]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "Vs_med"
+	 origin:  "Control_DMC_MicroLabBox/Mediciones1/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[77]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "bandera"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem8/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[25]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_6*
+	 alias:   "contador"
+	 origin:  "Control_DMC_MicroLabBox/Controlador/Controlador/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[59]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "fc"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem2/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[74]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "ickm1"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem7/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[65]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "icref"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem3/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[70]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+	 alias:   "ilalfabeta"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem5/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[56]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_3*
+	 alias:   "io"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem1/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+	p_0_Control_DMC_MicroLabBox_real_T_0[72]
+	{
+	 type:    Control_DMC_MicroLabBox_ArrayDT0_2*
+	 alias:   "vsalfabeta"
+	 origin:  "Control_DMC_MicroLabBox/Subsystem6/S-Function Builder1/Out1"
+	 flags:   READONLY
+ addr:    0x48054e8c
+}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file Control_DMC_MicroLabBox_usr.trc found.
+
+-- RTI_USR_TRC_END
+
+-- ******** EESPort States Variables ******************************************
+group "XIL API"
+{ 
+  flags: COLLAPSED
+}
+
+  group "EESPort"
+  {  
+    flags: COLLAPSED
+  }
+
+    p_xilapi_eesport_activeerrorset_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Active ErrorSet"
+      desc:    "Index of active ErrorSet or 0 if no ErrorSet is active."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x4804830c
+}
+
+    p_xilapi_eesport_erroractivated_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Activated"
+      desc:    "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."  
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+ addr:    0x48048308
+}
+
+    p_xilapi_eesport_errorswitching_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Switching"
+      desc:    "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+ addr:    0x48048304
+}
+
+    xilapi_eesport_flags_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Flags"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x48054f28
+}
+
+    xilapi_eesport_trigger_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Trigger"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+ addr:    0x48054f24
+}
+
+    endgroup -- "EESPort"
+
+endgroup -- "XILAPI"
+
+
+
+-- ******** [EOF] *************************************************************
+

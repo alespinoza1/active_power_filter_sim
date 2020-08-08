@@ -1,0 +1,26 @@
+Sw[3]
+Model Root/Scope/In1
+Tunable Parameters/Ia_offset
+Tunable Parameters/Ts
+Tunable Parameters/Ic_offset
+Tunable Parameters/Ganancia_Vw
+Sw[4]
+Model Root/Referencia\nIref/Saturation2/Out1
+Model Root/Referencia\nIref/Saturation1/Out1
+Tunable Parameters/Vv_offset
+Tunable Parameters/fref
+Tunable Parameters/Vu_offset
+Tunable Parameters/Iref
+Sw[1]
+Tunable Parameters/vopt
+Tunable Parameters/Ganancia_Iob
+Sw[2]
+Tunable Parameters/Ganancia_Vu
+Model Root/Referencia\nIref/Saturation3/Out1
+Tunable Parameters/Ganancia_Ioa
+Tunable Parameters/Ganancia_Vv
+Task Info/Timer Task 1/turnaroundTime
+Tunable Parameters/Ib_offset
+Sw[0]
+Tunable Parameters/Vw_offset
+Tunable Parameters/Ganancia_Ioc

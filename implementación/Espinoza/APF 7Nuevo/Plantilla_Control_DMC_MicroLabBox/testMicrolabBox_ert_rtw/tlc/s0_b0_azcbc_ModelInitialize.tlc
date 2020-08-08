@@ -1,0 +1,33 @@
+%implements s0_b0_azcbc_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS0B1 = OpaqueTLCBlockFcn("Start", 0, 1, 0, 2)
+%assign tlcStartFcnOfS0B2 = OpaqueTLCBlockFcn("Start", 0, 2, 0, 2)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Body")>\
+%if !WHITE_SPACE(tlcStartFcnOfS0B1)
+/* Start for S-Function (rti_commonblock): '<S1>/S-Function1' */
+%<SLibCG_DumpSSCode("/*@[d4f*/",tlcStartFcnOfS0B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS0B2)
+/* Start for S-Function (rti_commonblock): '<S2>/S-Function1' */
+%<SLibCG_DumpSSCode("/*@[d51*/",tlcStartFcnOfS0B2,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(0, "Start", "Trailer")>\
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction

@@ -1,0 +1,15 @@
+[System]
+Version=2.2
+SystemType=SingleProcessorSystem
+DAQService=DsDAQ
+DsDAQBackground=1
+Status=Start
+File=control_apf7_microlabbox.rta
+RTP=Master
+
+[Master]
+Type=DS1202
+State=Enabled
+ServiceID=1
+TraceFile=control_apf7_microlabbox.trc
+ID=AEE66D83-60DD-4F0D-904F-B8FD2F78C096

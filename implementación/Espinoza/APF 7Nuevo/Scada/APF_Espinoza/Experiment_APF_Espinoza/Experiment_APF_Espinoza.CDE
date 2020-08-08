@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+	<creator type="key">ControlDesk 6.3</creator>
+	<experiment>
+		<Creator type="key">ControlDesk</Creator>
+		<Name type="key">Experiment_APF_Espinoza.CDE</Name>
+		<DisplayName type="key">Experiment_APF_Espinoza</DisplayName>
+		<Path type="key">.\Experiment_APF_Espinoza</Path>
+		<Flags type="key">4096</Flags>
+		<Type type="key">2</Type>
+		<UniqueID type="key">662541810</UniqueID>
+		<EntityID type="key">{58EEDE54-D41A-485F-9D28-3FE518DBDEA9}</EntityID>
+		<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+		<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+		<ItemInfoDescr type="key"/>
+		<ItemInfoAddInfoDb type="key"/>
+		<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		<item>
+			<Targets type="key">experiment</Targets>
+			<Name type="key">Experiment_APF_Espinoza</Name>
+			<DisplayName type="key">Experiment_APF_Espinoza</DisplayName>
+			<Path type="key">..</Path>
+			<Flags type="key">4100</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">484813768</UniqueID>
+			<EntityID type="key">{51B6D26B-7645-4828-B58D-B9AC9B00836C}</EntityID>
+			<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Targets type="key">instrumentation</Targets>
+				<Name type="key">Experiment Layouts</Name>
+				<DisplayName type="key">Experiment Layouts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">896292379</UniqueID>
+				<EntityID type="key">{5BF1CA47-78A2-41F7-9540-EC815453E3F8}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Name type="key">Experiment_APF_Espinoza.cdc</Name>
+					<DisplayName type="key">Experiment_APF_Espinoza.cdc</DisplayName>
+					<Path type="key">.\Experiment Layouts</Path>
+					<Flags type="key">4100</Flags>
+					<Type type="key">4</Type>
+					<UniqueID type="key">955299395</UniqueID>
+					<EntityID type="key">{D959AB00-ACC2-47DD-BAD3-1551BAC46BE2}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">Instrumentation</Component>
+					<Name type="key">Layout1.lay</Name>
+					<DisplayName type="key">Layout1.lay</DisplayName>
+					<Path type="key">.\Experiment Layouts</Path>
+					<Flags type="key">16448</Flags>
+					<Type type="key">10</Type>
+					<UniqueID type="key">330241620</UniqueID>
+					<EntityID type="key">{6F96B28A-A74D-41E0-83AF-0A4D14752C76}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">devicemanagement,platformmanagement,diagnosticsmanagement</Targets>
+				<Name type="key">Hardware Configurations</Name>
+				<DisplayName type="key">Hardware Configurations</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">465918624</UniqueID>
+				<EntityID type="key">{540C4F9C-2D14-49A4-9396-02E78C8BFECC}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">PlatformManagement</Component>
+					<Targets type="key">Device::568f0ef5-b007-4e66-befd-b6be53b85068</Targets>
+					<RestoreInfopmdn type="key">Platform</RestoreInfopmdn>
+					<RestoreInfopmid type="key">568f0ef5-b007-4e66-befd-b6be53b85068</RestoreInfopmid>
+					<Name type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Name>
+					<DisplayName type="key">Platform [DS1202 MicroLabBox, assigned to 'ds1202']</DisplayName>
+					<Flags type="key">128</Flags>
+					<ExtendedFlags type="key">3072</ExtendedFlags>
+					<Type type="key">6</Type>
+					<UniqueID type="key">459863766</UniqueID>
+					<EntityID type="key">{D8E935DC-835E-43BD-B6E3-89231C47A28F}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Targets type="key">,VariableDescription::control_apf7_nuevo_microlabbox.sdf</Targets>
+						<Flags type="key">18736</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<UniqueID type="key">455704761</UniqueID>
+						<LinkedItem type="key">1028118774</LinkedItem>
+						<item>
+							<Component type="key">MeasureDataManagement</Component>
+							<Flags type="key">1380</Flags>
+							<UniqueID type="key">329462567</UniqueID>
+							<LinkedItem type="key">486269564</LinkedItem>
+						</item>
+						<item>
+							<Component type="key">DataSetManager</Component>
+							<Name type="key">Data Sets</Name>
+							<DisplayName type="key">Data Sets</DisplayName>
+							<Path type="key">.</Path>
+							<Flags type="key">260</Flags>
+							<ExtendedFlags type="key">132</ExtendedFlags>
+							<Type type="key">3</Type>
+							<UniqueID type="key">406538594</UniqueID>
+							<EntityID type="key">{4EE1E536-C96D-4583-A8ED-D562EB0F0101}</EntityID>
+							<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+							<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+							<ItemInfoDescr type="key"/>
+							<ItemInfoAddInfoDb type="key"/>
+							<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+						</item>
+						<item>
+							<Component type="key">MeasureDataManagement</Component>
+							<Flags type="key">1380</Flags>
+							<UniqueID type="key">902576908</UniqueID>
+							<LinkedItem type="key">731927030</LinkedItem>
+						</item>
+						<item>
+							<Component type="key">MeasureDataManagement</Component>
+							<Flags type="key">1380</Flags>
+							<UniqueID type="key">332493928</UniqueID>
+							<LinkedItem type="key">646070575</LinkedItem>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager</Targets>
+				<Name type="key">Data Sets</Name>
+				<DisplayName type="key">Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">422133220</UniqueID>
+				<EntityID type="key">{8FC4A781-BC13-4D29-BE23-226B8CABAB1F}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">measuredatamanagement</Targets>
+				<Name type="key">Measurement Data</Name>
+				<DisplayName type="key">Measurement Data</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">933158386</UniqueID>
+				<EntityID type="key">{83124A0B-DABD-4008-9A27-D2D444317254}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">MeasureDataManagement</Component>
+					<Name type="key">cv.vxf</Name>
+					<DisplayName type="key">cv.vxf</DisplayName>
+					<Path type="key">.\Measurement Data</Path>
+					<Flags type="key">4</Flags>
+					<Type type="key">4</Type>
+					<UniqueID type="key">855475599</UniqueID>
+					<EntityID type="key">{2DBA75CF-B768-4690-9DE5-B09339C7FD38}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">MeasureDataManagement</Component>
+					<Name type="key">rec1_001.mf4</Name>
+					<DisplayName type="key">rec1_001.mf4</DisplayName>
+					<Path type="key">.\Measurement Data</Path>
+					<Flags type="key">1088</Flags>
+					<Type type="key">9</Type>
+					<UniqueID type="key">486269564</UniqueID>
+					<EntityID type="key">{F7AD2FAA-9229-4EED-AF5E-A3E2339BBAA8}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 14:20:37</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Software revision: control_apf7_nuevo_microlabbox.sdf, control_apf7_nuevo_microlabbox.rta
+Variable description: control_apf7_nuevo_microlabbox.sdf
+    Platform / Device: Platform [DS1202 MicroLabBox, assigned to 'ds1202']
+ControlDesk version: 6.3</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">MeasureDataManagement</Component>
+					<Name type="key">rec1_002.mf4</Name>
+					<DisplayName type="key">rec1_002.mf4</DisplayName>
+					<Path type="key">.\Measurement Data</Path>
+					<Flags type="key">1088</Flags>
+					<Type type="key">9</Type>
+					<UniqueID type="key">731927030</UniqueID>
+					<EntityID type="key">{C4EF734B-422B-4ABC-91D3-FBD80F90F48A}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 14:36:26</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Software revision: control_apf7_nuevo_microlabbox.sdf, control_apf7_nuevo_microlabbox.rta
+Variable description: control_apf7_nuevo_microlabbox.sdf
+    Platform / Device: Platform [DS1202 MicroLabBox, assigned to 'ds1202']
+ControlDesk version: 6.3</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">MeasureDataManagement</Component>
+					<Name type="key">rec1_003.mf4</Name>
+					<DisplayName type="key">rec1_003.mf4</DisplayName>
+					<Path type="key">.\Measurement Data</Path>
+					<Flags type="key">1088</Flags>
+					<Type type="key">9</Type>
+					<UniqueID type="key">646070575</UniqueID>
+					<EntityID type="key">{93246138-148C-4A84-BB32-DA4A6FDA13AD}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 14:37:32</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Software revision: control_apf7_nuevo_microlabbox.sdf, control_apf7_nuevo_microlabbox.rta
+Variable description: control_apf7_nuevo_microlabbox.sdf
+    Platform / Device: Platform [DS1202 MicroLabBox, assigned to 'ds1202']
+ControlDesk version: 6.3</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">.rtf,.pdf,.html,.xml,.txt,.csv</Targets>
+				<Docs type="key">.rtf,.pdf,.html,.txt,.csv</Docs>
+				<Name type="key">Reports</Name>
+				<DisplayName type="key">Reports</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">273816667</UniqueID>
+				<EntityID type="key">{954266B9-0913-4B22-B0F3-BD813A997775}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.rtf,.pdf,.html,.txt,.csv</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">interpreter,.py</Targets>
+				<Docs type="key">.py</Docs>
+				<Name type="key">Python Scripts</Name>
+				<DisplayName type="key">Python Scripts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">119514127</UniqueID>
+				<EntityID type="key">{9F76658D-F656-4DB9-885C-2F33D1D7CE62}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.py</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">signaleditor</Targets>
+				<Name type="key">Signal Generators</Name>
+				<DisplayName type="key">Signal Generators</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">348264341</UniqueID>
+				<EntityID type="key">{53081372-75D8-4793-B950-324F64F925A5}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">xilapieesport</Targets>
+				<Name type="key">XIL API EESPorts</Name>
+				<DisplayName type="key">XIL API EESPorts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">1055782461</UniqueID>
+				<EntityID type="key">{B6D15B20-7F80-4AFF-A5A1-99584976FD9C}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+		<item>
+			<Name type="key">Events</Name>
+			<DisplayName type="key">Events</DisplayName>
+			<Path type="key">.</Path>
+			<Flags type="key">4</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">1061468170</UniqueID>
+			<EntityID type="key">{186725DF-D0BF-4F40-9663-104B817E6801}</EntityID>
+			<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Name type="key">Experiment.events</Name>
+				<DisplayName type="key">Experiment.events</DisplayName>
+				<Path type="key">.\Events</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">52</Type>
+				<UniqueID type="key">199517204</UniqueID>
+				<EntityID type="key">{BD234413-93F6-49EF-B26D-103D93848411}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+	</experiment>
+	<UserManager/>
+	<XILAPIEESPort Version="1">
+		<XILAPIEESPort>
+			<EESPorts type="key">&lt;EESPorts /&gt;</EESPorts>
+		</XILAPIEESPort>
+	</XILAPIEESPort>
+	<SignalEditor/>
+	<Interpreter/>
+	<VariablesManagement Version="100">
+		<Favorites>
+			<Labels/>
+		</Favorites>
+	</VariablesManagement>
+	<ProjectExperiment/>
+	<MeasureDataManagement Version="4">
+		<TriggerRules>
+			<Version type="key">2</Version>
+		</TriggerRules>
+		<BookmarkTypes>
+			<BookmarkType>
+				<TypeID type="key">1</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">2</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">3</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">5</TypeID>
+				<RecordingActive type="key">0</RecordingActive>
+				<VisualizationActive type="key">0</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">6</TypeID>
+				<RecordingActive type="key">0</RecordingActive>
+				<VisualizationActive type="key">0</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">8</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">9</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">10</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">11</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">12</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">13</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">14</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+			<BookmarkType>
+				<TypeID type="key">15</TypeID>
+				<RecordingActive type="key">1</RecordingActive>
+				<VisualizationActive type="key">1</VisualizationActive>
+			</BookmarkType>
+		</BookmarkTypes>
+		<ProjectExperimentSettings>
+			<ShowMeasurementLinks type="key">0</ShowMeasurementLinks>
+		</ProjectExperimentSettings>
+		<MeasurementConfiguration>
+			<NextUniqueKey type="key">7</NextUniqueKey>
+			<SortedColumn type="key">4</SortedColumn>
+			<SortAscending type="key">-1</SortAscending>
+			<SignalList>
+				<Variable>
+					<Name type="key">Labels/fc[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Ic_med[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Ic_med[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Ic_med[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/ickm1[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/ickm1[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/ickm1[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/icref[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/icref[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/icref[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/IL_med[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/IL_med[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/IL_med[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/PLQL[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/PLQL[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/varfiltrada[01]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vdclink[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vdclink[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vdclink[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vs_med[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vs_med[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/Vs_med[2]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/vsalfabeta[0]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+				<Variable>
+					<Name type="key">Labels/vsalfabeta[1]</Name>
+					<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+					<Active type="key">-1</Active>
+					<Signal>
+						<Raster type="key">HostService</Raster>
+					</Signal>
+				</Variable>
+			</SignalList>
+			<Platforms>
+				<Platform>
+					<Name type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Name>
+					<FilteredRastersView type="key">1</FilteredRastersView>
+					<DefaultRaster type="key">HostService</DefaultRaster>
+					<PlatformTriggers>
+						<PlatformTrigger>
+							<UniqueKey type="key">5</UniqueKey>
+							<Name type="key">Platform Trigger 1</Name>
+							<Condition type="key">posedge ( Vs_med_2_, -24.9361781671 )</Condition>
+							<Delay type="key">0</Delay>
+							<Enabled type="key">-1</Enabled>
+							<Timeout type="key">0</Timeout>
+							<TimeoutEnabled type="key">0</TimeoutEnabled>
+							<VariableMappings>
+								<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+								<VariableMapping>
+									<Symbol type="key">Vs_med_2_</Symbol>
+									<Signal type="key">Labels/Vs_med[2]</Signal>
+								</VariableMapping>
+							</VariableMappings>
+						</PlatformTrigger>
+					</PlatformTriggers>
+					<Rasters>
+						<PlatformTriggered>
+							<Name type="key">HostService</Name>
+							<AutoRepeatEnabled type="key">1</AutoRepeatEnabled>
+							<AutoRepeatBehavior type="key">1</AutoRepeatBehavior>
+							<MultiCaptureHistoryEnabled type="key">0</MultiCaptureHistoryEnabled>
+							<DownsamplingFactor type="key">1</DownsamplingFactor>
+							<StartTrigger type="key">5</StartTrigger>
+							<StopTrigger type="key">6</StopTrigger>
+						</PlatformTriggered>
+					</Rasters>
+					<EnabledHardwarePollingRasters/>
+				</Platform>
+				<Platform>
+					<Name type="key">Calculated</Name>
+					<FilteredRastersView type="key">1</FilteredRastersView>
+					<PlatformTriggers/>
+					<Rasters>
+						<Raster>
+							<Name type="key">Merged</Name>
+							<MinimumSamplingPeriod type="key">0.001</MinimumSamplingPeriod>
+						</Raster>
+					</Rasters>
+					<EnabledHardwarePollingRasters/>
+				</Platform>
+			</Platforms>
+			<DurationTriggers>
+				<DurationTrigger>
+					<UniqueKey type="key">6</UniqueKey>
+					<Name type="key">Duration Trigger 1</Name>
+					<Delay type="key">0</Delay>
+					<Duration type="key">3.72344561073843E-02</Duration>
+					<Enabled type="key">-1</Enabled>
+				</DurationTrigger>
+			</DurationTriggers>
+			<SampleCountTriggers/>
+			<Acquisition>
+				<MeasurementBufferSize type="key">60</MeasurementBufferSize>
+				<BufferOverflowWarningEnabled type="key">0</BufferOverflowWarningEnabled>
+				<BufferOverflowWarningTime type="key">10</BufferOverflowWarningTime>
+				<SaveMeasurementBuffer>
+					<AddToExperimentEnabled type="key">-1</AddToExperimentEnabled>
+					<AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled>
+					<AutomaticExportEnabled type="key">0</AutomaticExportEnabled>
+					<AutomaticExportFileNamePrefix type="key">bufexp_</AutomaticExportFileNamePrefix>
+					<AutomaticExportFileType type="key">ASAM MDF 4.1 Files (*.mf4)</AutomaticExportFileType>
+					<AutomaticExportFolder type="key"/>
+					<AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled>
+					<AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits>
+					<AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex>
+					<Description type="key"/>
+					<FileNamePrefix type="key">buf_</FileNamePrefix>
+					<OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled>
+					<RecordingFileType type="key">ASAM MDF 4.1 Files (*.mf4)</RecordingFileType>
+				</SaveMeasurementBuffer>
+				<SaveDisplayedData>
+					<AddToExperimentEnabled type="key">-1</AddToExperimentEnabled>
+					<AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled>
+					<AutomaticExportEnabled type="key">0</AutomaticExportEnabled>
+					<AutomaticExportFileNamePrefix type="key">sddexp_</AutomaticExportFileNamePrefix>
+					<AutomaticExportFileType type="key">ASAM MDF 4.1 Files (*.mf4)</AutomaticExportFileType>
+					<AutomaticExportFolder type="key"/>
+					<AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled>
+					<AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits>
+					<AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex>
+					<Description type="key"/>
+					<FileNamePrefix type="key">sdd_</FileNamePrefix>
+					<OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled>
+					<RecordingFileType type="key">ASAM MDF 4.1 Files (*.mf4)</RecordingFileType>
+				</SaveDisplayedData>
+				<SaveFlightRecorderData>
+					<AddToExperimentEnabled type="key">-1</AddToExperimentEnabled>
+					<AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled>
+					<AutomaticExportEnabled type="key">0</AutomaticExportEnabled>
+					<AutomaticExportFileNamePrefix type="key">flightrecexp_</AutomaticExportFileNamePrefix>
+					<AutomaticExportFileType type="key">ASAM MDF 4.1 Files (*.mf4)</AutomaticExportFileType>
+					<AutomaticExportFolder type="key"/>
+					<AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled>
+					<AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits>
+					<AutomaticNamingStartIndex type="key">1</AutomaticNamingStartIndex>
+					<Description type="key"/>
+					<FileNamePrefix type="key">flightrec_</FileNamePrefix>
+					<OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled>
+					<RecordingFileType type="key">ASAM MDF 4.1 Files (*.mf4)</RecordingFileType>
+				</SaveFlightRecorderData>
+			</Acquisition>
+			<Recorders>
+				<Recorder>
+					<Name type="key">Recorder 1</Name>
+					<UniqueKey type="key">4</UniqueKey>
+					<AutomaticSignalConfigurationEnabled type="key">-1</AutomaticSignalConfigurationEnabled>
+					<WriteToFileEnabled type="key">-1</WriteToFileEnabled>
+					<MeasurementTimestampsEnabled type="key">0</MeasurementTimestampsEnabled>
+					<StartAudioSignalEnabled type="key">0</StartAudioSignalEnabled>
+					<StopAudioSignalEnabled type="key">0</StopAudioSignalEnabled>
+					<Active type="key">-1</Active>
+					<StartCondition>
+						<Enabled type="key">0</Enabled>
+						<RecordingCycleCount type="key">1</RecordingCycleCount>
+						<SelectedTriggerRule type="key"/>
+						<TriggerDelay type="key">0</TriggerDelay>
+					</StartCondition>
+					<StopCondition>
+						<RecordingStopWarningEnabled type="key">0</RecordingStopWarningEnabled>
+						<RecordingStopWarningTime type="key">60</RecordingStopWarningTime>
+						<SelectedTriggerRule type="key"/>
+						<Type type="key">0</Type>
+						<TimeLimit type="key">3600</TimeLimit>
+						<TriggerDelay type="key">0</TriggerDelay>
+					</StopCondition>
+					<StorageInformation>
+						<AddToExperimentEnabled type="key">-1</AddToExperimentEnabled>
+						<AutomaticSaveDialogEnabled type="key">0</AutomaticSaveDialogEnabled>
+						<AutomaticExportEnabled type="key">0</AutomaticExportEnabled>
+						<AutomaticExportFileNamePrefix type="key">exp1_</AutomaticExportFileNamePrefix>
+						<AutomaticExportFileType type="key">ASAM MDF 4.1 Files (*.mf4)</AutomaticExportFileType>
+						<AutomaticExportFolder type="key"/>
+						<AutomaticNamingEnabled type="key">-1</AutomaticNamingEnabled>
+						<AutomaticNamingMinimunDigits type="key">3</AutomaticNamingMinimunDigits>
+						<AutomaticNamingStartIndex type="key">4</AutomaticNamingStartIndex>
+						<Description type="key"/>
+						<FileNamePrefix type="key">rec1_</FileNamePrefix>
+						<OpenInMeasurementDataPoolEnabled type="key">0</OpenInMeasurementDataPoolEnabled>
+						<RecordingFileType type="key">ASAM MDF 4.1 Files (*.mf4)</RecordingFileType>
+					</StorageInformation>
+					<SignalList>
+						<Variable>
+							<Name type="key">Labels/fc[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Ic_med[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Ic_med[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Ic_med[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/ickm1[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/ickm1[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/ickm1[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/icref[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/icref[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/icref[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/IL_med[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/IL_med[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/IL_med[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/PLQL[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/PLQL[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/varfiltrada[01]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vdclink[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vdclink[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vdclink[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vs_med[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vs_med[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/Vs_med[2]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/vsalfabeta[0]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+						<Variable>
+							<Name type="key">Labels/vsalfabeta[1]</Name>
+							<Platform type="key">568f0ef5-b007-4e66-befd-b6be53b85068</Platform>
+							<PlatformDisplayName type="key">Platform</PlatformDisplayName>
+							<Recorded type="key">-1</Recorded>
+							<Signal>
+								<Raster type="key">HostService</Raster>
+							</Signal>
+						</Variable>
+					</SignalList>
+				</Recorder>
+			</Recorders>
+		</MeasurementConfiguration>
+	</MeasureDataManagement>
+	<Instrumentation Version="1"/>
+	<DiagnosticsManagement/>
+	<PlatformManagement Version="10">
+		<SimulationTimeGroupSupported type="key">-1</SimulationTimeGroupSupported>
+		<DeviceFactory>
+			<Device>
+				<DeviceName type="key">568f0ef5-b007-4e66-befd-b6be53b85068</DeviceName>
+				<DisplayName type="key">Platform</DisplayName>
+				<DeviceType type="key">370</DeviceType>
+				<DeviceConfiguration/>
+				<applications/>
+				<AssignmentConfiguration>
+					<AssignmentInfo>
+						<AliasName type="key"/>
+						<BoardName type="key"/>
+						<ConnectionType type="key">1</ConnectionType>
+						<MACAddress type="key"/>
+						<Mode type="key">1</Mode>
+						<Children type="key">1</Children>
+						<NetClient type="key"/>
+						<PlatformType type="key">30</PlatformType>
+						<PortAddress type="key">0</PortAddress>
+						<ProcessorName type="key"/>
+						<SerialNumber type="key"/>
+						<TopologyCheck type="key">0</TopologyCheck>
+						<AssignmentProperties>
+							<AssignmentProperty>
+								<Name type="key">PlatformType</Name>
+								<Value type="key">30</Value>
+								<Type type="key">System.Int32</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">Mode</Name>
+								<Value type="key">1</Value>
+								<Type type="key">System.Int32</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">ConnectionType</Name>
+								<Value type="key">1</Value>
+								<Type type="key">System.Int32</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">Children</Name>
+								<Value type="key">1</Value>
+								<Type type="key">System.Int32</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">BoardName</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">MACAddress</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">NetClient</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">PortAddress</Name>
+								<Value type="key">0</Value>
+								<Type type="key">System.Int32</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">SerialNumber</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">ProcessorName</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">TopologyCheck</Name>
+								<Value type="key">False</Value>
+								<Type type="key">System.Boolean</Type>
+							</AssignmentProperty>
+							<AssignmentProperty>
+								<Name type="key">AliasName</Name>
+								<Value type="key"/>
+								<Type type="key">System.String</Type>
+							</AssignmentProperty>
+						</AssignmentProperties>
+						<AssignmentInfo>
+							<AliasName type="key"/>
+							<BoardName type="key"/>
+							<ConnectionType type="key">1</ConnectionType>
+							<MACAddress type="key"/>
+							<Mode type="key">1</Mode>
+							<Children type="key">0</Children>
+							<NetClient type="key">192.168.140.101</NetClient>
+							<PlatformType type="key">30</PlatformType>
+							<PortAddress type="key">0</PortAddress>
+							<ProcessorName type="key"/>
+							<SerialNumber type="key">796864</SerialNumber>
+							<TopologyCheck type="key">0</TopologyCheck>
+							<AssignmentProperties>
+								<AssignmentProperty>
+									<Name type="key">PlatformType</Name>
+									<Value type="key">30</Value>
+									<Type type="key">System.Int32</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">Mode</Name>
+									<Value type="key">1</Value>
+									<Type type="key">System.Int32</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">ConnectionType</Name>
+									<Value type="key">1</Value>
+									<Type type="key">System.Int32</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">Children</Name>
+									<Value type="key">0</Value>
+									<Type type="key">System.Int32</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">BoardName</Name>
+									<Value type="key"/>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">MACAddress</Name>
+									<Value type="key"/>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">NetClient</Name>
+									<Value type="key">192.168.140.101</Value>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">PortAddress</Name>
+									<Value type="key">0</Value>
+									<Type type="key">System.Int32</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">SerialNumber</Name>
+									<Value type="key">796864</Value>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">ProcessorName</Name>
+									<Value type="key"/>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">TopologyCheck</Name>
+									<Value type="key">False</Value>
+									<Type type="key">System.Boolean</Type>
+								</AssignmentProperty>
+								<AssignmentProperty>
+									<Name type="key">AliasName</Name>
+									<Value type="key"/>
+									<Type type="key">System.String</Type>
+								</AssignmentProperty>
+							</AssignmentProperties>
+						</AssignmentInfo>
+					</AssignmentInfo>
+				</AssignmentConfiguration>
+				<GeneralSettings>
+					<StartOnlineCalibrationBehavior type="key">5</StartOnlineCalibrationBehavior>
+					<DeviceEnableResynchonisation type="key">1</DeviceEnableResynchonisation>
+					<MeasurementService type="key">1</MeasurementService>
+					<ResumeOnlineCalibrationBehaviour type="key">5</ResumeOnlineCalibrationBehaviour>
+					<DisplayStatusInformation type="key">-1</DisplayStatusInformation>
+					<DisplayAutomaticReconnectBehavior type="key">1</DisplayAutomaticReconnectBehavior>
+					<EnablePlatform type="key">1</EnablePlatform>
+					<StartRTA type="key">1</StartRTA>
+					<EnforceStartingRTA type="key">1</EnforceStartingRTA>
+				</GeneralSettings>
+				<SubstituteFactory/>
+			</Device>
+		</DeviceFactory>
+	</PlatformManagement>
+	<DataSetManager>
+		<Version>
+			<Version type="key">2</Version>
+		</Version>
+		<Work/>
+		<ActiveWork/>
+		<Reference/>
+		<ActiveReference/>
+		<Master/>
+		<ActiveMaster/>
+		<InitialMaster/>
+		<Incomplete/>
+		<IncompleteReadonly/>
+		<DataSet/>
+		<Readonly/>
+		<LabelListFilter>
+			<LabelListFilterFile type="key"/>
+			<LabelListFilterActive type="key">0</LabelListFilterActive>
+		</LabelListFilter>
+		<AutomaticDownload/>
+	</DataSetManager>
+</Root>

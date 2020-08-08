@@ -1,0 +1,62 @@
+%implements s0_b0_azcbc_TLCInterface "C"
+
+%function getOutputAddr_0_1_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<e04*//*@>dfd*/rtDW./*@>e09*/SFunction1"
+%endfunction
+
+%function getOutput_0_1_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>e16*/rtDW./*@>e23*/SFunction1"
+%endfunction
+
+%function getInputAddr_0_2_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<e49*//*@>e42*/rtDW./*@>e4e*/Sum"
+%endfunction
+
+%function getInput_0_2_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>e5b*/rtDW./*@>e68*/Sum"
+%endfunction
+
+%function getOutputAddr_0_1_0_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<e8e*//*@>e87*/rtDW./*@>e93*/SFunction1"
+%endfunction
+
+%function getOutput_0_1_0_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>ea0*/rtDW./*@>ead*/SFunction1"
+%endfunction
+
+%function getInputAddr_0_2_0_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<ed3*//*@>ecc*/rtDW./*@>ed8*/Sum"
+%endfunction
+
+%function getInput_0_2_0_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>ee5*/rtDW./*@>ef2*/Sum"
+%endfunction
+
+%function getOutputAddr_0_1_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<f18*//*@>f11*/rtDW./*@>f1d*/SFunction1"
+%endfunction
+
+%function getOutput_0_1_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>f2a*/rtDW./*@>f37*/SFunction1"
+%endfunction
+
+%function getInputAddr_0_2_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<f5d*//*@>f56*/rtDW./*@>f62*/Sum"
+%endfunction
+
+%function getInput_0_2_0_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>f6f*/rtDW./*@>f7c*/Sum"
+%endfunction
+

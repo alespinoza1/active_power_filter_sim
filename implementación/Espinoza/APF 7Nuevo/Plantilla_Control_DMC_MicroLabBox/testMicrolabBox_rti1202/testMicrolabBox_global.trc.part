@@ -1,0 +1,52 @@
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	-- Skipping label "Salida"
+
+	p_0_testMicrolabBox_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "entrada"
+	 origin:  "testMicrolabBox/ADC_CLASS1_BL1/ADC"
+	 flags:   READONLY
+	}
+	p_0_testMicrolabBox_boolean_T_1[0]
+	{
+	 type:    uint(8)*
+	 alias:   "entradaDigital"
+	 bitmask: 0x01
+	 range:   < 0 ; 1 >
+	 origin:  "testMicrolabBox/DIO_CLASS1_BIT_IN_BL1/Out"
+	 flags:   READONLY
+	}
+	-- Skipping label "linea1"
+
+	p_0_testMicrolabBox_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "sal2"
+	 origin:  "testMicrolabBox/S-Function Builder/Out1"
+	 flags:   READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+

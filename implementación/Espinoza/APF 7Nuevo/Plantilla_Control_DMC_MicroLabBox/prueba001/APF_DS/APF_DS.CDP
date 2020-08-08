@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+	<creator type="key">ControlDesk 6.3</creator>
+	<project>
+		<Creator type="key">ControlDesk</Creator>
+		<Name type="key">APF_DS.CDP</Name>
+		<DisplayName type="key">APF_DS</DisplayName>
+		<Flags type="key">4096</Flags>
+		<Type type="key">1</Type>
+		<UniqueID type="key">278916179</UniqueID>
+		<EntityID type="key">{0065753E-E8A5-456A-B394-3F97F745D74D}</EntityID>
+		<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+		<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+		<ItemInfoDescr type="key"/>
+		<ItemInfoAddInfoDb type="key"/>
+		<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		<item>
+			<Targets type="key">project</Targets>
+			<Name type="key">APF_DS</Name>
+			<DisplayName type="key">APF_DS</DisplayName>
+			<Path type="key">..</Path>
+			<Flags type="key">4100</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">438067189</UniqueID>
+			<EntityID type="key">{6E4A5BE8-B66F-4D3E-8563-2D9BD93E7FF9}</EntityID>
+			<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Docs type="key">.doc,.docx,.pdf</Docs>
+				<Name type="key">Specifications</Name>
+				<DisplayName type="key">Specifications</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">1020463538</UniqueID>
+				<EntityID type="key">{2537EC64-E085-41CD-A29F-91838D053D95}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.doc,.docx,.pdf</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Docs type="key">.mpp</Docs>
+				<Name type="key">Project Plans</Name>
+				<DisplayName type="key">Project Plans</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">190323330</UniqueID>
+				<EntityID type="key">{241704DC-606A-4952-AD39-7190862ADF0C}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.mpp</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager_global</Targets>
+				<Name type="key">Global Data Sets</Name>
+				<DisplayName type="key">Global Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">1011681683</UniqueID>
+				<EntityID type="key">{AA13380A-43D8-4A74-BFD0-1374E4A0AF09}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">variablesmanagement</Targets>
+				<Name type="key">Variable Descriptions</Name>
+				<DisplayName type="key">Variable Descriptions</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">471506244</UniqueID>
+				<EntityID type="key">{138114E1-4DED-4E16-B66E-3EA2715A89CB}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">APF_DS.vdb</Name>
+					<DisplayName type="key">C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\prueba001\APF_DS\Variable Descriptions\APF_DS.vdb</DisplayName>
+					<Path type="key">.\Variable Descriptions</Path>
+					<Flags type="key">276</Flags>
+					<Type type="key">18</Type>
+					<UniqueID type="key">839203097</UniqueID>
+					<EntityID type="key">{21DA4110-6A01-45A2-A594-5054FF0850A2}</EntityID>
+					<ItemInfoDate type="key">9/5/2019 16:44:39</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">apf3n.sdf</Name>
+					<DisplayName type="key">apf3n.sdf</DisplayName>
+					<Path type="key">.\Variable Descriptions\apf3n.sdf</Path>
+					<Flags type="key">18704</Flags>
+					<Type type="key">7</Type>
+					<UniqueID type="key">1009168509</UniqueID>
+					<EntityID type="key">{72ABF1F2-195E-4E84-8DC5-F6D42E72834A}</EntityID>
+					<ItemInfoDate type="key">9/5/2019 16:44:39</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Original file added from ..\..\..\..\Julio Pacher\APF - 3N\apf3n.sdf [2019-04-16 23:40:38 (UTC)]
+</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">apf3n.trc</Name>
+						<DisplayName type="key">apf3n.trc</DisplayName>
+						<Path type="key">.\Variable Descriptions\apf3n.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">731759617</UniqueID>
+						<EntityID type="key">{79384571-D9FB-4DF9-ADFF-AC9246C6D7BD}</EntityID>
+						<ItemInfoDate type="key">9/5/2019 16:44:39</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">apf3n.map</Name>
+						<DisplayName type="key">apf3n.map</DisplayName>
+						<Path type="key">.\Variable Descriptions\apf3n.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">836098105</UniqueID>
+						<EntityID type="key">{1A0A9619-0CD2-4656-AB9C-D3B2201FF4BA}</EntityID>
+						<ItemInfoDate type="key">9/5/2019 16:44:39</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">apf3n.rta</Name>
+						<DisplayName type="key">apf3n.rta</DisplayName>
+						<Path type="key">.\Variable Descriptions\apf3n.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<Type type="key">30</Type>
+						<UniqueID type="key">187011102</UniqueID>
+						<EntityID type="key">{85E7FE11-5F35-4A64-87A7-16207B012918}</EntityID>
+						<ItemInfoDate type="key">9/5/2019 16:44:39</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager</Targets>
+				<Name type="key">Data Sets</Name>
+				<DisplayName type="key">Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">400067563</UniqueID>
+				<EntityID type="key">{6183FD9E-1172-4F06-BC95-057F8E52D773}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.vfe</Targets>
+				<Name type="key">Variable Filters</Name>
+				<DisplayName type="key">Variable Filters</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">2304</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">183478351</UniqueID>
+				<EntityID type="key">{191B26BF-EE29-47EA-86E8-4DF429C3459F}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.lab</Targets>
+				<Docs type="key">.lab,.txt</Docs>
+				<Name type="key">Label Lists</Name>
+				<DisplayName type="key">Label Lists</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">940343711</UniqueID>
+				<EntityID type="key">{39C5D621-9CF1-48CD-8E29-05E184BF955D}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.lab,.txt</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">interpreter,.py</Targets>
+				<Docs type="key">.py</Docs>
+				<Name type="key">Python Scripts</Name>
+				<DisplayName type="key">Python Scripts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">720161168</UniqueID>
+				<EntityID type="key">{D430C652-14E4-4438-A69A-B1356F210320}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.py</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">busnavigator,.xml</Targets>
+				<Name type="key">BusNavigator</Name>
+				<DisplayName type="key">BusNavigator</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<ExtendedFlags type="key">256</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">795148658</UniqueID>
+				<EntityID type="key">{1017E5F6-52ED-446F-8CE0-688D2CE6E53A}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">signaleditor</Targets>
+				<Name type="key">Signal Description Sets</Name>
+				<DisplayName type="key">Signal Description Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">1065670579</UniqueID>
+				<EntityID type="key">{4EABA57F-241C-415A-B6E1-891C3FEEF5E5}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+		<item>
+			<Name type="key">Events</Name>
+			<DisplayName type="key">Events</DisplayName>
+			<Path type="key">.</Path>
+			<Flags type="key">4</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">907310496</UniqueID>
+			<EntityID type="key">{361300EF-5B1B-4EF5-8CCA-BE852F57A1FB}</EntityID>
+			<ItemInfoDate type="key">9/5/2019 16:44:40</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Name type="key">Project.events</Name>
+				<DisplayName type="key">Project.events</DisplayName>
+				<Path type="key">.\Events</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">52</Type>
+				<UniqueID type="key">620914468</UniqueID>
+				<EntityID type="key">{935BEEBA-1FFC-4743-BDCB-7CBB4489FB75}</EntityID>
+				<ItemInfoDate type="key">9/5/2019 16:44:40</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+	</project>
+	<experiments>
+		<experiment>
+			<Creator type="key">ControlDesk</Creator>
+			<Name type="key">APF3N_experiment.CDE</Name>
+			<DisplayName type="key">APF3N_experiment</DisplayName>
+			<Path type="key">.\APF3N_experiment</Path>
+			<Flags type="key">4096</Flags>
+			<Type type="key">2</Type>
+			<UniqueID type="key">880407149</UniqueID>
+			<EntityID type="key">{3C5F9AA7-CE94-411D-8430-92887BDE49FF}</EntityID>
+			<ItemInfoDate type="key">9/5/2019 16:44:38</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		</experiment>
+	</experiments>
+	<UserManager/>
+	<XILAPIEESPort Version="1"/>
+	<SignalEditor/>
+	<Interpreter/>
+	<VariablesManagement Version="100">
+		<CreatorVersion type="key">603000375</CreatorVersion>
+	</VariablesManagement>
+	<ProjectExperiment>
+		<LastActiveExperiment type="key">APF3N_experiment</LastActiveExperiment>
+	</ProjectExperiment>
+	<MeasureDataManagement Version="4"/>
+	<Instrumentation Version="1">
+		<UniqueIds Version="3">
+			<Count type="key">1</Count>
+			<File1 type="key">APF3N_experiment/Layout1</File1>
+			<Id1 type="key">0</Id1>
+		</UniqueIds>
+	</Instrumentation>
+	<DiagnosticsManagement/>
+	<PlatformManagement Version="10"/>
+	<DataSetManager>
+		<Version>
+			<Version type="key">2</Version>
+		</Version>
+		<Work/>
+		<ActiveWork/>
+		<Reference/>
+		<ActiveReference/>
+		<Master/>
+		<ActiveMaster/>
+		<InitialMaster/>
+		<Incomplete/>
+		<IncompleteReadonly/>
+		<DataSet/>
+		<Readonly/>
+		<LabelListFilter>
+			<LabelListFilterFile type="key"/>
+			<LabelListFilterActive type="key">0</LabelListFilterActive>
+		</LabelListFilter>
+		<AutomaticDownload/>
+	</DataSetManager>
+</Root>

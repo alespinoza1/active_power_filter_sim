@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+	<creator type="key">ControlDesk 6.3</creator>
+	<project>
+		<Creator type="key">ControlDesk</Creator>
+		<Name type="key">APF_Espinoza.CDP</Name>
+		<DisplayName type="key">APF_Espinoza</DisplayName>
+		<Flags type="key">4096</Flags>
+		<Type type="key">1</Type>
+		<UniqueID type="key">600578892</UniqueID>
+		<EntityID type="key">{D46A9F99-CB4E-4856-8F42-BFF1A9D1245C}</EntityID>
+		<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+		<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+		<ItemInfoDescr type="key"/>
+		<ItemInfoAddInfoDb type="key"/>
+		<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		<item>
+			<Targets type="key">project</Targets>
+			<Name type="key">APF_Espinoza</Name>
+			<DisplayName type="key">APF_Espinoza</DisplayName>
+			<Path type="key">..</Path>
+			<Flags type="key">4100</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">806269627</UniqueID>
+			<EntityID type="key">{59381E7D-E085-4869-B3AE-BD1FCEB45F3B}</EntityID>
+			<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Docs type="key">.doc,.docx,.pdf</Docs>
+				<Name type="key">Specifications</Name>
+				<DisplayName type="key">Specifications</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">85165964</UniqueID>
+				<EntityID type="key">{3A49A88F-DE26-498D-8C38-5C329D992E07}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.doc,.docx,.pdf</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Docs type="key">.mpp</Docs>
+				<Name type="key">Project Plans</Name>
+				<DisplayName type="key">Project Plans</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">1055756072</UniqueID>
+				<EntityID type="key">{64EC389E-95AB-461C-89FD-1620BC1636DF}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.mpp</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager_global</Targets>
+				<Name type="key">Global Data Sets</Name>
+				<DisplayName type="key">Global Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">101805288</UniqueID>
+				<EntityID type="key">{59889868-D9D6-42B4-A2BD-524EEB524C51}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">variablesmanagement</Targets>
+				<Name type="key">Variable Descriptions</Name>
+				<DisplayName type="key">Variable Descriptions</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">77339864</UniqueID>
+				<EntityID type="key">{EFDE891D-3849-4E5F-9AA3-053CA4DEFAA2}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">APF_Espinoza.vdb</Name>
+					<DisplayName type="key">C:\Users\DELL\Documents\Espinoza\APF 7Nuevo\Scada\APF_Espinoza\Variable Descriptions\APF_Espinoza.vdb</DisplayName>
+					<Path type="key">.\Variable Descriptions</Path>
+					<Flags type="key">276</Flags>
+					<Type type="key">18</Type>
+					<UniqueID type="key">724013063</UniqueID>
+					<EntityID type="key">{1FDB9DB5-9423-4C05-A1E3-E8E413D393C1}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">control_apf7_nuevo_microlabbox.sdf</Name>
+					<DisplayName type="key">control_apf7_nuevo_microlabbox.sdf</DisplayName>
+					<Path type="key">.\Variable Descriptions\control_apf7_nuevo_microlabbox.sdf</Path>
+					<Flags type="key">18704</Flags>
+					<Type type="key">7</Type>
+					<UniqueID type="key">1028118774</UniqueID>
+					<EntityID type="key">{603A8A9E-0FE9-4CEE-817E-B6DDF3717DB4}</EntityID>
+					<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoLog type="key">
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf [2020-08-07 17:17:43 (UTC)]
+
+Variable description reloaded on 07.08.2020 13:55:40 (C:\Users\DELL\Documents\Espinoza\APF 7Nuevo\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf [2020-08-07 17:55:29 (UTC)]
+
+Variable description reloaded on 07.08.2020 14:06:20 (C:\Users\DELL\Documents\Espinoza\APF 7Nuevo\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf [2020-08-07 18:05:02 (UTC)]
+
+Variable description reloaded on 07.08.2020 14:11:00 (C:\Users\DELL\Documents\Espinoza\APF 7Nuevo\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf [2020-08-07 18:10:45 (UTC)]
+
+Variable description reloaded on 07.08.2020 14:29:44 (C:\Users\DELL\Documents\Espinoza\APF 7Nuevo\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf)
+Original file added from ..\..\Plantilla_Control_DMC_MicroLabBox\control_apf7_nuevo_microlabbox.sdf [2020-08-07 18:27:15 (UTC)]
+</ItemInfoLog>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_apf7_nuevo_microlabbox.trc</Name>
+						<DisplayName type="key">control_apf7_nuevo_microlabbox.trc</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_apf7_nuevo_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">529348367</UniqueID>
+						<EntityID type="key">{45791073-4348-4AAC-B31F-BD7C3EC86560}</EntityID>
+						<ItemInfoDate type="key">7/8/2020 14:29:44</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_apf7_nuevo_microlabbox.map</Name>
+						<DisplayName type="key">control_apf7_nuevo_microlabbox.map</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_apf7_nuevo_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">941969470</UniqueID>
+						<EntityID type="key">{B989EC4E-8168-4822-944E-47CB1B854454}</EntityID>
+						<ItemInfoDate type="key">7/8/2020 14:29:44</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_apf7_nuevo_microlabbox.rta</Name>
+						<DisplayName type="key">control_apf7_nuevo_microlabbox.rta</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_apf7_nuevo_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">30</Type>
+						<UniqueID type="key">195422417</UniqueID>
+						<EntityID type="key">{8DE767E8-217E-48D9-B474-807EBFF0BCDA}</EntityID>
+						<ItemInfoDate type="key">7/8/2020 14:29:44</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager</Targets>
+				<Name type="key">Data Sets</Name>
+				<DisplayName type="key">Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">209002014</UniqueID>
+				<EntityID type="key">{4D524BC1-7FEC-40E4-AF38-05B1FE68516D}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.vfe</Targets>
+				<Name type="key">Variable Filters</Name>
+				<DisplayName type="key">Variable Filters</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">2304</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">573438724</UniqueID>
+				<EntityID type="key">{70D1DD51-AADA-4164-9DFD-4EC4B6C82A5F}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.lab</Targets>
+				<Docs type="key">.lab,.txt</Docs>
+				<Name type="key">Label Lists</Name>
+				<DisplayName type="key">Label Lists</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">275906221</UniqueID>
+				<EntityID type="key">{A2FC4231-79D5-433B-AEDC-EECFDAF15FF4}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.lab,.txt</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">interpreter,.py</Targets>
+				<Docs type="key">.py</Docs>
+				<Name type="key">Python Scripts</Name>
+				<DisplayName type="key">Python Scripts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">895699765</UniqueID>
+				<EntityID type="key">{F19DE74B-AF83-4D32-BD7F-87976F56BD36}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.py</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">busnavigator,.xml</Targets>
+				<Name type="key">BusNavigator</Name>
+				<DisplayName type="key">BusNavigator</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<ExtendedFlags type="key">256</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">191999817</UniqueID>
+				<EntityID type="key">{555B5C36-87F4-49DD-BEB3-C5777EA18FF1}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">signaleditor</Targets>
+				<Name type="key">Signal Description Sets</Name>
+				<DisplayName type="key">Signal Description Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">354859922</UniqueID>
+				<EntityID type="key">{9AD1CE74-46EC-4809-BE4D-9918B693C9FD}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+		<item>
+			<Name type="key">Events</Name>
+			<DisplayName type="key">Events</DisplayName>
+			<Path type="key">.</Path>
+			<Flags type="key">4</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">509647930</UniqueID>
+			<EntityID type="key">{75B085EE-FE9D-421F-B397-7ED6097822C8}</EntityID>
+			<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Name type="key">Project.events</Name>
+				<DisplayName type="key">Project.events</DisplayName>
+				<Path type="key">.\Events</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">52</Type>
+				<UniqueID type="key">771268108</UniqueID>
+				<EntityID type="key">{91C14357-7723-4FFB-89CC-25E1E2D98F7B}</EntityID>
+				<ItemInfoDate type="key">7/8/2020 13:20:32</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+	</project>
+	<experiments>
+		<experiment>
+			<Creator type="key">ControlDesk</Creator>
+			<Name type="key">Experiment_APF_Espinoza.CDE</Name>
+			<DisplayName type="key">Experiment_APF_Espinoza</DisplayName>
+			<Path type="key">.\Experiment_APF_Espinoza</Path>
+			<Flags type="key">4096</Flags>
+			<Type type="key">2</Type>
+			<UniqueID type="key">662541810</UniqueID>
+			<EntityID type="key">{58EEDE54-D41A-485F-9D28-3FE518DBDEA9}</EntityID>
+			<ItemInfoDate type="key">7/8/2020 13:20:31</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		</experiment>
+	</experiments>
+	<UserManager/>
+	<XILAPIEESPort Version="1"/>
+	<SignalEditor/>
+	<Interpreter/>
+	<VariablesManagement Version="100">
+		<CreatorVersion type="key">603000375</CreatorVersion>
+	</VariablesManagement>
+	<ProjectExperiment>
+		<LastActiveExperiment type="key">Experiment_APF_Espinoza</LastActiveExperiment>
+	</ProjectExperiment>
+	<MeasureDataManagement Version="4"/>
+	<Instrumentation Version="1">
+		<UniqueIds Version="3">
+			<Count type="key">1</Count>
+			<File1 type="key">Experiment_APF_Espinoza/Layout1</File1>
+			<Id1 type="key">0</Id1>
+		</UniqueIds>
+	</Instrumentation>
+	<DiagnosticsManagement/>
+	<PlatformManagement Version="10"/>
+	<DataSetManager>
+		<Version>
+			<Version type="key">2</Version>
+		</Version>
+		<Work/>
+		<ActiveWork/>
+		<Reference/>
+		<ActiveReference/>
+		<Master/>
+		<ActiveMaster/>
+		<InitialMaster/>
+		<Incomplete/>
+		<IncompleteReadonly/>
+		<DataSet/>
+		<Readonly/>
+		<LabelListFilter>
+			<LabelListFilterFile type="key"/>
+			<LabelListFilterActive type="key">0</LabelListFilterActive>
+		</LabelListFilter>
+		<AutomaticDownload/>
+	</DataSetManager>
+</Root>

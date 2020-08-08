@@ -21,10 +21,9 @@ fc = 18000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
 Tsim= 1; %Tiempo total de simulacion [s]
 Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
-APFon = 0.040;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
-RLon = 0.00;%Tiempo de interconexion de la carga RL con el sistema Carga-Red electrica [s]
-NLLon = 0.2
-
+APFon = 0.02;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+RLon = 0;%Tiempo de interconexion de la carga RL con el sistema Carga-Red electrica [s]
+NLLon = 5
 
 %% parámetros de la red eléctrica %%
 global Vs fe we teta_a teta_b teta_c 
@@ -32,8 +31,8 @@ Vs= 120*sqrt(2);%Tension de la red [V]
 fe = 50; %Frecuencia de la red [Hz]
 we= 2*pi*fe; %Frecuencia de la red [rad/s]
 teta_a= 0; %Angulo de fase a [deg]
-teta_b= 120; %Angulo de fase b [deg]
-teta_c= -120; %Angulo de fase c [deg]
+teta_b= -120; %Angulo de fase b [deg]
+teta_c= +120; %Angulo de fase c [deg]
 
 %% parámetros del filtro de salida %%
 global Rf Lf
@@ -49,7 +48,7 @@ CL = 2200e-6; % capacitancia en [mF]
 %% parámetros del convertidor multinivel %%
     %%parametros DC-LINK%%
     global Vdc Cdc Vodc Ideal vcrls
-    Vdc = 62; %Tension ideal del DC-Link [V]
+    Vdc = 63; %Tension ideal del DC-Link [V]
     Cdc = 680e-6; %Capacitancia del DC-Link [F]
     Vodc = Vdc; %Tension inicial en el capacitor [V]
     Ideal = 0; %Variable que indica si el DC-Link es una fuente de tension ideal o un capacitor: 1 = Fuente ideal, 0 = Capacitor
@@ -62,7 +61,7 @@ CL = 2200e-6; % capacitancia en [mF]
     
     nc = 3; %Nº de celdas por fase
     
-    vcrls = 1/6;
+    vcrls = 1/3;
     
     %Definicion de los 7 posibles vectores de disparo/estados de conmutacion: Matriz de estados de conmutacion   
     XI=[0 1 0 1 0 1;
@@ -83,12 +82,12 @@ fn = fe;
 Theta = 0;
 v_q_km1 = 0;
 ylfkm1 = 0;
-tset = 30e-3; %30ms tiempo de establecimiento
-zeta = 0.7; %factor de amortiguamiento
-delta = 0.05;% banda error 5%
-wn = -(1/(tset*zeta))*log(delta/(1/sqrt(1-zeta^2)));
-kipll = wn^2/Vs;
-kppll = 2*zeta*wn/Vs;
+tset = 5e-3; %5ms tiempo de establecimiento
+zeta = 0.707; %factor de amortiguamiento
+delta = 0.01;% banda error 1%
+wn = -(1/(tset*zeta))*log(delta/(1/sqrt(1-zeta^2)))
+kipll = wn^2/Vs
+kppll = 2*zeta*wn/Vs
 B0 = (2*kppll+kipll*Tm)/2
 B1 = -(2*kppll-kipll*Tm)/2
 

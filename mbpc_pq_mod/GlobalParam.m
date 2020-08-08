@@ -19,11 +19,11 @@ global Tm fm Ts Tsim APFon fc RLon NLLon
 fm = 18000; %Frecuencia de muestreo [Hz]
 fc = 18000; % frecuencia de la portadora
 Tm = 1/fm; %Periodo de muestreo [s]
-Tsim= 1; %Tiempo total de simulacion [s]
+Tsim= 0.15; %Tiempo total de simulacion [s]
 Ts= 5e-6; %Tiempo de integracion para la simulacion [s]
-APFon = 0.060;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
-RLon = 0.00;%Tiempo de interconexion de la carga RL con el sistema Carga-Red electrica [s]
-NLLon = 0.25
+APFon = 0.02;%Tiempo de interconexion del APF con el sistema Carga-Red electrica [s]
+RLon = 0.0;%Tiempo de interconexion de la carga RL con el sistema Carga-Red electrica [s]
+NLLon = 0.06
 
 
 %% parámetros de la red eléctrica %%

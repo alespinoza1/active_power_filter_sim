@@ -1,0 +1,329 @@
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+	p_1_Control_APF7_MicroLabBox_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ica"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ila"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[5]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsa"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[8]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[9]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ica_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[10]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[11]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[12]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ila_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[13]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[14]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[15]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Lc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[16]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Rc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[17]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ts"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[18]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vdc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[19]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsa_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[20]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[21]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[22]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "e"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[23]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "f"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[24]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "g"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[25]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "ki"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[26]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "kp"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[27]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "lamda"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[28]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "sat"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[29]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[30]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "y"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_MicroLabBox_real_T_0[31]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "z"
+	 flags:   PARAM
+	}
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	p_0_Control_APF7_MicroLabBox_real_T_0[167]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "IL_med"
+	 origin:  "Control_APF7_MicroLabBox/Mediciones1/S-Function Builder/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[173]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "Ic_med"
+	 origin:  "Control_APF7_MicroLabBox/Mediciones1/S-Function Builder2/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[82]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_2*
+	 alias:   "PLQL"
+	 origin:  "Control_APF7_MicroLabBox/Pl QL\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[84]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_2*
+	 alias:   "Qc_Qs"
+	 origin:  "Control_APF7_MicroLabBox/QcQsfiltrada/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[179]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "Vdclink"
+	 origin:  "Control_APF7_MicroLabBox/Mediciones1/S-Function Builder3/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[96]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWA"
+	 origin:  "Control_APF7_MicroLabBox/Subsystem3/Subsystem/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[111]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWB"
+	 origin:  "Control_APF7_MicroLabBox/Subsystem3/Subsystem1/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[126]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWC"
+	 origin:  "Control_APF7_MicroLabBox/Subsystem3/Subsystem2/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[161]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "Vs_med"
+	 origin:  "Control_APF7_MicroLabBox/Mediciones1/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[40]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_6*
+	 alias:   "contador"
+	 origin:  "Control_APF7_MicroLabBox/Controlador/Controlador/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[144]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "fc"
+	 origin:  "Control_APF7_MicroLabBox/funcionCosto\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[147]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "ickm1"
+	 origin:  "Control_APF7_MicroLabBox/ic km1\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[150]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "icref"
+	 origin:  "Control_APF7_MicroLabBox/ic ref\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[153]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_3*
+	 alias:   "ploss"
+	 origin:  "Control_APF7_MicroLabBox/ploss/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[132]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_12*
+	 alias:   "varfiltrada"
+	 origin:  "Control_APF7_MicroLabBox/filtros/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_MicroLabBox_real_T_0[156]
+	{
+	 type:    Control_APF7_MicroLabBox_ArrayDT0_2*
+	 alias:   "vsalfabeta"
+	 origin:  "Control_APF7_MicroLabBox/vs alfa beta\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+

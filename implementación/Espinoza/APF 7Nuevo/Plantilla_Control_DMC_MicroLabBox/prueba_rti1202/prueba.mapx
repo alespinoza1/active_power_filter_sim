@@ -1,0 +1,181 @@
+<?xml version="1.0"?><!--Generic MAP information file.--><NormalizedMapFile Version="1.0.0.0">
+ <MetaData>
+  <Files>
+   <File Type="GNU x86 Compiler" Name="C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\prueba.map" Date="2019-04-16 10:06:54" ParsingDate="2019-04-16 10:06:54"/>
+  </Files>
+ </MetaData>
+ <Sections>
+  <Section StartAddress="0x48040134" Size="0x00000014" Name=".interp"/>
+  <Section StartAddress="0x48040150" Size="0x00000018" Name=".note"/>
+  <Section StartAddress="0x48040168" Size="0x00000020" Name=".note.gnu.build-id"/>
+  <Section StartAddress="0x48040188" Size="0x00000270" Name=".hash"/>
+  <Section StartAddress="0x480403f8" Size="0x00000570" Name=".dynsym"/>
+  <Section StartAddress="0x48040968" Size="0x000006ea" Name=".dynstr"/>
+  <Section StartAddress="0x48041052" Size="0x00000000" Name=".gnu.version"/>
+  <Section StartAddress="0x48041054" Size="0x00000000" Name=".gnu.version_d"/>
+  <Section StartAddress="0x48041054" Size="0x00000000" Name=".gnu.version_r"/>
+  <Section StartAddress="0x48041054" Size="0x0000006c" Name=".rela.dyn"/>
+  <Section StartAddress="0x480410c0" Size="0x00000330" Name=".rela.plt"/>
+  <Section StartAddress="0x480413f0" Size="0x00000024" Name=".init"/>
+  <Section StartAddress="0x48041420" Size="0x00001c4c" Name=".text"/>
+  <Section StartAddress="0x4804306c" Size="0x00000020" Name=".fini"/>
+  <Section StartAddress="0x48043090" Size="0x000004c8" Name=".rodata"/>
+  <Section StartAddress="0x48043558" Size="0x00000000" Name=".sdata2"/>
+  <Section StartAddress="0x48043558" Size="0x00000014" Name=".eh_frame_hdr"/>
+  <Section StartAddress="0x4804356c" Size="0x0000002c" Name=".eh_frame"/>
+  <Section StartAddress="0x48044598" Size="0x00000000" Name=".preinit_array"/>
+  <Section StartAddress="0x48044598" Size="0x00000000" Name=".init_array"/>
+  <Section StartAddress="0x48044598" Size="0x00000000" Name=".fini_array"/>
+  <Section StartAddress="0x48044598" Size="0x00000008" Name=".ctors"/>
+  <Section StartAddress="0x480445a0" Size="0x00000008" Name=".dtors"/>
+  <Section StartAddress="0x480445a8" Size="0x00000004" Name=".jcr"/>
+  <Section StartAddress="0x480445ac" Size="0x00000100" Name=".dynamic"/>
+  <Section StartAddress="0x480446b0" Size="0x00000028" Name=".data"/>
+  <Section StartAddress="0x480446d8" Size="0x00000000" Name=".tm_clone_table"/>
+  <Section StartAddress="0x480446d8" Size="0x00000054" Name=".got"/>
+  <Section StartAddress="0x4804472c" Size="0x00000000" Name=".sdata"/>
+  <Section StartAddress="0x4804472c" Size="0x00000000" Name=".sbss"/>
+  <Section StartAddress="0x4804472c" Size="0x00000378" Name=".plt"/>
+  <Section StartAddress="0x48044aa8" Size="0x000000c8" Name=".bss"/>
+  <Section StartAddress="0x48044b70" Size="0x00000000" Name=".iplt"/>
+  <Section StartAddress="0x00000000" Size="0x00000047" Name=".comment"/>
+  <Section StartAddress="0x00000000" Size="0x00000018" Name=".PPC.EMB.apuinfo"/>
+  <Section StartAddress="0x00000000" Size="0x00000014" Name=".gnu.attributes"/>
+ </Sections>
+ <Symbols>
+  <Symbol Address="0x48044874" Name="AdcCl1AnalogIn_apply"/>
+  <Symbol Address="0x48044964" Name="AdcCl1AnalogIn_create"/>
+  <Symbol Address="0x48044924" Name="AdcCl1AnalogIn_getSingleValue"/>
+  <Symbol Address="0x4804489c" Name="AdcCl1AnalogIn_isDataReady"/>
+  <Symbol Address="0x4804478c" Name="AdcCl1AnalogIn_read"/>
+  <Symbol Address="0x48044914" Name="AdcCl1AnalogIn_setConversSwTrigger"/>
+  <Symbol Address="0x48044814" Name="AdcCl1AnalogIn_setConversTrigger"/>
+  <Symbol Address="0x4804485c" Name="AdcCl1AnalogIn_setConversionMode"/>
+  <Symbol Address="0x480448dc" Name="AdcCl1AnalogIn_start"/>
+  <Symbol Address="0x4804488c" Name="AdcCl1AnalogIn_write"/>
+  <Symbol Address="0x000004b2" Name="DS_TARGET_PLATFORM"/>
+  <Symbol Address="0x480425d0" Name="DsEesPort_init()"/>
+  <Symbol Address="0x480447e4" Name="DsTimeSync_baserate"/>
+  <Symbol Address="0x4804484c" Name="DsTimeSync_setCurrentTimePtr"/>
+  <Symbol Address="0x480447ac" Name="DsTimeSync_simstateRun"/>
+  <Symbol Address="0x48044974" Name="DsTimeSync_simstateStop"/>
+  <Symbol Address="0x48044954" Name="SrtkApp_background"/>
+  <Symbol Address="0x480448fc" Name="SrtkApp_init"/>
+  <Symbol Address="0x48044894" Name="SrtkApp_terminate"/>
+  <Symbol Address="0x480448ec" Name="SrtkDaq_Background"/>
+  <Symbol Address="0x4804483c" Name="SrtkDaq_Init"/>
+  <Symbol Address="0x48044904" Name="SrtkDaq_Service"/>
+  <Symbol Address="0x4804497c" Name="SrtkIntBase_disableIntGlobal"/>
+  <Symbol Address="0x48044854" Name="SrtkIntBase_enableIntGlobal"/>
+  <Symbol Address="0x480447bc" Name="SrtkIntBase_requestTaskMode"/>
+  <Symbol Address="0x48044824" Name="SrtkPreload_preloadRegion"/>
+  <Symbol Address="0x4804491c" Name="SrtkSim_notifyStateTransition"/>
+  <Symbol Address="0x48044984" Name="SrtkSim_registerState"/>
+  <Symbol Address="0x00000000" Name="_DSPACE_START"/>
+  <Symbol Address="0x00000000" Name="_DSPACE_START_"/>
+  <Symbol Address="0x480445ac" Name="_DYNAMIC"/>
+  <Symbol Address="0x48044720" Name="_GLOBAL_OFFSET_TABLE_"/>
+  <Symbol Address="0x480445a4" Name="__DTOR_END__"/>
+  <Symbol Address="0x480447cc" Name="__cxa_finalize"/>
+  <Symbol Address="0x4804498c" Name="__deregister_frame_info"/>
+  <Symbol Address="0x480446b0" Name="__dso_handle"/>
+  <Symbol Address="0x480425f4" Name="__ieee754_pow"/>
+  <Symbol Address="0x4804477c" Name="__register_frame_info"/>
+  <Symbol Address="0x480448d4" Name="__wrap_atexit"/>
+  <Symbol Address="0x480448cc" Name="__wrap_exit"/>
+  <Symbol Address="0x4804306c" Name="_fini"/>
+  <Symbol Address="0x480448e4" Name="_fini_array"/>
+  <Symbol Address="0x480413f0" Name="_init"/>
+  <Symbol Address="0x480447d4" Name="_init_array"/>
+  <Symbol Address="0x4804487c" Name="_init_libc"/>
+  <Symbol Address="0x480448f4" Name="_preinit_array"/>
+  <Symbol Address="0x48041420" Name="_start"/>
+  <Symbol Address="0x48044b18" Name="currentTime"/>
+  <Symbol Address="0x4804481c" Name="dsparam_copy_data_set"/>
+  <Symbol Address="0x48044884" Name="dsrtt_init"/>
+  <Symbol Address="0x480447f4" Name="dsrtt_script_service_post_computation"/>
+  <Symbol Address="0x480448ac" Name="dsrtt_script_service_pre_computation"/>
+  <Symbol Address="0x48044794" Name="dsrtt_set_current_time"/>
+  <Symbol Address="0x4804493c" Name="dsrtt_set_step_size"/>
+  <Symbol Address="0x48044ab0" Name="dsts_sum_of_reseted_time"/>
+  <Symbol Address="0x48044aa8" Name="errno"/>
+  <Symbol Address="0x48044b1c" Name="finalTime"/>
+  <Symbol Address="0x48041dc0" Name="initConditions"/>
+  <Symbol Address="0x48041dd0" Name="initVariables"/>
+  <Symbol Address="0x480446c8" Name="lastSimState"/>
+  <Symbol Address="0x48041de0" Name="main"/>
+  <Symbol Address="0x480448bc" Name="memset"/>
+  <Symbol Address="0x48044b20" Name="modelStepSize"/>
+  <Symbol Address="0x48044784" Name="msg_error_clear"/>
+  <Symbol Address="0x480448b4" Name="msg_error_printf"/>
+  <Symbol Address="0x4804482c" Name="msg_error_set"/>
+  <Symbol Address="0x480448a4" Name="msg_info_set"/>
+  <Symbol Address="0x48044ab8" Name="msg_last_error_no"/>
+  <Symbol Address="0x4804480c" Name="msg_last_error_number"/>
+  <Symbol Address="0x4804492c" Name="msg_set"/>
+  <Symbol Address="0x48044804" Name="msg_warning_printf"/>
+  <Symbol Address="0x48044b28" Name="pRTIAdcC1AnalogIn_Ch_1"/>
+  <Symbol Address="0x48044b48" Name="pRti_TIMERA_OCnt"/>
+  <Symbol Address="0x48044b40" Name="pRti_TIMERA_OMax"/>
+  <Symbol Address="0x48044b44" Name="pRti_TIMERA_ORpt"/>
+  <Symbol Address="0x48044b3c" Name="pRti_TIMERA_OType"/>
+  <Symbol Address="0x48044b50" Name="pRti_TIMERA_Prio"/>
+  <Symbol Address="0x48044b30" Name="pRti_TIMERA_STime"/>
+  <Symbol Address="0x48044b4c" Name="pRti_TIMERA_TCnt"/>
+  <Symbol Address="0x48044b38" Name="pRti_TIMERA_TState"/>
+  <Symbol Address="0x48044b34" Name="pRti_TIMERA_TTime"/>
+  <Symbol Address="0x48044b14" Name="p_0_prueba_real_T_0"/>
+  <Symbol Address="0x480430ac" Name="p_dsts_sum_of_reset_time"/>
+  <Symbol Address="0x480430b0" Name="p_msg_last_error_no"/>
+  <Symbol Address="0x480446d4" Name="p_xilapi_eesport_activeerrorset_uint32_T"/>
+  <Symbol Address="0x480446d0" Name="p_xilapi_eesport_erroractivated_uint32_T"/>
+  <Symbol Address="0x480446cc" Name="p_xilapi_eesport_errorswitching_uint32_T"/>
+  <Symbol Address="0x480425d4" Name="pow"/>
+  <Symbol Address="0x48044ae0" Name="prueba_B"/>
+  <Symbol Address="0x48044b10" Name="prueba_DW"/>
+  <Symbol Address="0x48043090" Name="prueba_M"/>
+  <Symbol Address="0x48044ae8" Name="prueba_M_"/>
+  <Symbol Address="0x480418f0" Name="prueba_initialize"/>
+  <Symbol Address="0x480417f0" Name="prueba_output"/>
+  <Symbol Address="0x48041994" Name="prueba_rti_init_trc_pointers"/>
+  <Symbol Address="0x48041960" Name="prueba_terminate"/>
+  <Symbol Address="0x48041870" Name="prueba_update"/>
+  <Symbol Address="0x480424d0" Name="rt_SimGetNextSampleHit"/>
+  <Symbol Address="0x480424a0" Name="rt_SimInitTimingEngine"/>
+  <Symbol Address="0x480424e0" Name="rt_SimUpdateDiscreteTaskSampleHits"/>
+  <Symbol Address="0x48044b54" Name="rtiAssertionMode"/>
+  <Symbol Address="0x480430a8" Name="rtiDataSetStorageEnabled"/>
+  <Symbol Address="0x480424f0" Name="rti_assertion_handler"/>
+  <Symbol Address="0x48042580" Name="rti_assertion_mode_msg"/>
+  <Symbol Address="0x48042460" Name="rti_init"/>
+  <Symbol Address="0x48041d70" Name="rti_th_timertask1_trigger_source"/>
+  <Symbol Address="0x4804486c" Name="rtk_bind_interrupt"/>
+  <Symbol Address="0x480447fc" Name="rtk_create_task"/>
+  <Symbol Address="0x480447a4" Name="rtk_current_task_absolute_time_ptr_get"/>
+  <Symbol Address="0x4804495c" Name="rtk_default_overrun_fcn"/>
+  <Symbol Address="0x48044834" Name="rtk_enable_services"/>
+  <Symbol Address="0x48044944" Name="rtk_enter_idle_mode"/>
+  <Symbol Address="0x48044934" Name="rtk_get_subentry"/>
+  <Symbol Address="0x48041d60" Name="rtk_idle_function"/>
+  <Symbol Address="0x4804494c" Name="rtk_initialize"/>
+  <Symbol Address="0x480448c4" Name="rtk_leave_idle_mode"/>
+  <Symbol Address="0x48044864" Name="rtk_overrun_flag_clear"/>
+  <Symbol Address="0x480447c4" Name="rtk_reset_tasks"/>
+  <Symbol Address="0x480447dc" Name="rtk_set_task_type"/>
+  <Symbol Address="0x480447b4" Name="rtk_setup_temp_overrun_handling"/>
+  <Symbol Address="0x480447ec" Name="rtk_task_name_set"/>
+  <Symbol Address="0x48044844" Name="rtk_task_task_calls_get"/>
+  <Symbol Address="0x4804490c" Name="rtk_task_task_name_get"/>
+  <Symbol Address="0x48042e50" Name="scalbn"/>
+  <Symbol Address="0x480446b8" Name="simState"/>
+  <Symbol Address="0x4804479c" Name="sqrt"/>
+  <Symbol Address="0x48044b2c" Name="taskMode"/>
+  <Symbol Address="0x48044774" Name="ts_reset"/>
+  <Symbol Address="0x4804496c" Name="vcm_module_register"/>
+  <Symbol Address="0x48044b6c" Name="xilapi_eesport_activeerrorset_uint32_T"/>
+  <Symbol Address="0x48044b68" Name="xilapi_eesport_erroractivated_uint32_T"/>
+  <Symbol Address="0x48044b64" Name="xilapi_eesport_errorswitching_uint32_T"/>
+  <Symbol Address="0x48044b60" Name="xilapi_eesport_flags_uint32_T"/>
+  <Symbol Address="0x48044b5c" Name="xilapi_eesport_trigger_uint32_T"/>
+ </Symbols>
+</NormalizedMapFile>

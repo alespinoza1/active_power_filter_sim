@@ -1,0 +1,36 @@
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 0
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "Control_DMC_MicroLabBox.map"
+
+_genname     "RTI"
+_genversion  "7.10"
+_gendate     "06/07/2019 14:46:03"
+_description ""
+_author      "RTI1202 7.10 (02-May-2018)"
+_model       "Control_DMC_MicroLabBox"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       1.0E-6
+  alias:       "HostService"
+  increment:   1.0E-6
+  unit:        "s"
+}
+

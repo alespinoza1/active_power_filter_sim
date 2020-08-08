@@ -1,0 +1,708 @@
+-- ****************************************************************************
+--
+--  Trace file: smd_1202_sl.trc
+--
+--  RTI1202 7.10 (02-May-2018)
+--  Sat Feb  9 12:10:58 2019
+--
+--  Copyright 2019, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 1
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "smd_1202_sl.map"
+
+_genname     "RTI"
+_genversion  "7.10"
+_gendate     "02/09/2019 12:11:01"
+_description ""
+_author      "RTI1202 7.10 (02-May-2018)"
+_model       "smd_1202_sl"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       0.0001
+  alias:       "HostService"
+  increment:   0.0001
+  unit:        "s"
+}
+
+
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 RUN=2"
+ unit:  "-"
+}
+
+p_msg_last_error_no
+{
+ type:  uint(32)*
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: READONLY
+}
+
+p_dsts_sum_of_reset_time
+{
+ type:  flt(64,IEEE)*
+ alias: "sumOfResetTime"
+ desc:  "Internal variable for summing up reset time."
+ unit:  "s"
+ flags: READONLY|HIDDEN
+}
+
+
+-- ******** Task Information variables ****************************************
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_TIMERA_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: READONLY
+  }
+  pRti_TIMERA_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: READONLY
+  }
+  pRti_TIMERA_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: READONLY
+  }
+  pRti_TIMERA_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: READONLY
+  }
+  pRti_TIMERA_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: READONLY
+  }
+  pRti_TIMERA_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: READONLY
+  }
+  pRti_TIMERA_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: READONLY
+  }
+  endgroup
+
+
+endgroup
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Integrator 1" -- block-group
+	{
+	 block: "Integrator"
+	}
+		p_0_smd_1202_sl_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_smd_1202_sl_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "InitialCondition"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Integrator 1"
+
+	group "Integrator 2" -- block-group
+	{
+	 block: "Integrator"
+	}
+		p_0_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_smd_1202_sl_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "InitialCondition"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Integrator 2"
+
+	group "x disp" -- block-group
+	{
+	 block: "SignalGenerator"
+	}
+		p_0_smd_1202_sl_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+		p_1_smd_1202_sl_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Amplitude"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Frequency"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "x disp"
+
+	group "Sum" -- block-group
+	{
+	 block: "Sum"
+	}
+		p_0_smd_1202_sl_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum"
+
+	group "x" -- block-group
+	{
+	 block: "Scope"
+	}
+		p_0_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "x"
+
+  
+  
+	group "Equation Block" -- subsystem-group
+
+		p_0_smd_1202_sl_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "a"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "v" -- block-group
+		{
+		 block: "Inport"
+		}
+			p_0_smd_1202_sl_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "v"
+
+		group "x - x disp" -- block-group
+		{
+		 block: "Inport"
+		}
+			p_0_smd_1202_sl_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "x - x disp"
+
+		group "DampCoeff d" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "DampCoeff d"
+
+		group "Mass m" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Mass m"
+
+		group "SpringConst C" -- block-group
+		{
+		 block: "From"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "SpringConst C"
+
+		group "Product" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product"
+
+		group "Product1" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product1"
+
+		group "Product2" -- block-group
+		{
+		 block: "Product"
+		}
+			p_0_smd_1202_sl_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product2"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			p_0_smd_1202_sl_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum"
+
+
+
+	endgroup -- subsystem-group "Equation Block"
+  
+  
+	group "Logo" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "Logo"
+  
+  
+	group "Model Parameters" -- subsystem-group
+
+
+		p_1_smd_1202_sl_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "C"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "d"
+		 flags:   PARAM
+		}
+		p_1_smd_1202_sl_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "m"
+		 flags:   PARAM
+		}
+
+		group "C" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_C
+			{
+			 refgroup: ".."
+			 refvar:   "C"
+			 alias:    "C"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "C"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "C"
+
+		group "d" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_d
+			{
+			 refgroup: ".."
+			 refvar:   "d"
+			 alias:    "d"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "d"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "d"
+
+		group "m" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_m
+			{
+			 refgroup: ".."
+			 refvar:   "m"
+			 alias:    "m"
+			}
+			trcref0_Value
+			{
+			 refgroup: ".."
+			 refvar:   "m"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "m"
+
+		group "DampCoeff d" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "DampCoeff d"
+
+		group "Mass m" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "Mass m"
+
+		group "SpringConst C" -- block-group
+		{
+		 block: "Goto"
+		}
+
+			-- Skipping inport In1
+
+
+
+
+		endgroup -- block-group "SpringConst C"
+
+
+
+	endgroup -- subsystem-group "Model Parameters"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "info" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "info"
+
+	p_0_smd_1202_sl_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "a"
+	 origin:  "smd_1202_sl/Equation Block/a"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "v"
+	 origin:  "smd_1202_sl/Integrator 1/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 origin:  "smd_1202_sl/Integrator 2/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x disp"
+	 origin:  "smd_1202_sl/x disp/Out1"
+	 flags:   READONLY
+	}
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	p_0_smd_1202_sl_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "a"
+	 origin:  "smd_1202_sl/Equation Block/a"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "v"
+	 origin:  "smd_1202_sl/Integrator 1/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 origin:  "smd_1202_sl/Integrator 2/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x disp"
+	 origin:  "smd_1202_sl/x disp/Out1"
+	 flags:   READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file smd_1202_sl_usr.trc found.
+
+-- RTI_USR_TRC_END
+
+-- ******** EESPort States Variables ******************************************
+group "XIL API"
+{ 
+  flags: COLLAPSED
+}
+
+  group "EESPort"
+  {  
+    flags: COLLAPSED
+  }
+
+    p_xilapi_eesport_activeerrorset_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Active ErrorSet"
+      desc:    "Index of active ErrorSet or 0 if no ErrorSet is active."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    p_xilapi_eesport_erroractivated_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Activated"
+      desc:    "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."  
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    p_xilapi_eesport_errorswitching_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Switching"
+      desc:    "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    xilapi_eesport_flags_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Flags"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    xilapi_eesport_trigger_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Trigger"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    endgroup -- "EESPort"
+
+endgroup -- "XILAPI"
+
+
+
+-- ******** [EOF] *************************************************************
+

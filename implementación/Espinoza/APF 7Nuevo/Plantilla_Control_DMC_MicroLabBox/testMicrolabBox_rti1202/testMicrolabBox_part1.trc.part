@@ -1,0 +1,204 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Constant" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_testMicrolabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Constant"
+
+	group "Gain1" -- block-group
+	{
+	 block: "Gain"
+	}
+		-- Skipping output Out1
+		p_1_testMicrolabBox_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain1"
+
+	group "Gain2" -- block-group
+	{
+	 block: "Gain"
+	}
+		-- Skipping output Out1
+		p_1_testMicrolabBox_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain2"
+
+	group "Saturation" -- block-group
+	{
+	 block: "Saturate"
+	}
+		p_0_testMicrolabBox_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_testMicrolabBox_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "UpperLimit"
+		 flags:   PARAM
+		}
+		p_1_testMicrolabBox_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "LowerLimit"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Saturation"
+
+	group "Saturation1" -- block-group
+	{
+	 block: "Saturate"
+	}
+		p_0_testMicrolabBox_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_testMicrolabBox_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "UpperLimit"
+		 flags:   PARAM
+		}
+		p_1_testMicrolabBox_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "LowerLimit"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Saturation1"
+
+	group "S-Function Builder" -- block-group
+	{
+	 block: "S-Function"
+	}
+		p_0_testMicrolabBox_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "S-Function Builder"
+
+	group "Sum" -- block-group
+	{
+	 block: "Sum"
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Sum"
+
+  
+  
+	group "ADC_CLASS1_BL1" -- subsystem-group
+
+		p_0_testMicrolabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "ADC"
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "ADC_CLASS1_BL1"
+  
+  
+	group "DAC_CLASS1_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DAC_CLASS1_BL1"
+  
+  
+	group "DAC_CLASS1_BL2" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DAC_CLASS1_BL2"
+  
+  
+	group "DIO_CLASS1_BIT_IN_BL1" -- subsystem-group
+
+		p_0_testMicrolabBox_boolean_T_1[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Out"
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "DIO_CLASS1_BIT_IN_BL1"
+  
+  
+	group "DIO_CLASS1_BIT_OUT_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DIO_CLASS1_BIT_OUT_BL1"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+
+	-- Skipping label "Salida"
+
+	p_0_testMicrolabBox_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "entrada"
+	 origin:  "testMicrolabBox/ADC_CLASS1_BL1/ADC"
+	 flags:   READONLY
+	}
+	p_0_testMicrolabBox_boolean_T_1[0]
+	{
+	 type:    uint(8)*
+	 alias:   "entradaDigital"
+	 bitmask: 0x01
+	 range:   < 0 ; 1 >
+	 origin:  "testMicrolabBox/DIO_CLASS1_BIT_IN_BL1/Out"
+	 flags:   READONLY
+	}
+	-- Skipping label "linea1"
+
+	p_0_testMicrolabBox_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "sal2"
+	 origin:  "testMicrolabBox/S-Function Builder/Out1"
+	 flags:   READONLY
+	}
+
+
+endgroup -- "Model Root"

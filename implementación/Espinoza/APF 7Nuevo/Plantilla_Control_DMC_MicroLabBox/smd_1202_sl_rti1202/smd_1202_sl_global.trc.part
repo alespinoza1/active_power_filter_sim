@@ -1,0 +1,53 @@
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	p_0_smd_1202_sl_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "a"
+	 origin:  "smd_1202_sl/Equation Block/a"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "v"
+	 origin:  "smd_1202_sl/Integrator 1/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 origin:  "smd_1202_sl/Integrator 2/Out1"
+	 flags:   READONLY
+	}
+	p_0_smd_1202_sl_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x disp"
+	 origin:  "smd_1202_sl/x disp/Out1"
+	 flags:   READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+

@@ -1,0 +1,3 @@
+  prueba02.c
+prueba02_trc_ptr.c
+

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root>
+	<creator type="key">ControlDesk 6.3</creator>
+	<project>
+		<Creator type="key">ControlDesk</Creator>
+		<Name type="key">Control_DMC_Soft_Panel.CDP</Name>
+		<DisplayName type="key">Control_DMC_Soft_Panel</DisplayName>
+		<Flags type="key">4096</Flags>
+		<Type type="key">1</Type>
+		<UniqueID type="key">580054054</UniqueID>
+		<EntityID type="key">{8E6070A6-AA44-454A-883F-F12A90023459}</EntityID>
+		<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+		<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+		<ItemInfoDescr type="key"/>
+		<ItemInfoAddInfoDb type="key"/>
+		<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		<item>
+			<Targets type="key">project</Targets>
+			<Name type="key">Control_DMC_Soft_Panel</Name>
+			<DisplayName type="key">Control_DMC_Soft_Panel</DisplayName>
+			<Path type="key">..</Path>
+			<Flags type="key">4100</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">490028748</UniqueID>
+			<EntityID type="key">{83CD2D70-0975-4834-922A-779DB039D43A}</EntityID>
+			<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Docs type="key">.doc,.docx,.pdf</Docs>
+				<Name type="key">Specifications</Name>
+				<DisplayName type="key">Specifications</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">357080555</UniqueID>
+				<EntityID type="key">{23B82D69-BE57-4691-AE7A-88BFC514F575}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.doc,.docx,.pdf</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Docs type="key">.mpp</Docs>
+				<Name type="key">Project Plans</Name>
+				<DisplayName type="key">Project Plans</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">1052028284</UniqueID>
+				<EntityID type="key">{9895846D-2EE6-40E4-AEF7-114A87D83217}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.mpp</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager_global</Targets>
+				<Name type="key">Global Data Sets</Name>
+				<DisplayName type="key">Global Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">738502759</UniqueID>
+				<EntityID type="key">{680920C4-AA17-4273-83B7-5C3043826296}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">variablesmanagement</Targets>
+				<Name type="key">Variable Descriptions</Name>
+				<DisplayName type="key">Variable Descriptions</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">78212823</UniqueID>
+				<EntityID type="key">{7B247407-110F-4BAC-9979-328C679F2DF8}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">Control_DMC_Soft_Panel.vdb</Name>
+					<DisplayName type="key">C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\Control_DMC_Soft_Panel\Variable Descriptions\Control_DMC_Soft_Panel.vdb</DisplayName>
+					<Path type="key">.\Variable Descriptions</Path>
+					<Flags type="key">276</Flags>
+					<Type type="key">18</Type>
+					<UniqueID type="key">429682107</UniqueID>
+					<EntityID type="key">{AFDC8F3B-3D33-4D35-9C65-84A45D4D1E23}</EntityID>
+					<ItemInfoDate type="key">16/3/2019 11:11:49</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+				</item>
+				<item>
+					<Component type="key">VariablesManagement</Component>
+					<Name type="key">control_dmc_microlabbox.sdf</Name>
+					<DisplayName type="key">control_dmc_microlabbox.sdf</DisplayName>
+					<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+					<Flags type="key">18704</Flags>
+					<Type type="key">7</Type>
+					<UniqueID type="key">550095238</UniqueID>
+					<EntityID type="key">{D0FAF7FC-C21B-4F0E-8A74-C74A2AD3B2FE}</EntityID>
+					<ItemInfoDate type="key">16/3/2019 11:11:47</ItemInfoDate>
+					<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+					<ItemInfoDescr type="key"/>
+					<ItemInfoLog type="key">
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-16 16:04:50 (UTC)]
+
+Variable description reloaded on 16.03.2019 11:14:38 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-16 16:13:46 (UTC)]
+
+Variable description reloaded on 16.03.2019 15:06:34 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-16 19:52:23 (UTC)]
+
+Variable description reloaded on 16.03.2019 16:27:56 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-16 21:26:41 (UTC)]
+
+Variable description reloaded on 16.03.2019 16:33:22 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-16 21:32:35 (UTC)]
+
+Variable description reloaded on 18.03.2019 10:51:38 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 15:41:49 (UTC)]
+
+Variable description reloaded on 18.03.2019 11:36:58 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 16:32:19 (UTC)]
+
+Variable description reloaded on 18.03.2019 11:50:11 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 16:49:25 (UTC)]
+
+Variable description reloaded on 18.03.2019 13:22:42 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 18:20:25 (UTC)]
+
+Variable description reloaded on 18.03.2019 13:25:59 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 18:23:56 (UTC)]
+
+Variable description reloaded on 18.03.2019 13:49:22 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 18:48:30 (UTC)]
+
+Variable description reloaded on 18.03.2019 13:59:07 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 18:54:10 (UTC)]
+
+Variable description reloaded on 18.03.2019 14:01:47 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 19:00:37 (UTC)]
+
+Variable description reloaded on 18.03.2019 14:08:08 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 19:07:26 (UTC)]
+
+Variable description reloaded on 18.03.2019 14:13:56 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 19:09:17 (UTC)]
+
+Variable description reloaded on 18.03.2019 14:25:15 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-18 19:23:39 (UTC)]
+
+Variable description reloaded on 19.03.2019 16:10:50 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-19 21:09:52 (UTC)]
+
+Variable description reloaded on 19.03.2019 16:46:00 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-03-19 21:45:17 (UTC)]
+
+Variable description reloaded on 04.04.2019 17:33:34 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 22:32:29 (UTC)]
+
+Variable description reloaded on 04.04.2019 17:44:00 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 22:42:58 (UTC)]
+
+Variable description reloaded on 04.04.2019 17:51:23 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 22:50:32 (UTC)]
+
+Variable description reloaded on 04.04.2019 17:55:57 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 22:55:15 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:04:12 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:03:37 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:13:42 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:13:10 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:17:36 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:17:07 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:21:10 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:19:27 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:24:20 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:23:52 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:30:18 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:29:51 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:33:10 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:32:19 (UTC)]
+
+Variable description reloaded on 04.04.2019 18:42:25 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-04 23:41:57 (UTC)]
+
+Variable description reloaded on 04.04.2019 19:01:04 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-05 00:00:10 (UTC)]
+
+Variable description reloaded on 05.04.2019 10:09:06 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-05 15:01:42 (UTC)]
+
+Variable description reloaded on 16.04.2019 18:18:13 (C:\Users\DELL\Documents\Sergio Toledo\Plantilla_Control_DMC_MicroLabBox\control_dmc_microlabbox.sdf)
+Original file added from ..\control_dmc_microlabbox.sdf [2019-04-16 23:16:16 (UTC)]
+</ItemInfoLog>
+					<ItemInfoAddInfoDb type="key"/>
+					<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.trc</Name>
+						<DisplayName type="key">control_dmc_microlabbox.trc</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">854984680</UniqueID>
+						<EntityID type="key">{2EF7947C-6807-410F-A564-CAB7C95C0668}</EntityID>
+						<ItemInfoDate type="key">16/4/2019 18:18:13</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.map</Name>
+						<DisplayName type="key">control_dmc_microlabbox.map</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">4</Type>
+						<UniqueID type="key">201918627</UniqueID>
+						<EntityID type="key">{1D0E5B67-D4F2-4CBA-A5BC-20C65B8B98E9}</EntityID>
+						<ItemInfoDate type="key">16/4/2019 18:18:13</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+					<item>
+						<Component type="key">VariablesManagement</Component>
+						<Name type="key">control_dmc_microlabbox.rta</Name>
+						<DisplayName type="key">control_dmc_microlabbox.rta</DisplayName>
+						<Path type="key">.\Variable Descriptions\control_dmc_microlabbox.sdf</Path>
+						<Flags type="key">18692</Flags>
+						<ExtendedFlags type="key">1</ExtendedFlags>
+						<Type type="key">30</Type>
+						<UniqueID type="key">90636037</UniqueID>
+						<EntityID type="key">{DB19E4A2-B4D7-4E79-AB38-F99B8930C332}</EntityID>
+						<ItemInfoDate type="key">16/4/2019 18:18:13</ItemInfoDate>
+						<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+						<ItemInfoDescr type="key"/>
+						<ItemInfoAddInfoDb type="key"/>
+						<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+					</item>
+				</item>
+			</item>
+			<item>
+				<Targets type="key">datasetmanager</Targets>
+				<Name type="key">Data Sets</Name>
+				<DisplayName type="key">Data Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<Type type="key">29</Type>
+				<UniqueID type="key">998338481</UniqueID>
+				<EntityID type="key">{B5CBCC25-B5E2-4BCE-A97D-4DA610EBB37F}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.vfe</Targets>
+				<Name type="key">Variable Filters</Name>
+				<DisplayName type="key">Variable Filters</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">2304</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">476666845</UniqueID>
+				<EntityID type="key">{716072CE-CA12-450C-90C4-FCB1671F4B4F}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">.lab</Targets>
+				<Docs type="key">.lab,.txt</Docs>
+				<Name type="key">Label Lists</Name>
+				<DisplayName type="key">Label Lists</DisplayName>
+				<Path type="key">.</Path>
+				<Type type="key">3</Type>
+				<UniqueID type="key">819856447</UniqueID>
+				<EntityID type="key">{037A84D9-402E-42FC-A3F9-BFBE7873E21C}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.lab,.txt</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">interpreter,.py</Targets>
+				<Docs type="key">.py</Docs>
+				<Name type="key">Python Scripts</Name>
+				<DisplayName type="key">Python Scripts</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<ExtendedFlags type="key">4224</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">691791062</UniqueID>
+				<EntityID type="key">{A0F1EBFB-2EDB-496C-A499-A58D4844BE1D}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDocs type="key">.py</ItemInfoDocs>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">busnavigator,.xml</Targets>
+				<Name type="key">BusNavigator</Name>
+				<DisplayName type="key">BusNavigator</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">260</Flags>
+				<ExtendedFlags type="key">256</ExtendedFlags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">45530711</UniqueID>
+				<EntityID type="key">{A9416C82-B0DE-4AE1-9EE5-77192A6CCB2D}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+			<item>
+				<Targets type="key">signaleditor</Targets>
+				<Name type="key">Signal Description Sets</Name>
+				<DisplayName type="key">Signal Description Sets</DisplayName>
+				<Path type="key">.</Path>
+				<Flags type="key">256</Flags>
+				<Type type="key">3</Type>
+				<UniqueID type="key">898985104</UniqueID>
+				<EntityID type="key">{84D3A944-2322-4BED-B130-139CA04EB1B8}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+		<item>
+			<Name type="key">Events</Name>
+			<DisplayName type="key">Events</DisplayName>
+			<Path type="key">.</Path>
+			<Flags type="key">4</Flags>
+			<Type type="key">3</Type>
+			<UniqueID type="key">722756211</UniqueID>
+			<EntityID type="key">{0A815774-8703-40CB-BA1E-7C0D50926E87}</EntityID>
+			<ItemInfoDate type="key">16/3/2019 11:11:49</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			<item>
+				<Name type="key">Project.events</Name>
+				<DisplayName type="key">Project.events</DisplayName>
+				<Path type="key">.\Events</Path>
+				<Flags type="key">4</Flags>
+				<Type type="key">52</Type>
+				<UniqueID type="key">52849068</UniqueID>
+				<EntityID type="key">{D75424C2-0731-4EB2-A3C6-DE30E3EA30E2}</EntityID>
+				<ItemInfoDate type="key">16/3/2019 11:11:49</ItemInfoDate>
+				<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+				<ItemInfoDescr type="key"/>
+				<ItemInfoAddInfoDb type="key"/>
+				<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+			</item>
+		</item>
+	</project>
+	<experiments>
+		<experiment>
+			<Creator type="key">ControlDesk</Creator>
+			<Name type="key">Panel_de_Control.CDE</Name>
+			<DisplayName type="key">Panel_de_Control</DisplayName>
+			<Path type="key">.\Panel_de_Control</Path>
+			<Flags type="key">4096</Flags>
+			<Type type="key">2</Type>
+			<UniqueID type="key">466156564</UniqueID>
+			<EntityID type="key">{A6D29BEA-71C6-47B2-BAF1-8C7D2A96D443}</EntityID>
+			<ItemInfoDate type="key">16/3/2019 11:11:46</ItemInfoDate>
+			<ItemInfoPath type="key">$FPATH$</ItemInfoPath>
+			<ItemInfoDescr type="key"/>
+			<ItemInfoAddInfoDb type="key"/>
+			<ItemInfoAuthor type="key">DELL</ItemInfoAuthor>
+		</experiment>
+	</experiments>
+	<UserManager/>
+	<XILAPIEESPort Version="1"/>
+	<SignalEditor/>
+	<Interpreter/>
+	<VariablesManagement Version="100">
+		<CreatorVersion type="key">603000375</CreatorVersion>
+	</VariablesManagement>
+	<ProjectExperiment>
+		<LastActiveExperiment type="key">Panel_de_Control</LastActiveExperiment>
+	</ProjectExperiment>
+	<MeasureDataManagement Version="4"/>
+	<Instrumentation Version="1">
+		<UniqueIds Version="3">
+			<Count type="key">4</Count>
+			<File1 type="key">Panel_de_Control/Panel de Control</File1>
+			<Id1 type="key">0</Id1>
+			<File2 type="key">Panel_de_Control/Calibracion de Sensores</File2>
+			<Id2 type="key">1</Id2>
+			<File3 type="key">Panel_de_Control/Copy of Calibracion de Sensores</File3>
+			<Id3 type="key">2</Id3>
+			<File4 type="key">Panel_de_Control/Generación de Referencia</File4>
+			<Id4 type="key">3</Id4>
+		</UniqueIds>
+	</Instrumentation>
+	<DiagnosticsManagement/>
+	<PlatformManagement Version="10"/>
+	<DataSetManager>
+		<Version>
+			<Version type="key">2</Version>
+		</Version>
+		<Work/>
+		<ActiveWork/>
+		<Reference/>
+		<ActiveReference/>
+		<Master/>
+		<ActiveMaster/>
+		<InitialMaster/>
+		<Incomplete/>
+		<IncompleteReadonly/>
+		<DataSet/>
+		<Readonly/>
+		<LabelListFilter>
+			<LabelListFilterFile type="key"/>
+			<LabelListFilterActive type="key">0</LabelListFilterActive>
+		</LabelListFilter>
+		<AutomaticDownload/>
+	</DataSetManager>
+</Root>

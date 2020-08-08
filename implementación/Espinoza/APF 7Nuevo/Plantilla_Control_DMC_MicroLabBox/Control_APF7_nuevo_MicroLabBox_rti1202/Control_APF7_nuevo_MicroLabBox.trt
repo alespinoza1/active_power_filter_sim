@@ -1,0 +1,3673 @@
+-- ****************************************************************************
+--
+--  Trace file: Control_APF7_nuevo_MicroLabBox.trc
+--
+--  RTI1202 7.10 (02-May-2018)
+--  Fri Aug  7 14:27:03 2020
+--
+--  Copyright 2020, dSPACE GmbH. All rights reserved.
+--
+-- ****************************************************************************
+--
+--  Used options:
+--    TRCGenerateVirtualBlocks      = 0
+--    TRCGenerateLabels             = 1
+--    TRCGenerateStates             = 0
+--    TRCGenerateDerivatives        = 0
+--    TRCGenerateParamValues        = 0
+--    TRCGenerateApplicationKeyword = 0
+--    TRCOnlyGlobals                = 0
+--    TRCIsOmitVdOn                 = 0
+--
+--  Trace file format: 3
+
+-- ******** Keywords **********************************************************
+-- _application "Control_APF7_nuevo_MicroLabBox.map"
+
+_genname     "RTI"
+_genversion  "7.10"
+_gendate     "08/07/2020 14:27:08"
+_description ""
+_author      "RTI1202 7.10 (02-May-2018)"
+_model       "Control_APF7_nuevo_MicroLabBox"
+
+-- Default data type formats
+_floating_point_type(64,IEEE)
+_integer_type(32)
+
+-- No Data Capture blocks within model: use base sample time as sampling period
+sampling_period[0]
+{
+  value:       1.0E-6
+  alias:       "HostService"
+  increment:   1.0E-6
+  unit:        "s"
+}
+
+
+
+-- Type definitions for structures
+
+typedef Control_APF7_nuevo_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0 int(32)[2]
+
+struct Control_APF7_nuevo_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE
+{
+  array-incr: -1
+}
+    structField0 
+    {
+      alias:   "InputPortsWidth"
+      type:    Control_APF7_nuevo_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0
+      offs:    -1
+    }
+endstruct
+
+
+-- Type definitions for arrays
+typedef Control_APF7_nuevo_MicroLabBox_ArrayDT0_26 flt(64,IEEE)[26]
+typedef Control_APF7_nuevo_MicroLabBox_ArrayDT0_6 flt(64,IEEE)[6]
+typedef Control_APF7_nuevo_MicroLabBox_ArrayDT0_3 flt(64,IEEE)[3]
+typedef Control_APF7_nuevo_MicroLabBox_ArrayDT0_2 flt(64,IEEE)[2]
+typedef Control_APF7_nuevo_MicroLabBox_ArrayDT0_12 flt(64,IEEE)[12]
+
+
+-- ******** Simulation control variables **************************************
+
+finalTime
+{
+ type:  flt(64,IEEE)*
+ alias: "finalTime"
+ desc:  "Simulation stop time. When reached, simState switches to STOP."
+ flags:  READONLY
+ unit:  "s"
+}
+
+currentTime
+{
+ type:  flt(64,IEEE)*
+ alias: "currentTime"
+ desc:  "Current simulation time. Increments with execution of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+modelStepSize
+{
+ type:  flt(64,IEEE)
+ alias: "modelStepSize"
+ desc:  "Fixed step size of the model, sample time of Timer Task 1."
+ flags: READONLY
+ unit:  "s"
+}
+
+simState
+{
+ type:  int(32)
+ alias: "simState"
+ desc:  "Simulation state: STOP=0 RUN=2"
+ unit:  "-"
+}
+
+p_msg_last_error_no
+{
+ type:  uint(32)*
+ alias: "errorNumber"
+ desc:  "Error number of last error message (zero if no error)."
+ unit:  "-"
+ flags: READONLY
+}
+
+p_dsts_sum_of_reset_time
+{
+ type:  flt(64,IEEE)*
+ alias: "sumOfResetTime"
+ desc:  "Internal variable for summing up reset time."
+ unit:  "s"
+ flags: READONLY|HIDDEN
+}
+
+
+-- ******** Task Information variables ****************************************
+group "Task Info"
+{
+ flags: COLLAPSED
+}
+  group "Timer Task 1"
+  {
+   flags: COLLAPSED
+  }
+
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_STime
+  {
+   type:  flt(64,IEEE)*
+   alias: "sampleTime"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TTime
+  {
+   type:  flt(64,IEEE)*
+   alias: "turnaroundTime"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TState
+  {
+   type:  int(32)*
+   alias: "state"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OType
+  {
+   type:  int(32)*
+   alias: "overrunCheckType"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OMax
+  {
+   type:  int(32)*
+   alias: "overrunQueueMax"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_ORpt
+  {
+   type:  int(32)*
+   alias: "overrunQueueCount"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_OCnt
+  {
+   type:  int(32)*
+   alias: "overrunCount"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_TCnt
+  {
+   type:  flt(64,IEEE)*
+   alias: "taskCallCount"
+   flags: READONLY
+  }
+  pRti_120XDIOCL1PWM_FALLING_EDGEP3Ch1_Prio
+  {
+   type:  int(32)*
+   alias: "priority"
+   flags: READONLY
+  }
+  endgroup
+
+
+endgroup
+
+
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Constant" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[39]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Constant"
+
+	group "Duty Cycle" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[63]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Duty Cycle"
+
+	group "Period" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		trcref0_Ts
+		{
+		 refgroup: "/Tunable Parameters"
+		 refvar:   "Ts"
+		 alias:    "Ts"
+		}
+		trcref0_Value
+		{
+		 refgroup: "/Tunable Parameters"
+		 refvar:   "Ts"
+		 alias:    "Value"
+		 flags:    DEPRECATED|HIDDEN
+		}
+
+
+	endgroup -- block-group "Period"
+
+	group "Scope1" -- block-group
+	{
+	 block: "Scope"
+	}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "Scope1"
+
+  
+  
+	group "Controlador" -- subsystem-group
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[40]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+		 alias:   "SA"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[46]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "ind"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[55]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "fc"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[58]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "vsalfabeta"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[60]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "PL_QL"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[62]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "QcQs"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[64]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "ickm1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[67]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "ic_ref"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[70]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_12*
+		 alias:   "valfiltro"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[49]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+		 alias:   "SC"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ts
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Ts"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Rc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Rc"
+			 alias:    "Rc"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Rc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Constant10" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_f
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "f"
+			 alias:    "f"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "f"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant10"
+
+		group "Constant11" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_x
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "x"
+			 alias:    "x"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "x"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant11"
+
+		group "Constant12" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_y
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "y"
+			 alias:    "y"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "y"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant12"
+
+		group "Constant13" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_sat
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "sat"
+			 alias:    "sat"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "sat"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant13"
+
+		group "Constant2" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Lc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Lc"
+			 alias:    "Lc"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Lc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant2"
+
+		group "Constant3" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vdc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vdc"
+			 alias:    "Vdc"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vdc"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant3"
+
+		group "Constant4" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_kp
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "kp"
+			 alias:    "kp"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "kp"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant4"
+
+		group "Constant5" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_ki
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "ki"
+			 alias:    "ki"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "ki"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant5"
+
+		group "Constant6" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_lamda
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "lamda"
+			 alias:    "lamda"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "lamda"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant6"
+
+		group "Constant7" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_z
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "z"
+			 alias:    "z"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "z"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant7"
+
+		group "Constant8" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_e
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "e"
+			 alias:    "e"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "e"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant8"
+
+		group "Constant9" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_g
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "g"
+			 alias:    "g"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "g"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant9"
+
+		group "Controlador" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[40]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[46]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out2"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[49]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+			 alias:   "Out3"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[55]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out4"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[58]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out5"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[60]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out6"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[62]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out7"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[64]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out8"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[67]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out9"
+			 flags:   OUTPUT|READONLY
+			}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[70]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_12*
+			 alias:   "Out10"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Controlador"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[40]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+		 alias:   "contador"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Controlador/Controlador/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "Controlador"
+  
+  
+	group "DIO_CLASS1_HWINT_BL2" -- subsystem-group
+
+		-- Skipping output Interrupt
+
+
+  
+  
+		group "Common Hardware\nInterrupt Interface" -- subsystem-group
+
+			-- Skipping output  
+
+		endgroup -- subsystem-group "Common Hardware\nInterrupt Interface"
+
+
+	endgroup -- subsystem-group "DIO_CLASS1_HWINT_BL2"
+  
+  
+	group "DIO_CLASS1_PWM_BL1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DIO_CLASS1_PWM_BL1"
+  
+  
+	group "Mediciones1" -- subsystem-group
+
+		-- Skipping output
+		-- Skipping output
+		-- Skipping output
+		-- Skipping output
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsa_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsa_offset"
+			 alias:    "Vsa_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsa_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsb_offset"
+			 alias:    "Vsb_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Constant2" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Vsc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsc_offset"
+			 alias:    "Vsc_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Vsc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant2"
+
+		group "Constant3" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ila_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ila_offset"
+			 alias:    "Ila_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ila_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant3"
+
+		group "Constant4" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ilb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilb_offset"
+			 alias:    "Ilb_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant4"
+
+		group "Constant5" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ilc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilc_offset"
+			 alias:    "Ilc_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ilc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant5"
+
+		group "Constant6" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Ica_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ica_offset"
+			 alias:    "Ica_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ica_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant6"
+
+		group "Constant7" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Icb_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icb_offset"
+			 alias:    "Icb_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icb_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant7"
+
+		group "Constant8" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			trcref0_Icc_offset
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icc_offset"
+			 alias:    "Icc_offset"
+			}
+			trcref0_Value
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Icc_offset"
+			 alias:    "Value"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Constant8"
+
+		group "Gain" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsa
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsa"
+			 alias:    "Ganancia_Vsa"
+			}
+			-- Skipping parameter "Gain"
+
+
+		endgroup -- block-group "Gain"
+
+		group "Gain1" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[43]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain1"
+
+		group "Gain10" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsb"
+			 alias:    "Ganancia_Vsb"
+			}
+			-- Skipping parameter "Gain"
+
+
+		endgroup -- block-group "Gain10"
+
+		group "Gain11" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Vsc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Vsc"
+			 alias:    "Ganancia_Vsc"
+			}
+			-- Skipping parameter "Gain"
+
+
+		endgroup -- block-group "Gain11"
+
+		group "Gain15" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[45]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain15"
+
+		group "Gain17" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[46]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain17"
+
+		group "Gain18" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[47]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain18"
+
+		group "Gain2" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[44]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain2"
+
+		group "Gain3" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ila
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ila"
+			 alias:    "Ganancia_Ila"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ila"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain3"
+
+		group "Gain4" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ilb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilb"
+			 alias:    "Ganancia_Ilb"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilb"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain4"
+
+		group "Gain5" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ilc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilc"
+			 alias:    "Ganancia_Ilc"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ilc"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain5"
+
+		group "Gain6" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Ica
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ica"
+			 alias:    "Ganancia_Ica"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Ica"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain6"
+
+		group "Gain7" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Icb
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icb"
+			 alias:    "Ganancia_Icb"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icb"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain7"
+
+		group "Gain8" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			trcref0_Ganancia_Icc
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icc"
+			 alias:    "Ganancia_Icc"
+			}
+			trcref0_Gain
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ganancia_Icc"
+			 alias:    "Gain"
+			 flags:    DEPRECATED|HIDDEN
+			}
+
+
+		endgroup -- block-group "Gain8"
+
+		group "Gain9" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[42]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain9"
+
+		group "S-Function Builder" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[167]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder"
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[161]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+		group "S-Function Builder2" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[173]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder2"
+
+		group "S-Function Builder3" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[179]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder3"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum"
+
+		group "Sum1" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum1"
+
+		group "Sum2" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum2"
+
+		group "Sum3" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum3"
+
+		group "Sum4" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum4"
+
+		group "Sum5" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum5"
+
+		group "Sum6" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum6"
+
+		group "Sum7" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum7"
+
+		group "Sum8" -- block-group
+		{
+		 block: "Sum"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Sum8"
+
+  
+  
+		group "ILa" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "ILa"
+  
+  
+		group "ILb\n" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "ILb\n"
+  
+  
+		group "ILc" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "ILc"
+  
+  
+		group "Ica" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Ica"
+  
+  
+		group "Icb" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Icb"
+  
+  
+		group "Icc" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Icc"
+  
+  
+		group "Vsa" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Vsa"
+  
+  
+		group "Vsb" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Vsb"
+  
+  
+		group "Vsc" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "Vsc"
+  
+  
+		group "dclink1" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "dclink1"
+  
+  
+		group "dclink2" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "dclink2"
+  
+  
+		group "dclink3" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "ADC"
+			 flags:   OUTPUT|READONLY
+			}
+
+		endgroup -- subsystem-group "dclink3"
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[167]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "IL_med"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder/Out1"
+		 flags:   READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[173]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "Ic_med"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder2/Out1"
+		 flags:   READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[179]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "Vdclink"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder3/Out1"
+		 flags:   READONLY
+		}
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[161]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "Vs_med"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "Mediciones1"
+  
+  
+	group "Pl QL\n" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[82]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[82]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "PLQL"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/Pl QL\n/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "Pl QL\n"
+  
+  
+	group "QcQsfiltrada" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[84]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[84]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "Qc_Qs"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/QcQsfiltrada/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "QcQsfiltrada"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "Subsystem3" -- subsystem-group
+
+
+
+		group "Transport\nDelay" -- block-group
+		{
+		 block: "TransportDelay"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[53]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialOutput"
+			 flags:   PARAM
+			}
+			trcref0_Ts
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Ts"
+			}
+			-- Skipping parameter "DelayTime"
+
+
+		endgroup -- block-group "Transport\nDelay"
+
+		group "Transport\nDelay1" -- block-group
+		{
+		 block: "TransportDelay"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[55]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialOutput"
+			 flags:   PARAM
+			}
+			trcref0_Ts
+			{
+			 refgroup: "/Tunable Parameters"
+			 refvar:   "Ts"
+			 alias:    "Ts"
+			}
+			-- Skipping parameter "DelayTime"
+
+
+		endgroup -- block-group "Transport\nDelay1"
+
+  
+  
+		group "Inversion \n\n" -- subsystem-group
+
+			-- Skipping output
+
+
+			group "NOT" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[2]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT"
+
+			group "NOT1" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[5]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT1"
+
+			group "NOT2" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[4]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT2"
+
+			group "NOT3" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[3]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT3"
+
+			group "NOT4" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[0]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT4"
+
+			group "NOT5" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[1]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT5"
+
+
+
+		endgroup -- subsystem-group "Inversion \n\n"
+  
+  
+		group "Inversion2" -- subsystem-group
+
+			-- Skipping output
+
+
+			group "NOT" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[6]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT"
+
+			group "NOT1" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[11]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT1"
+
+			group "NOT2" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[10]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT2"
+
+			group "NOT3" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[9]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT3"
+
+			group "NOT4" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[7]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT4"
+
+			group "NOT5" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[8]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT5"
+
+
+
+		endgroup -- subsystem-group "Inversion2"
+  
+  
+		group "Inversion3" -- subsystem-group
+
+			-- Skipping output
+
+
+			group "NOT" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[12]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT"
+
+			group "NOT1" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[17]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT1"
+
+			group "NOT2" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[16]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT2"
+
+			group "NOT3" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[15]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT3"
+
+			group "NOT4" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[13]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT4"
+
+			group "NOT5" -- block-group
+			{
+			 block: "Logic"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_boolean_T_1[14]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "NOT5"
+
+
+
+		endgroup -- subsystem-group "Inversion3"
+  
+  
+		group "Modulation block a1" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[87]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[52]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block a1"
+  
+  
+		group "Modulation block a2" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[88]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[54]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block a2"
+  
+  
+		group "Modulation block a3" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[89]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[56]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block a3"
+  
+  
+		group "Modulation block b1" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[102]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[57]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block b1"
+  
+  
+		group "Modulation block b2" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[103]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[58]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block b2"
+  
+  
+		group "Modulation block b3" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[104]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[59]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block b3"
+  
+  
+		group "Modulation block c1" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[117]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[60]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block c1"
+  
+  
+		group "Modulation block c2" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[118]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[61]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block c2"
+  
+  
+		group "Modulation block c3" -- subsystem-group
+
+			-- Skipping output S1
+			-- Skipping output S3
+
+
+			group "Data Type Conversion" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion"
+
+			group "Data Type Conversion3" -- block-group
+			{
+			 block: "DataTypeConversion"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Data Type Conversion3"
+
+			group "Gain1" -- block-group
+			{
+			 block: "Gain"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[119]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[62]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Gain"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Gain1"
+
+			group "Relational\nOperator" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator"
+
+			group "Relational\nOperator2" -- block-group
+			{
+			 block: "RelationalOperator"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Relational\nOperator2"
+
+
+
+		endgroup -- subsystem-group "Modulation block c3"
+  
+  
+		group "Repeating\nSequence1" -- subsystem-group
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[86]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[32]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "rep_seq_y"
+			 flags:   PARAM
+			}
+
+			group "Clock" -- block-group
+			{
+			 block: "Clock"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Clock"
+
+			group "Constant" -- block-group
+			{
+			 block: "Constant"
+			}
+				-- Skipping output Out1
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[48]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Value"
+				 flags:   PARAM
+				}
+
+
+			endgroup -- block-group "Constant"
+
+			group "Output" -- block-group
+			{
+			 block: "SignalConversion"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[86]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Output"
+
+			group "Look-Up Table1" -- block-group
+			{
+			 block: "Lookup_n-D"
+			}
+				-- Skipping output Out1
+
+				-- Skipping inport In1
+
+
+
+				p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[49]
+				{
+				 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+				 alias:   "bp01Data"
+				 flags:   PARAM
+				}
+				trcref0_rep_seq_y
+				{
+				 refgroup: ".."
+				 refvar:   "rep_seq_y"
+				 alias:    "rep_seq_y"
+				}
+				trcref0_tableData
+				{
+				 refgroup: ".."
+				 refvar:   "rep_seq_y"
+				 alias:    "tableData"
+				}
+				trcref0_LookUpTableData
+				{
+				 refgroup: ".."
+				 refvar:   "rep_seq_y"
+				 alias:    "LookUpTableData"
+				}
+
+
+			endgroup -- block-group "Look-Up Table1"
+
+			group "Math\nFunction" -- block-group
+			{
+			 block: "Math"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Math\nFunction"
+
+			group "startTime" -- block-group
+			{
+			 block: "S-Function"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "startTime"
+
+			group "Sum" -- block-group
+			{
+			 block: "Sum"
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Sum"
+
+
+
+		endgroup -- subsystem-group "Repeating\nSequence1"
+  
+  
+		group "Subsystem" -- subsystem-group
+
+
+
+			group "S-Function Builder1" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[96]
+				{
+				 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "S-Function Builder1"
+
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[96]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+			 alias:   "Vec_SWA"
+			 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem/S-Function Builder1/Out1"
+			 flags:   READONLY
+			}
+
+		endgroup -- subsystem-group "Subsystem"
+  
+  
+		group "Subsystem1" -- subsystem-group
+
+
+
+			group "S-Function Builder1" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[111]
+				{
+				 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "S-Function Builder1"
+
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[111]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+			 alias:   "Vec_SWB"
+			 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem1/S-Function Builder1/Out1"
+			 flags:   READONLY
+			}
+
+		endgroup -- subsystem-group "Subsystem1"
+  
+  
+		group "Subsystem2" -- subsystem-group
+
+
+
+			group "S-Function Builder1" -- block-group
+			{
+			 block: "S-Function"
+			}
+				p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[126]
+				{
+				 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+				 alias:   "Out1"
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "S-Function Builder1"
+
+
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[126]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+			 alias:   "Vec_SWC"
+			 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem2/S-Function Builder1/Out1"
+			 flags:   READONLY
+			}
+
+		endgroup -- subsystem-group "Subsystem2"
+  
+  
+		group "faseA" -- subsystem-group
+
+
+
+  
+  
+			group "Señales de Conmutación \nAPF" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF"
+  
+  
+			group "Señales de Conmutación \nAPF1" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF1"
+  
+  
+			group "Señales de Conmutación \nAPF10" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF10"
+  
+  
+			group "Señales de Conmutación \nAPF7" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF7"
+  
+  
+			group "Señales de Conmutación \nAPF8" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF8"
+  
+  
+			group "Señales de Conmutación \nAPF9" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF9"
+
+
+		endgroup -- subsystem-group "faseA"
+  
+  
+		group "faseB" -- subsystem-group
+
+
+
+  
+  
+			group "Señales de Conmutación \nAPF10" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF10"
+  
+  
+			group "Señales de Conmutación \nAPF2" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF2"
+  
+  
+			group "Señales de Conmutación \nAPF3" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF3"
+  
+  
+			group "Señales de Conmutación \nAPF7" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF7"
+  
+  
+			group "Señales de Conmutación \nAPF8" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF8"
+  
+  
+			group "Señales de Conmutación \nAPF9" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF9"
+
+
+		endgroup -- subsystem-group "faseB"
+  
+  
+		group "faseC" -- subsystem-group
+
+
+
+  
+  
+			group "Señales de Conmutación \nAPF10" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF10"
+  
+  
+			group "Señales de Conmutación \nAPF4" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF4"
+  
+  
+			group "Señales de Conmutación \nAPF6" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF6"
+  
+  
+			group "Señales de Conmutación \nAPF7" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF7"
+  
+  
+			group "Señales de Conmutación \nAPF8" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF8"
+  
+  
+			group "Señales de Conmutación \nAPF9" -- subsystem-group
+
+
+			endgroup -- subsystem-group "Señales de Conmutación \nAPF9"
+
+
+		endgroup -- subsystem-group "faseC"
+
+
+	endgroup -- subsystem-group "Subsystem3"
+  
+  
+	group "TicTac" -- subsystem-group
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Toggle"
+		 flags:   OUTPUT|READONLY
+		}
+		-- Skipping output Counter
+
+
+		group "Constant" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[40]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant"
+
+		group "Constant1" -- block-group
+		{
+		 block: "Constant"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[35]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Value"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Constant1"
+
+		group "Gain" -- block-group
+		{
+		 block: "Gain"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[38]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain"
+
+		group "Gain1" -- block-group
+		{
+		 block: "Gain"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[36]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Gain1"
+
+		group "Memory" -- block-group
+		{
+		 block: "Memory"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[37]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory"
+
+		group "Memory1" -- block-group
+		{
+		 block: "Memory"
+		}
+			-- Skipping output Out1
+			p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[41]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Memory1"
+
+		group "Relational\nOperator" -- block-group
+		{
+		 block: "RelationalOperator"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Relational\nOperator"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum"
+
+		group "Switch" -- block-group
+		{
+		 block: "Switch"
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Switch"
+
+
+
+	endgroup -- subsystem-group "TicTac"
+  
+  
+	group "Timer Task Assignment1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "Timer Task Assignment1"
+  
+  
+	group "TimerTask \nAssignment \nBlock8" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "TimerTask \nAssignment \nBlock8"
+  
+  
+	group "TimerTask \nAssignment \nBlock9" -- subsystem-group
+
+
+
+
+
+	endgroup -- subsystem-group "TimerTask \nAssignment \nBlock9"
+  
+  
+	group "filtros" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[132]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_12*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[132]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_12*
+		 alias:   "varfiltrada"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/filtros/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "filtros"
+  
+  
+	group "funcionCosto\n" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[144]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[144]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "fc"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/funcionCosto\n/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "funcionCosto\n"
+  
+  
+	group "ic km1\n" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[147]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[147]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "ickm1"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/ic km1\n/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "ic km1\n"
+  
+  
+	group "ic ref\n" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[150]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[150]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "icref"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/ic ref\n/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "ic ref\n"
+  
+  
+	group "ploss" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[153]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[153]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+		 alias:   "ploss"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/ploss/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "ploss"
+  
+  
+	group "vs alfa beta\n" -- subsystem-group
+
+
+
+		group "S-Function Builder1" -- block-group
+		{
+		 block: "S-Function"
+		}
+			p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[156]
+			{
+			 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+			 alias:   "Out1"
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "S-Function Builder1"
+
+
+		p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[156]
+		{
+		 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+		 alias:   "vsalfabeta"
+		 origin:  "Control_APF7_nuevo_MicroLabBox/vs alfa beta\n/S-Function Builder1/Out1"
+		 flags:   READONLY
+		}
+
+	endgroup -- subsystem-group "vs alfa beta\n"
+
+
+
+endgroup -- "Model Root"
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ica"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Icc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ila"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[5]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Ilc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsa"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsb"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[8]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ganancia_Vsc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[9]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ica_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[10]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[11]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Icc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[12]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ila_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[13]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[14]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ilc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[15]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Lc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[16]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Rc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[17]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Ts"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[18]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vdc"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[19]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsa_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[20]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsb_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[21]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Vsc_offset"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[22]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "e"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[23]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "f"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[24]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "g"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[25]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "ki"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[26]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "kp"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[27]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "lamda"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[28]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "sat"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[29]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[30]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "y"
+	 flags:   PARAM
+	}
+	p_1_Control_APF7_nuevo_MicroLabBox_real_T_0[31]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "z"
+	 flags:   PARAM
+	}
+
+endgroup
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[167]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "IL_med"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[173]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "Ic_med"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder2/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[82]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+	 alias:   "PLQL"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Pl QL\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[84]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+	 alias:   "Qc_Qs"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/QcQsfiltrada/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[179]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "Vdclink"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder3/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[96]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWA"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[111]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWB"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem1/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[126]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+	 alias:   "Vec_SWC"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Subsystem3/Subsystem2/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[161]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "Vs_med"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Mediciones1/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[40]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_6*
+	 alias:   "contador"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/Controlador/Controlador/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[144]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "fc"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/funcionCosto\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[147]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "ickm1"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/ic km1\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[150]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "icref"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/ic ref\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[153]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_3*
+	 alias:   "ploss"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/ploss/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[132]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_12*
+	 alias:   "varfiltrada"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/filtros/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+	p_0_Control_APF7_nuevo_MicroLabBox_real_T_0[156]
+	{
+	 type:    Control_APF7_nuevo_MicroLabBox_ArrayDT0_2*
+	 alias:   "vsalfabeta"
+	 origin:  "Control_APF7_nuevo_MicroLabBox/vs alfa beta\n/S-Function Builder1/Out1"
+	 flags:   READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+group "RTT Dynamic Variables"
+
+endgroup
+
+-- ******** User variables from model_usr.trc *********************************
+
+-- RTI_USR_TRC_BEGIN
+
+-- No user file Control_APF7_nuevo_MicroLabBox_usr.trc found.
+
+-- RTI_USR_TRC_END
+
+-- ******** EESPort States Variables ******************************************
+group "XIL API"
+{ 
+  flags: COLLAPSED
+}
+
+  group "EESPort"
+  {  
+    flags: COLLAPSED
+  }
+
+    p_xilapi_eesport_activeerrorset_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Active ErrorSet"
+      desc:    "Index of active ErrorSet or 0 if no ErrorSet is active."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    p_xilapi_eesport_erroractivated_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Activated"
+      desc:    "0 - no error is activated on hardware, 1 - at least one error is activated on hardware."  
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    p_xilapi_eesport_errorswitching_uint32_T
+    {
+      type:    uint(32)*
+      alias:   "Error Switching"
+      desc:    "0 - no switching operation running on hardware, 1 -  switching operation running on hardware."
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 1 >
+    }
+
+    xilapi_eesport_flags_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Flags"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    xilapi_eesport_trigger_uint32_T
+    {
+      type:    uint(32)
+      alias:   "Trigger"
+      flags:   OUTPUT|READONLY
+      range:   < 0 ; 4294967295 >
+    }
+
+    endgroup -- "EESPort"
+
+endgroup -- "XILAPI"
+
+
+
+-- ******** [EOF] *************************************************************
+

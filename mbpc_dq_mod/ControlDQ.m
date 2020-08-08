@@ -83,7 +83,7 @@ if tact-tant >= Tm
    
     %%%%%%%%% GENERADOR DE REFERENCIA/S %%%%%%%%%
     %SE CONVIERTEN AL PLANO DQ
-    Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),-sin(Theta-2*pi/3),-sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med]
+    Idq0 = sqrt(2/3)*[cos(Theta),cos(Theta-2*pi/3),cos(Theta+2*pi/3);-sin(Theta),-sin(Theta-2*pi/3),-sin(Theta+2*pi/3);sqrt(1/2),sqrt(1/2),sqrt(1/2)]*[ial_med;ibl_med;icl_med];
     
     %SE FILTRA LA POTENCIA ACTVIA, REACTIVA Y COMPENSA LA CARGA DEL CAPACITOR:
     %Instante actual

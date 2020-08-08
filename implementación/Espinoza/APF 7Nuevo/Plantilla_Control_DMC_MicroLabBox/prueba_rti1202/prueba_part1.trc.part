@@ -1,0 +1,40 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Time\nScope" -- block-group
+	{
+	 block: "Scope"
+	}
+		p_0_prueba_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "Time\nScope"
+
+  
+  
+	group "ADC_CLASS1_BL1" -- subsystem-group
+
+		p_0_prueba_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "ADC"
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "ADC_CLASS1_BL1"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+
+
+
+endgroup -- "Model Root"

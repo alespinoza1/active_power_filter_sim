@@ -18,7 +18,7 @@ if( (tact-tant) >= Tm )
     %update output frequency
     fo=fn+ylf_k;
     Theta = Theta + 2*pi*(fo*Tm);
-    if( Theta >= (2*pi - 2*pi*(fo*Tm)) )
+    if( abs(Theta) >= abs(2*pi - 2*pi*(fo*Tm)) )
         Theta=0;
     end
     %update u_q for future use
@@ -26,11 +26,11 @@ if( (tact-tant) >= Tm )
     ylfkm1 = ylf_k;
     tant = tact;
     [theta] = Theta;
-    [vdq] = [Vd,Vq]
+    [vdq] = [Vd,Vq,Theta]
     
 else
     %[theta] = Theta;
-    [vdq] = [Vd,Vq]
+    [vdq] = [Vd,Vq,Theta]
 end
 end
 

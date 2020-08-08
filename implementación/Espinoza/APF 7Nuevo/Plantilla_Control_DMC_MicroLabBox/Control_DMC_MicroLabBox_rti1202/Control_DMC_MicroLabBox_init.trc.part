@@ -1,0 +1,27 @@
+
+
+-- Type definitions for structures
+
+typedef Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0 int(32)[2]
+
+struct Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE
+{
+  array-incr: -1
+}
+    structField0 
+    {
+      alias:   "InputPortsWidth"
+      type:    Control_DMC_MicroLabBox_struct_z8IL72b4r57TjkVvP5IoWE_InputPortsWidth_0
+      offs:    -1
+    }
+endstruct
+
+
+-- Type definitions for arrays
+typedef Control_DMC_MicroLabBox_ArrayDT0_14 flt(64,IEEE)[14]
+typedef Control_DMC_MicroLabBox_ArrayDT0_6 flt(64,IEEE)[6]
+typedef Control_DMC_MicroLabBox_ArrayDT0_3 flt(64,IEEE)[3]
+typedef Control_DMC_MicroLabBox_ArrayDT0_2 flt(64,IEEE)[2]
+typedef Control_DMC_MicroLabBox_ArrayDT10_12 int(32)[12]
+
+
